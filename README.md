@@ -5,6 +5,11 @@
 
 https://www.atzlinux.com/atzlinux/pool/main/a/atzlinux-archive-keyring/atzlinux-archive-keyring_lastest_all.deb
 
+dpkg -i atzlinux-archive-keyring_lastest_all.deb
+
+sudo apt-get update
+
+sudo apt-get install atzlinux-archive-keyring
 
 软件源后加上non-free
 
