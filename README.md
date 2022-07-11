@@ -30,6 +30,8 @@ deb http://mirrors.ustc.edu.cn/debian stable main contrib non-free
 
 deb http://mirrors.ustc.edu.cn/debian stable-updates main contrib non-free
 
+deb http://ftp.de.debian.org/debian sid main non-free
+
 sudo apt-get update
 
 **查看网卡型号**：
