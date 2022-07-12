@@ -30,8 +30,6 @@ deb http://mirrors.ustc.edu.cn/debian stable main contrib non-free
 
 deb http://mirrors.ustc.edu.cn/debian stable-updates main contrib non-free
 
-deb http://ftp.de.debian.org/debian sid main non-free
-
 sudo apt-get update
 
 **查看网卡型号**：
@@ -59,3 +57,20 @@ sh NVIDIA-Linux-x86_64-xxx.xxx.run -no-x-check -no-nouveau-check -no-opengl-file
 -no-opengl-files：只安装驱动文件，不安装OpenGL文件
 
 --kernel-source-path: 指定安装路径
+
+创建桌面图标
+```
+cd ~/Desktop
+touch idea.desktop
+sudo vim idea.desktop
+```
+```
+[Desktop Entry]
+Name=IntelliJ IDEA
+Comment=IntelliJ IDEA
+Exec=/usr/local/ideaIU/bin/idea.sh ##替换成自己的目录
+Icon=/usr/local/ideaIU/bin/idea.png##替换成自己的目录
+Terminal=false
+Type=Application
+Categories=Developer;
+```
