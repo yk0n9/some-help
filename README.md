@@ -68,12 +68,13 @@ sudo vim idea.desktop
 [Desktop Entry]
 Name=IntelliJ IDEA
 Comment=IntelliJ IDEA
-Exec=/usr/local/ideaIU/bin/idea.sh ##替换成自己的目录
-Icon=/usr/local/ideaIU/bin/idea.png##替换成自己的目录
+Exec=/home/ideaIU/bin/idea.sh ##替换成自己的目录
+Icon=/home/ideaIU/bin/idea.svg##替换成自己的目录
 Terminal=false
 Type=Application
 Categories=Developer;
 ```
+.cargo/config
 ```
 [source.crates-io]
 replace-with = 'tuna'
@@ -81,3 +82,13 @@ replace-with = 'tuna'
 [source.tuna]
 registry = "https://mirrors.tuna.tsinghua.edu.cn/git/crates.io-index.git"
 ```
+
+**Docker**
+
+mysql
+
+docker pull mysql
+
+docker run -p 3306:3306 --name mysql -v /d/mysql-data/mysql-files:/var/lib/mysql-files -v /d/mysql-data/conf:/etc/mysql -v /d/mysql-data/logs:/logs -v /d/mysql-data/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=root -d mysql
+
+
