@@ -87,8 +87,6 @@ registry = "https://mirrors.tuna.tsinghua.edu.cn/git/crates.io-index.git"
 
 mysql
 
-docker pull mysql
-
-docker run -p 3306:3306 --name mysql -v /d/mysql-data/mysql-files:/var/lib/mysql-files -v /d/mysql-data/conf:/etc/mysql -v /d/mysql-data/logs:/logs -v /d/mysql-data/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=root -d mysql
+docker run -p 3306:3306 --name mysql -v /d/mysql-data/mysql-files:/var/lib/mysql-files -v /d/mysql-data/conf:/etc/mysql -v /d/mysql-data/logs:/logs -v /d/mysql-data/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=root -d mysql:latest
 
 
