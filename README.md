@@ -34,19 +34,19 @@ deb http://mirrors.ustc.edu.cn/debian stable-updates main contrib non-free
 
 deb https://mirrors.tuna.tsinghua.edu.cn/debian/ buster main contrib non-free
 
-# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ buster main contrib non-free
+#deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ buster main contrib non-free
 
 deb https://mirrors.tuna.tsinghua.edu.cn/debian/ buster-updates main contrib non-free
 
-# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ buster-updates main contrib non-free
+#deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ buster-updates main contrib non-free
 
 deb https://mirrors.tuna.tsinghua.edu.cn/debian/ buster-backports main contrib non-free
 
-# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ buster-backports main contrib non-free
+#deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ buster-backports main contrib non-free
 
 deb https://mirrors.tuna.tsinghua.edu.cn/debian-security buster/updates main contrib non-free
 
-# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian-security buster/updates main contrib non-free
+#deb-src https://mirrors.tuna.tsinghua.edu.cn/debian-security buster/updates main contrib non-free
 
 sudo apt-get update
 
