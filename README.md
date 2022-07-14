@@ -125,3 +125,15 @@ git pull origin master --allow-unrelated-histories  这里的master是你远程�
 git branch --set-upstream-to=origin/master
 
 至此，本地仓库重新与github远程仓库建立了连接,再次执行git pull,出现up to date就没问题了
+
+**mysqlclient**
+
+安装 MySQL Connector/C download address https://downloads.mysql.com/archives/c-c/
+
+设置环境变量：
+
+    MYSQLCLIENT_LIB_DIR
+
+默认 在 C:\Program Files\MySQL\MySQL Connector C 6.1\lib\vs14
+
+然后 执行 cargo install diesel_cli --no-default-features --features mysql
