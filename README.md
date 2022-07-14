@@ -93,6 +93,8 @@ mongo
 
 docker run -p 27017:27017 --name mongo -v /d/mongo/data:/data/db -v /d/mongo/conf:/data/conf -v /d/mongo/log:/data/log -d mongo:latest
 
+**同步GitHub项目**
+
 生成SSH秘钥
 
 第一步先生成ssh秘钥。在系统根目录下打开命令行终端，执行命令：ssh-keygen -t rsa -C "填写你的任意邮箱"，
@@ -131,12 +133,10 @@ git branch --set-upstream-to=origin/master
 
 **mysqlclient**
 
-安装 MySQL Connector/C download address https://downloads.mysql.com/archives/c-c/
+安装 [MySQL Connector/C](https://downloads.mysql.com/archives/c-c/)
 
-设置环境变量：
+设置环境变量：MYSQLCLIENT_LIB_DIR
 
-    MYSQLCLIENT_LIB_DIR
+默认在 C:\Program Files\MySQL\MySQL Connector C 6.1\lib\vs14
 
-默认 在 C:\Program Files\MySQL\MySQL Connector C 6.1\lib\vs14
-
-然后 执行 cargo install diesel_cli --no-default-features --features mysql
+然后执行 cargo install diesel_cli --no-default-features --features mysql
