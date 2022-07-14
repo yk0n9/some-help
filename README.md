@@ -89,6 +89,9 @@ mysql
 
 docker run -p 3306:3306 --name mysql -v /d/mysql-data/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=root -d mysql:latest
 
+mongo
+
+docker run -p 27017:27017 --name mongo -v /d/mongo/data:/data/db -v /d/mongo/conf:/data/conf -v /d/mongo/log:/data/log -d mongo:latest
 
 生成SSH秘钥
 
