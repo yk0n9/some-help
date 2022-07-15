@@ -149,6 +149,10 @@ git branch --set-upstream-to=origin/master
 
 至此，本地仓库重新与github远程仓库建立了连接,再次执行git pull,出现up to date就没问题了
 
+**rustup default stable-x86_64-pc-windows-msvc**
+
+下载[Visual Studio Community](https://visualstudio.microsoft.com/zh-hans/vs/community/)
+
 **mysqlclient**
 
 安装 [MySQL Connector/C](https://downloads.mysql.com/archives/c-c/)
