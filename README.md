@@ -151,7 +151,9 @@ git branch --set-upstream-to=origin/master
 
 **rustup default stable-x86_64-pc-windows-msvc**
 
-下载[Visual Studio Community](https://visualstudio.microsoft.com/zh-hans/vs/community/)
+下载 [Visual Studio Community](https://visualstudio.microsoft.com/zh-hans/vs/community/)
+
+默认安装C++桌面开发
 
 **mysqlclient**
 
