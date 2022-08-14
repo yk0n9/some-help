@@ -153,6 +153,10 @@ git branch --set-upstream-to=origin/master
 
 下载 [Visual Studio Community](https://visualstudio.microsoft.com/zh-hans/vs/community/)
 
+**rustup default stable-x86_64-pc-windows-gnu**
+
+下载 [MinGW](https://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win64/Personal%20Builds/mingw-builds/8.1.0/threads-posix/seh/x86_64-8.1.0-release-posix-seh-rt_v6-rev0.7z)
+
 默认安装C++桌面开发
 
 **mysqlclient**
