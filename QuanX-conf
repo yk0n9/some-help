@@ -17,15 +17,17 @@ server=8.8.8.8
 #static
 #url-latency-benchmark
 #available
+#round-robin
 
 static= 节点选择, AUTO, proxy, img-url=airplane.departure.system
-available=AUTO, server-tag-regex=$, img-url=move.3d.system
+round-robin=AUTO, server-tag-regex=$, img-url=move.3d.system
 static= 全球直连, direct, img-url=app.connected.to.app.below.fill.system
 static= 全球拦截, reject, img-url=nosign.system
 
 [server_remote]
-url, tag=tag, update-interval=7200, opt-parser=true, enabled=true
-url, tag=tag, update-interval=7200, opt-parser=true, enabled=false
+url-1, tag=tag-1, update-interval=7200, opt-parser=true, enabled=true
+url-2, tag=tag-2, update-interval=7200, opt-parser=true, enabled=false
+
 
 [filter_remote]
 https://sub.xeton.dev/getruleset?type=2&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvTG9jYWxBcmVhTmV0d29yay5saXN0&group=8J-OryDlhajnkIPnm7Tov54, tag= 全球直连, enabled=true
@@ -51,5 +53,6 @@ FINAL, 节点选择
 [rewrite_local]
 
 [mitm]
+
 
 
