@@ -29,8 +29,8 @@ static=🎯 全球直连, direct, img-url=https://raw.githubusercontent.com/Kool
 static=🛑 全球拦截, reject, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Reject.png
 
 [server_remote]
-url-1, tag=tag-1, update-interval=7200, opt-parser=true, enabled=true
-url-2, tag=tag-2, update-interval=7200, opt-parser=true, enabled=false
+url, tag=tag-1, update-interval=7200, opt-parser=true, enabled=true
+url, tag=tag-2, update-interval=7200, opt-parser=true, enabled=false
 
 
 [filter_remote]
