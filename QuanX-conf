@@ -23,10 +23,10 @@ server=223.5.5.5
 #round-robin
 #dest-hash
 
-static=🚀 节点选择, AUTO, proxy, img-url=airplane.departure.system
-round-robin=AUTO, server-tag-regex=$, img-url=move.3d.system
-static=🎯 全球直连, direct, img-url=app.connected.to.app.below.fill.system
-static=🛑 全球拦截, reject, img-url=nosign.system
+static=🚀 节点选择, Round-Robin, proxy, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Proxy.png
+round-robin=Round-Robin, server-tag-regex=$, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Round-Robin.png
+static=🎯 全球直连, direct, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Direct.png
+static=🛑 全球拦截, reject, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Reject.png
 
 [server_remote]
 url-1, tag=tag-1, update-interval=7200, opt-parser=true, enabled=true
