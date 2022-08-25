@@ -9,11 +9,11 @@ internet-test-url = http://bing.com/
 proxy-test-url = http://bing.com/
 
 [Proxy Group]
-🚀 节点选择 = select, tag-1
+🚀 节点选择 = select, tag
 🎯 全球直连 = select, DIRECT
 🛑 全球拦截 = select, REJECT
-tag-1 = load-balance, policy-path=url, update-interval=3600
-tag-2 = load-balance, policy-path=url, update-interval=3600
+tag = load-balance, policy-path=url, update-interval=3600
+tag = load-balance, policy-path=url, update-interval=3600
 
 [Rule]
 RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list,🎯 全球直连,update-interval=86400
