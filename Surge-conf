@@ -3,13 +3,17 @@ hide-vpn-icon = true
 loglevel = notify
 skip-proxy = 127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,100.64.0.0/10,localhost,*.local,e.crashlytics.com,captive.apple.com,::ffff:0:0:0:0/1,::ffff:128:0:0:0/1
 dns-server = 119.29.29.29,223.5.5.5,8.8.8.8,114.114.114.114,1.1.1.1
+ipv6 = false
+test-timeout = 5
+internet-test-url = http://bing.com/
+proxy-test-url = http://bing.com/
 
 [Proxy Group]
-🚀 节点选择 = select, Tag-1
+🚀 节点选择 = select, tag-1
 🎯 全球直连 = select, DIRECT
 🛑 全球拦截 = select, REJECT
-Tag-1 = fallback, policy-path=订阅地址, update-interval=3600
-Tag-2 = fallback, policy-path=订阅地址, update-interval=3600
+tag-1 = fallback, policy-path=url, update-interval=3600
+tag-2 = fallback, policy-path=url, update-interval=3600
 
 [Rule]
 RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list,🎯 全球直连,update-interval=86400
