@@ -7,17 +7,20 @@ network_check_url=http://bing.com/
 server_check_url=http://bing.com/
 
 [dns]
+no-system
 no-ipv6
 server=119.29.29.29
 server=223.5.5.5
 server=1.0.0.1
 server=8.8.8.8
+server=114.114.114.114
 
 [policy]
 #static
 #url-latency-benchmark
 #available
 #round-robin
+#dest-hash
 
 static=🚀 节点选择, AUTO, proxy, img-url=airplane.departure.system
 round-robin=AUTO, server-tag-regex=$, img-url=move.3d.system
