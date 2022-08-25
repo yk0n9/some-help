@@ -11,13 +11,10 @@ no-system
 no-ipv6
 server=1.1.1.1
 server=8.8.8.8
+server=208.67.222.222
 server=114.114.114.114
 server=119.29.29.29
 server=223.5.5.5
-server=180.76.76.76
-server=101.226.4.6
-server=208.67.222.222
-server=4.2.2.1
 
 [policy]
 #static
