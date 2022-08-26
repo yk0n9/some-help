@@ -1,5 +1,13 @@
 # My-Tools
 
+**获取订阅链接**：
+
+Clash：https://sub.xeton.dev/sub?target=clash&new_name=true&url=订阅链接&list=true
+
+QuanX：https://sub.xeton.dev/sub?target=quanx&url=订阅链接&list=true
+
+Surge：https://sub.xeton.dev/sub?target=surge&ver=4&url=订阅链接&list=true
+
 **铜豌豆软件源**：
 
 apt -y install wget
