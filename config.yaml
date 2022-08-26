@@ -38,7 +38,7 @@ proxy-groups:
 proxy-providers:
   tag1:
     type: http
-    url: url1
+    url: https://sub.xeton.dev/sub?target=clash&new_name=true&url=订阅链接&list=true
     interval: 3600
     path: tag1.yaml
     health-check:
@@ -49,7 +49,7 @@ proxy-providers:
 
   tag2:
     type: http
-    url: url2
+    url: https://sub.xeton.dev/sub?target=clash&new_name=true&url=订阅链接&list=true
     interval: 3600
     path: tag2.yaml
     health-check:
