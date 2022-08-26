@@ -111,6 +111,10 @@ mongo
 
 docker run -p 27017:27017 --name mongo -v /d/mongo/data:/data/db -v /d/mongo/conf:/data/conf -v /d/mongo/log:/data/log -d mongo:latest
 
+clash
+
+docker run -p 9090:9090 -p 7890:7890 --name clash -v /d/clash:/root/.config/clash -d --restart always dreamacro/clash:latest
+
 **同步GitHub项目**
 
 生成SSH秘钥
