@@ -8,6 +8,12 @@ QuanX：https://sub.xeton.dev/sub?target=quanx&url=订阅&list=true
 
 Surge：https://sub.xeton.dev/sub?target=surge&ver=4&url=订阅&list=true
 
+编辑 /root/.bashrc
+
+export http_proxy=http://127.0.0.1:7890
+
+运行 source .bashrc
+
 **铜豌豆软件源**：
 
 apt -y install wget
@@ -37,24 +43,6 @@ vim /etc/apt/sources.list
 deb http://mirrors.ustc.edu.cn/debian stable main contrib non-free
 
 deb http://mirrors.ustc.edu.cn/debian stable-updates main contrib non-free
-
---
-
-deb https://mirrors.tuna.tsinghua.edu.cn/debian/ buster main contrib non-free
-
-#deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ buster main contrib non-free
-
-deb https://mirrors.tuna.tsinghua.edu.cn/debian/ buster-updates main contrib non-free
-
-#deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ buster-updates main contrib non-free
-
-deb https://mirrors.tuna.tsinghua.edu.cn/debian/ buster-backports main contrib non-free
-
-#deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ buster-backports main contrib non-free
-
-deb https://mirrors.tuna.tsinghua.edu.cn/debian-security buster/updates main contrib non-free
-
-#deb-src https://mirrors.tuna.tsinghua.edu.cn/debian-security buster/updates main contrib non-free
 
 sudo apt-get update
 
