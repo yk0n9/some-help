@@ -101,11 +101,11 @@ registry = "https://mirrors.tuna.tsinghua.edu.cn/git/crates.io-index.git"
 
 mysql
 
-docker run -p 3306:3306 --name mysql -v /d/mysql-data/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=root -d mysql:latest
+docker run --name mysql -p 3306:3306 -v /d/mysql-data/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=root -d mysql:latest
 
 mongo
 
-docker run -p 27017:27017 --name mongo -v /d/mongo/data:/data/db -v /d/mongo/conf:/data/conf -v /d/mongo/log:/data/log -d mongo:latest
+docker run --name mongo -p 27017:27017 -v /d/mongo/data:/data/db -d mongo:latest
 
 clash
 
