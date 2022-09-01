@@ -91,9 +91,13 @@ Categories=Developer;
 .cargo/config
 ```
 [source.crates-io]
+
+registry = "https://github.com/rust-lang/crates.io-index"
+
 replace-with = 'tuna'
 
 [source.tuna]
+
 registry = "https://mirrors.tuna.tsinghua.edu.cn/git/crates.io-index.git"
 ```
 
@@ -101,7 +105,7 @@ registry = "https://mirrors.tuna.tsinghua.edu.cn/git/crates.io-index.git"
 
 mysql
 
-docker run --name mysql -p 3306:3306 -v /d/mysql-data/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=root -d mysql:latest
+docker run --name mysql -p 3306:3306 -v /d/mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=root -d mysql:8.0.25
 
 mongo
 
