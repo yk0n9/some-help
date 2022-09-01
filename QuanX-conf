@@ -22,15 +22,13 @@ server=223.5.5.5
 #round-robin
 #dest-hash
 
-static=🚀 节点选择, Round-Robin, proxy, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Proxy.png
-round-robin=Round-Robin, server-tag-regex=$, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Round_Robin.png
+static=🚀 节点选择, Available, proxy, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Proxy.png
+available=Available, server-tag-regex=$, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Available.png
 static=🎯 全球直连, direct, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Direct.png
 static=🛑 全球拦截, reject, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Reject.png
 
 [server_remote]
-https://sub.xeton.dev/sub?target=quanx&url=订阅&list=true, tag=tag, update-interval=7200, opt-parser=false, enabled=true
-https://sub.xeton.dev/sub?target=quanx&url=订阅&list=true, tag=tag, update-interval=7200, opt-parser=false, enabled=false
-
+https://sub.xeton.dev/sub?target=quanx&url=订阅&list=true, tag=tag, update-interval=3600, opt-parser=false, enabled=true
 
 [filter_remote]
 https://sub.xeton.dev/getruleset?type=2&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvTG9jYWxBcmVhTmV0d29yay5saXN0&group=8J-OryDlhajnkIPnm7Tov54, tag=🎯 全球直连, enabled=true
