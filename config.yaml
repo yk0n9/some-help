@@ -12,14 +12,14 @@ proxy-groups:
       - tag2
 
   - name: tag1
-    type: load-balance
+    type: fallback
     use: 
       - tag1
     url: http://bing.com/
     interval: 300
 
   - name: tag2
-    type: load-balance
+    type: fallback
     use: 
       - tag2
     url: http://bing.com/
