@@ -12,7 +12,7 @@ proxy-test-url = http://bing.com/
 🚀 节点选择 = select, tag, no-alert=0, hidden=0, include-all-proxies=0, include-other-group=tag
 🎯 全球直连 = select, DIRECT
 🛑 全球拦截 = select, REJECT
-tag = load-balance, policy-path=https://sub.xeton.dev/sub?target=surge&ver=4&url=订阅&list=true, update-interval=3600
+tag = fallback, policy-path=https://sub.xeton.dev/sub?target=surge&ver=4&url=订阅&list=true, update-interval=3600
 
 [Rule]
 RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list,🎯 全球直连,update-interval=86400
