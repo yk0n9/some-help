@@ -106,6 +106,9 @@ docker run --name=mysql -it -p 3306:3306 -v /d/mysql/mysqld:/var/run/mysqld -v /
 mongo
 docker run --name mongo -p 27017:27017 -v /d/mongo/data:/data/db -d mongo:latest
 
+redis
+docker run -v /d/redis:/usr/local/etc/redis --name redis redis-server /usr/local/etc/redis/redis.conf redis:latest
+
 nacos
 docker run --name nacos -e MODE=standalone -p 8848:8848 -d nacos/nacos-server:2.0.3
 
