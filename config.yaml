@@ -2,26 +2,18 @@ mixed-port: 7890
 allow-lan: true
 mode: Rule
 external-controller: 0.0.0.0:9090
-external-ui: clash-ui
+external-ui: yacd
 
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
-      - tag1
-      - tag2
+      - tag
 
-  - name: tag1
+  - name: tag
     type: fallback
     use: 
-      - tag1
-    url: http://bing.com/
-    interval: 300
-
-  - name: tag2
-    type: fallback
-    use: 
-      - tag2
+      - tag
     url: http://bing.com/
     interval: 300
 
@@ -36,22 +28,12 @@ proxy-groups:
       - REJECT
 
 proxy-providers:
-  tag1:
-    type: http
-    url: https://sub.xeton.dev/sub?target=clash&new_name=true&url=订阅&list=true
-    interval: 3600
-    path: tag1.yaml
-    health-check:
-      enable: true
-      interval: 600
-      # lazy: true
-      url: http://bing.com/
 
-  tag2:
+  tag:
     type: http
     url: https://sub.xeton.dev/sub?target=clash&new_name=true&url=订阅&list=true
     interval: 3600
-    path: tag2.yaml
+    path: tag.yaml
     health-check:
       enable: true
       interval: 600
@@ -3333,3 +3315,4 @@ rules:
  - IP-CIDR,101.199.196.0/22,🎯 全球直连,no-resolve
  - GEOIP,CN,🎯 全球直连
  - MATCH,🚀 节点选择
+ 
