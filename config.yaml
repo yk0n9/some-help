@@ -8,9 +8,9 @@ proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
-      - tag
+      - Auto
 
-  - name: tag
+  - name: Auto
     type: fallback
     use: 
       - tag
