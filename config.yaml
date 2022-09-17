@@ -31,7 +31,7 @@ proxy-providers:
 
   tag:
     type: http
-    url: https://sub.xeton.dev/sub?target=clash&new_name=true&url=订阅&list=true
+    url: https://sub.xeton.dev/sub?target=clash&list=true&url=订阅
     interval: 3600
     path: tag.yaml
     health-check:
