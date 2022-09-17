@@ -2,11 +2,11 @@
 
 **获取订阅链接**：
 
-Clash：https://sub.xeton.dev/sub?target=clash&new_name=true&url=订阅&list=true
+Clash：https://sub.xeton.dev/sub?target=clash&list=true&url=订阅
 
-QuanX：https://sub.xeton.dev/sub?target=quanx&url=订阅&list=true
+QuanX：https://sub.xeton.dev/sub?target=quanx&list=true&url=订阅
 
-Surge：https://sub.xeton.dev/sub?target=surge&ver=4&url=订阅&list=true
+Surge：https://sub.xeton.dev/sub?target=surge&ver=4&list=true&url=订阅
 
 编辑 /root/.bashrc
 
