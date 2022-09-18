@@ -160,7 +160,7 @@ git branch --set-upstream-to=origin/master
 
 **rustup default stable-x86_64-pc-windows-gnu**
 
-下载 [MinGW-w64](https://sourceforge.net/projects/mingw-w64/)
+下载 [MinGW-w64](https://sourceforge.net/projects/mingw-w64/files/)
 
 默认安装C++桌面开发
 
