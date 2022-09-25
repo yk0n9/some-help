@@ -107,13 +107,13 @@ mongo
 docker run --name mongo -p 27017:27017 -v /d/mongo/data:/data/db -d mongo:latest
 
 redis
-docker run -p 6379:6379 --name redis -v /d/redis/redis.conf:/etc/redis/redis.conf -v /d/redis/data:/data -d redis:latest redis-server /etc/redis/redis.conf --appendonly yes
+docker run --name redis -p 6379:6379 -v /d/redis/redis.conf:/etc/redis/redis.conf -v /d/redis/data:/data -d redis:latest redis-server /etc/redis/redis.conf --appendonly yes
 
 nacos
-docker run --name nacos -e MODE=standalone -p 8848:8848 -d nacos/nacos-server:2.0.3
+docker run --name nacos -p 8848:8848 -e MODE=standalone -d nacos/nacos-server:2.0.3
 
 clash
-docker run -p 9090:9090 -p 7890:7890 --name clash -v /d/clash:/root/.config/clash -d --restart always dreamacro/clash:latest
+docker run --name clash -p 9090:9090 -p 7890:7890 -v /d/clash:/root/.config/clash -d --restart always dreamacro/clash:latest
 ```
 
 **同步GitHub项目**
