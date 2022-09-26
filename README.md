@@ -9,9 +9,9 @@ QuanX：https://sub.xeton.dev/sub?target=quanx&list=true&url=订阅
 Surge：https://sub.xeton.dev/sub?target=surge&ver=4&list=true&url=订阅
 
 编辑 /root/.bashrc
-
+```
 export http_proxy=http://127.0.0.1:7890
-
+```
 运行 source .bashrc
 
 **BIOS**
@@ -24,9 +24,9 @@ export http_proxy=http://127.0.0.1:7890
 ```
 
 **铜豌豆软件源**：
-
+```
 wget https://www.atzlinux.com/atzlinux/download/install-all-single-script.sh
-
+```
 **non-free软件源**
 
 vim /etc/apt/sources.list
@@ -44,22 +44,22 @@ deb https://mirrors.tuna.tsinghua.edu.cn/debian-security bullseye-security main 
 ```
 sudo apt-get update
 
-**查看网卡型号**：
-
+**查看网卡型号**:
+```
 lspci -nn
-
+```
 **wifi**:
-
+```
 sudo apt-get install firmware-iwlwifi firmware-intelwimax firmware-realtek firmware-atheros
 
 sudo apt-get install gnome-control-center
-
+```
 **显卡**：
-
+```
 sudo apt install nvidia-settings
-
+```
 **双显卡方案**：
-
+```
 sh NVIDIA-Linux-x86_64-xxx.xxx.run -no-x-check -no-nouveau-check -no-opengl-files --kernel-source-path=/usr/src/kernels/$(uname -r)
 
 -no-x-check：安装驱动时关闭X服务
@@ -69,8 +69,8 @@ sh NVIDIA-Linux-x86_64-xxx.xxx.run -no-x-check -no-nouveau-check -no-opengl-file
 -no-opengl-files：只安装驱动文件，不安装OpenGL文件
 
 --kernel-source-path: 指定安装路径
-
-创建桌面图标
+```
+**创建桌面图标**
 ```
 cd ~/Desktop
 touch idea.desktop
@@ -118,39 +118,53 @@ docker run --name clash -p 9090:9090 -p 7890:7890 -v /d/clash:/root/.config/clas
 
 生成SSH秘钥
 
-第一步先生成ssh秘钥。在系统根目录下打开命令行终端，执行命令：ssh-keygen -t rsa -C "填写你的任意邮箱"，
+第一步先生成ssh秘钥。在系统根目录下打开命令行终端，执行命令：
+```
+ssh-keygen -t rsa -C "填写你的任意邮箱"
+```
+执行完成后，会生成一个.ssh文件夹，里面的id_rsa.pub文件内容就是秘钥，那么我们就进入ssh文件夹打开该文件后复制它的内容。或者命令行快速打开
+```
+cd ./.ssh && cat id_rsa.pub
+```
+然后会有一大串字符打印在终端，这个是秘钥内容，全部复制下来。
 
-执行完成后，会生成一个.ssh文件夹，里面的id_rsa.pub文件内容就是秘钥，那么我们就进入ssh文件夹打开该文件后复制它的内容。或者命令行快速打开cd ./.ssh && cat id_rsa.pub然后会有一大串字符打印在终端，这个是秘钥内容，全部复制下来。
 登录github新建SSH Key
 
 登录自己的github，在右上角头像框点击邮件选择Settings，然后在左边菜单选择SSH and GPG keys,在SSH keys一栏点击New SSH key的绿色按钮，title随便写，key那一个框框里把刚才复制的id_rsa.pub的内容粘贴到这里，确定复制的是完整的秘钥不要漏了。粘贴完后点下面Add的绿色按钮，这样就在github上生成了一个对应的SSH秘钥了。
+
 验证SSH
 
 回到本地，随便找个空文件夹或者新建一个文件夹，在这个新文件夹下新建一个git本地仓库。终端在这个文件夹的路径下打开，路径一定要正确，然后执行
-
+```
 git init
-
+```
 再然后就是设置用户名和邮箱：
-
+```
 git config --global user.name "用户名"
 
 git config --global user.email "你的邮箱"
-
+```
 设置完后，设置你想要建立对应连接的远程仓库地址：
-
-git remote add origin git@github.com:XXXXXXX/xxxxxxx.git   这里的地址填写你github仓库的SSH地址，注意是SSH的地址不是http的地址
+```
+git remote add origin git@github.com:XXXXXXX/xxxxxxx.git   
+```
+这里的地址填写你github仓库的SSH地址，注意是SSH的地址不是http的地址
 
 设置完成后，把远程仓库的源代码拉取到本地：
-
-git pull origin master --allow-unrelated-histories  这里的master是你远程仓库的分支名，如果你的分支名不是master你就改成你的分支名
+```
+git pull origin master --allow-unrelated-histories 
+```
+这里的master是你远程仓库的分支名，如果你的分支名不是master你就改成你的分支名
 
 一般来讲没有改过的分支名肯定有一个是master，只不过不知道你想要的代码在不在master分支。
 
 执行上述命令后会出现一堆信息，大概就是关于验证的，结束会有一个（yes/no），这里手打‘yes’再回车就可以完成验证了，直接打回车会验证错误，    验证通过后就会拉取远程master分支的代码到你的文件夹，并同时在本地创建一个master分支。接下来就是要建立本地分支和远程分支的追踪关系，方便以后push，执行如下命令：
-
+```
 git branch --set-upstream-to=origin/master
-
+```
 至此，本地仓库重新与github远程仓库建立了连接,再次执行git pull,出现up to date就没问题了
+
+### Rust
 
 **rustup default stable-x86_64-pc-windows-msvc**
 
