@@ -25,33 +25,23 @@ export http_proxy=http://127.0.0.1:7890
 
 **铜豌豆软件源**：
 
-apt -y install wget
+wget https://www.atzlinux.com/atzlinux/download/install-all-single-script.sh
 
-wget -c -O atzlinux-archive-keyring_lastest_all.deb https://www.atzlinux.com/atzlinux/pool/main/a/atzlinux-archive-keyring/atzlinux-archive-keyring_lastest_all.deb
-
-apt -y install ./atzlinux-archive-keyring_lastest_all.deb
-
-dpkg --add-architecture i386
-
-apt update
-
-**或者**
-
-https://www.atzlinux.com/atzlinux/pool/main/a/atzlinux-archive-keyring/atzlinux-archive-keyring_lastest_all.deb
-
-dpkg -i atzlinux-archive-keyring_lastest_all.deb
-
-sudo apt-get update
-
-sudo apt-get install atzlinux-archive-keyring
-
-**软件源后加上non-free**
+**non-free软件源**
 
 vim /etc/apt/sources.list
 
-deb http://mirrors.ustc.edu.cn/debian stable main contrib non-free
+deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye main contrib non-free
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye main contrib non-free
+deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye-updates main contrib non-free
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye-updates main contrib non-free
 
-deb http://mirrors.ustc.edu.cn/debian stable-updates main contrib non-free
+deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye-backports main contrib non-free
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye-backports main contrib non-free
+
+deb https://mirrors.tuna.tsinghua.edu.cn/debian-security bullseye-security main contrib non-free
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian-security bullseye-security main contrib non-free
+
 
 sudo apt-get update
 
