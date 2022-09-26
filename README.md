@@ -101,7 +101,7 @@ registry = "https://mirrors.tuna.tsinghua.edu.cn/git/crates.io-index.git"
 **Docker**
 ```
 mysql
-docker run --name=mysql -it -p 3306:3306 -v /d/mysql/mysqld:/var/run/mysqld -v /d/mysql/db:/var/lib/mysql -v /d/mysql/conf:/etc/mysql/conf.d -v /d/mysql/files:/var/lib/mysql-files -e MYSQL_ROOT_PASSWORD=root --privileged=true -d mysql:latest
+docker run --name mysql -it -p 3306:3306 -v /d/mysql/mysqld:/var/run/mysqld -v /d/mysql/db:/var/lib/mysql -v /d/mysql/conf:/etc/mysql/conf.d -v /d/mysql/files:/var/lib/mysql-files -e MYSQL_ROOT_PASSWORD=root --privileged=true -d mysql:latest
 
 mongo
 docker run --name mongo -p 27017:27017 -v /d/mongo/data:/data/db -d mongo:latest
