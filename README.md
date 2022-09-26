@@ -30,7 +30,7 @@ wget https://www.atzlinux.com/atzlinux/download/install-all-single-script.sh
 **non-free软件源**
 
 vim /etc/apt/sources.list
-
+```
 deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye main contrib non-free
 # deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye main contrib non-free
 deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye-updates main contrib non-free
@@ -41,8 +41,7 @@ deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye-backports main contrib
 
 deb https://mirrors.tuna.tsinghua.edu.cn/debian-security bullseye-security main contrib non-free
 # deb-src https://mirrors.tuna.tsinghua.edu.cn/debian-security bullseye-security main contrib non-free
-
-
+```
 sudo apt-get update
 
 **查看网卡型号**：
