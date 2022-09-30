@@ -59,16 +59,37 @@ sudo apt-get install gnome-control-center
 sudo apt install nvidia-settings
 ```
 **双显卡方案**：
+
+**Intel & NVIDIA**
+
+关闭独显
+
+开机时，依据屏幕提示进主板设置，将独显设置为不启用。
+
+独显切换
+
+安装第三方的Bumblebee程序，可实现NVIDIA Optimus，终端中执行：
 ```
-sh NVIDIA-Linux-x86_64-xxx.xxx.run -no-x-check -no-nouveau-check -no-opengl-files --kernel-source-path=/usr/src/kernels/$(uname -r)
+sudo apt-get install bumblebee-nvidia primus #安装Bumblebee-nvidia(适用于闭源驱动),其中primus可选,用于提升性能
+sudo apt-get install bumblebee primus #安装Bumblebee(适用于开源驱动)
+sudo update-glx --config glx    #切换显卡的工作模式   选择的配置
+```
 
--no-x-check：安装驱动时关闭X服务
+注意 16年以后的新笔记本可能存在重新启用独显以后，造成系统冻结。
 
--no-nouveau-check：安装驱动时禁用nouveau
+可以查看bumblebee的讨论和linux bug讨论。
 
--no-opengl-files：只安装驱动文件，不安装OpenGL文件
+解决方法是在grub中给内核添加参数来防止系统出现冻结。
+```
+acpi_osi=! acpi_osi="Windows 2009"
+```
+安装完毕后重启电脑使Bumblebee生效，但是Bumblebee并不能做到集显（Intel显卡）和独显（NVIDIA显卡）之间的自动切换。系统运行时会默认使用集成显卡（Intel显卡），当你需要使用独显（NVIDIA显卡）运行某个程序或游戏时候，终端执行如下命令即可：
+```
+optirun command #使用独显运行command程序
+```
+```
+optirun -b primus command #使用独显运行command程序,提升性能
 
---kernel-source-path: 指定安装路径
 ```
 **创建桌面图标**
 ```
