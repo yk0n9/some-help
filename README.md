@@ -2,11 +2,14 @@
 
 **获取订阅链接**：
 ```
-Clash：https://sub.xeton.dev/sub?target=clash&list=true&url=订阅
+Clash：
+https://sub.xeton.dev/sub?target=clash&list=true&url=订阅
 
-QuanX：https://sub.xeton.dev/sub?target=quanx&list=true&url=订阅
+QuanX：
+https://sub.xeton.dev/sub?target=quanx&list=true&url=订阅
 
-Surge：https://sub.xeton.dev/sub?target=surge&ver=4&list=true&url=订阅
+Surge：
+https://sub.xeton.dev/sub?target=surge&ver=4&list=true&url=订阅
 ```
 编辑 /root/.bashrc
 ```
@@ -17,9 +20,7 @@ export http_proxy=http://127.0.0.1:7890
 **BIOS**
 ```
 1.开启CSM（兼容）
-
 2.开启AHCI
-
 3.开启Source Fast Boot
 ```
 
@@ -51,12 +52,34 @@ lspci -nn
 **wifi**:
 ```
 sudo apt-get install firmware-iwlwifi firmware-intelwimax firmware-realtek firmware-atheros
-
 sudo apt-get install gnome-control-center
 ```
 **显卡**：
+
+命令自动安装
+
+安装源内版本，终端执行：
 ```
-sudo apt install nvidia-settings
+sudo apt-get install nvidia-driver #安装驱动包
+```
+如果以上命令不能正常安装驱动，请终端执行：
+```
+ubuntu-drivers list  #检测合适的驱动包
+```
+然后使用如下命令安装对应的驱动包，例如检测的结果为nvidia-legacy-340xx-driver
+```
+sudo apt-get install  nvidia-legacy-340xx-driver #安装驱动包
+```
+卸载
+
+如果为命令自动安装，终端执行如下命令可卸载：
+```
+sudo apt-get remove nvidia-driver nvidia-kernel-dkms glx-alternative-nvidia
+```
+如果为手动安装，终端执行如下命令可卸载：
+```
+sudo nvidia-uninstall
+sudo nvidia-installer --uninstall
 ```
 **双显卡方案**：
 
@@ -74,12 +97,12 @@ sudo apt-get install bumblebee-nvidia primus #安装Bumblebee-nvidia(适用于�
 sudo apt-get install bumblebee primus #安装Bumblebee(适用于开源驱动)
 sudo update-glx --config glx    #切换显卡的工作模式   选择的配置
 ```
+在grub中给内核添加参数来防止系统出现冻结。
 
-注意 16年以后的新笔记本可能存在重新启用独显以后，造成系统冻结。
-
-可以查看bumblebee的讨论和linux bug讨论。
-
-解决方法是在grub中给内核添加参数来防止系统出现冻结。
+在 GRUB_CMDLINE_LINUX_DEFAULT 变量中以
+```
+sudo vim /etc/default/grub
+```
 ```
 acpi_osi=! acpi_osi="Windows 2009"
 ```
@@ -89,7 +112,6 @@ optirun command #使用独显运行command程序
 ```
 ```
 optirun -b primus command #使用独显运行command程序,提升性能
-
 ```
 **创建桌面图标**
 ```
@@ -152,7 +174,6 @@ git init
 再然后就是设置用户名和邮箱：
 ```
 git config --global user.name "用户名"
-
 git config --global user.email "你的邮箱"
 ```
 设置完后，设置你想要建立对应连接的远程仓库地址：
