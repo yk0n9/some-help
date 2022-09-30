@@ -1,13 +1,13 @@
 # My-Tools
 
 **获取订阅链接**：
-
+```
 Clash：https://sub.xeton.dev/sub?target=clash&list=true&url=订阅
 
 QuanX：https://sub.xeton.dev/sub?target=quanx&list=true&url=订阅
 
 Surge：https://sub.xeton.dev/sub?target=surge&ver=4&list=true&url=订阅
-
+```
 编辑 /root/.bashrc
 ```
 export http_proxy=http://127.0.0.1:7890
@@ -168,12 +168,13 @@ git branch --set-upstream-to=origin/master
 
 **rustup default stable-x86_64-pc-windows-msvc**
 
-下载 [Visual Studio Community](https://visualstudio.microsoft.com/zh-hans/vs/community/) - **使用C++的桌面开发**
+下载 [Visual Studio Community](https://visualstudio.microsoft.com/zh-hans/vs/community/) -- **使用C++的桌面开发**
 
 **rustup default stable-x86_64-pc-windows-gnu**
 
-下载 [MinGW-w64](https://sourceforge.net/projects/mingw-w64/files/) - **x86_64-posix-seh**
+下载 [MinGW-w64](https://sourceforge.net/projects/mingw-w64/files/) -- **x86_64-posix-seh**
 
+下载 [CMake](https://cmake.org/download/) -- 环境变量
 
 **mysqlclient**
 
