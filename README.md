@@ -86,16 +86,6 @@ Terminal=false
 Type=Application
 Categories=Developer;
 ```
-.cargo/config
-```
-[source.crates-io]
-registry = "https://github.com/rust-lang/crates.io-index"
-
-replace-with = 'tuna'
-[source.tuna]
-registry = "https://mirrors.tuna.tsinghua.edu.cn/git/crates.io-index.git"
-```
-
 **Docker**
 ```
 mysql
@@ -175,6 +165,16 @@ git branch --set-upstream-to=origin/master
 下载 [MinGW-w64](https://sourceforge.net/projects/mingw-w64/files/) -- **x86_64-posix-seh**
 
 下载 [CMake](https://cmake.org/download/) -- 环境变量
+
+**.cargo/config**
+```
+[source.crates-io]
+registry = "https://github.com/rust-lang/crates.io-index"
+
+replace-with = 'tuna'
+[source.tuna]
+registry = "https://mirrors.tuna.tsinghua.edu.cn/git/crates.io-index.git"
+```
 
 **mysqlclient**
 
