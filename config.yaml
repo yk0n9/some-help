@@ -1,10 +1,20 @@
 mixed-port: 7890
 allow-lan: true
-mode: Rule
+mode: rule
 external-controller: 0.0.0.0:9090
 external-ui: yacd
 
+dns: 
+  enable: true
+  nameserver: 
+    - 223.5.5.5
+    - 119.29.29.29
+    - 114.114.114.114
+    - 8.8.8.8
+    - 1.1.1.1
+
 proxy-groups:
+
   - name: 🚀 节点选择
     type: select
     proxies:
@@ -13,7 +23,7 @@ proxy-groups:
   - name: Auto
     type: fallback
     use: 
-      - tag
+      - Sub
     url: http://bing.com/
     interval: 300
 
@@ -29,11 +39,11 @@ proxy-groups:
 
 proxy-providers:
 
-  tag:
+  Sub:
     type: http
     url: https://sub.xeton.dev/sub?target=clash&list=true&url=订阅
     interval: 3600
-    path: tag.yaml
+    path: sub.yaml
     health-check:
       enable: true
       interval: 600
