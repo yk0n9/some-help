@@ -21,7 +21,7 @@ export http_proxy=http://127.0.0.1:7890
 ```
 1.开启CSM（兼容）
 2.开启AHCI
-3.开启Source Fast Boot
+3.关闭Source (Fast) Boot
 ```
 
 **铜豌豆软件源**：
