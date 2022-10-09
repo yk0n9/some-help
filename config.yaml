@@ -16,11 +16,6 @@ dns:
 proxy-groups:
 
   - name: 🚀 节点选择
-    type: select
-    proxies:
-      - Auto
-
-  - name: Auto
     type: fallback
     use: 
       - Sub
