@@ -13,7 +13,7 @@ https://sub.xeton.dev/sub?target=surge&ver=4&list=true&url=订阅
 ```
 编辑 /root/.bashrc
 ```
-export http_proxy=http://127.0.0.1:7890
+export all_proxy=http://127.0.0.1:7890
 ```
 运行 source .bashrc
 
