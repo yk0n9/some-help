@@ -43,7 +43,7 @@ proxy-providers:
       enable: true
       interval: 600
       # lazy: true
-      url: http://bing.com/
+      url: http://www.google.com/
 
 rules:
  - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
