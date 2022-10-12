@@ -19,8 +19,8 @@ proxy-groups:
     type: fallback
     use: 
       - Sub
-    url: http://bing.com/
-    interval: 300
+    url: http://www.google.com/
+    interval: 600
 
   - name: 🎯 全球直连
     type: select
