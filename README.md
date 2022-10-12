@@ -118,16 +118,18 @@ optirun -b primus command #使用独显运行command程序,提升性能
 cd ~/Desktop
 touch idea.desktop
 sudo vim idea.desktop
+
+or
+
+sudo vim /usr/share/applications/idea.desktop
 ```
 ```
 [Desktop Entry]
-Name=IntelliJ IDEA
-Comment=IntelliJ IDEA
-Exec=/home/ideaIU/bin/idea.sh ##替换成自己的目录
-Icon=/home/ideaIU/bin/idea.svg##替换成自己的目录
-Terminal=false
+Name=IDEA
 Type=Application
-Categories=Developer;
+Exec=/home/ideaIU/bin/idea.sh
+Icon=/home/ideaIU/bin/idea.svg
+Terminal=false
 ```
 **Docker**
 ```
