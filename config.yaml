@@ -38,11 +38,7 @@ proxy-providers:
     type: http
     url: https://sub.xeton.dev/sub?target=clash&list=true&url=订阅
     interval: 3600
-    path: sub.yaml
-    health-check:
-      enable: true
-      interval: 600
-      url: http://www.google.com
+    path: ./sub.yaml
 
 rules:
  - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
