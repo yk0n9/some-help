@@ -24,95 +24,96 @@ export all_proxy=http://127.0.0.1:7890
 3.关闭Source (Fast) Boot
 ```
 
-**铜豌豆软件源**：
-```
-wget https://www.atzlinux.com/atzlinux/download/install-all-single-script.sh
-```
-**non-free软件源**
-
-vim /etc/apt/sources.list
-```
-deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye main contrib non-free
-# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye main contrib non-free
-deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye-updates main contrib non-free
-# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye-updates main contrib non-free
-
-deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye-backports main contrib non-free
-# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye-backports main contrib non-free
-
-deb https://mirrors.tuna.tsinghua.edu.cn/debian-security bullseye-security main contrib non-free
-# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian-security bullseye-security main contrib non-free
-```
-sudo apt-get update
-
 **查看网卡型号**:
 ```
 lspci -nn
 ```
-**wifi**:
-```
-sudo apt-get install firmware-iwlwifi firmware-intelwimax firmware-realtek firmware-atheros
-sudo apt-get install gnome-control-center
-```
-**显卡**：
 
-命令自动安装
+**开启 32 位支持库**
 
-安装源内版本，终端执行：
+```bash
+vim /etc/pacman.conf
 ```
-sudo apt-get install nvidia-driver #安装驱动包
-```
-如果以上命令不能正常安装驱动，请终端执行：
-```
-ubuntu-drivers list  #检测合适的驱动包
-```
-然后使用如下命令安装对应的驱动包，例如检测的结果为nvidia-legacy-340xx-driver
-```
-sudo apt-get install  nvidia-legacy-340xx-driver #安装驱动包
-```
-卸载
 
-如果为命令自动安装，终端执行如下命令可卸载：
-```
-sudo apt-get remove nvidia-driver nvidia-kernel-dkms glx-alternative-nvidia
-```
-如果为手动安装，终端执行如下命令可卸载：
-```
-sudo nvidia-uninstall
-sudo nvidia-installer --uninstall
-```
-**双显卡方案**：
+去掉[multilib]一节中两行的注释，来开启 32 位库支持。
 
-**Intel & NVIDIA**
+最后:wq 保存退出，刷新 pacman 数据库
 
-关闭独显
+```bash
+pacman -Syyu
+```
 
-开机时，依据屏幕提示进主板设置，将独显设置为不启用。
+重启电脑，即可看到欢迎界面，输入新用户的密码即可登录桌面
 
-独显切换
+**安装一些基础功能包**
 
-安装第三方的Bumblebee程序，可实现NVIDIA Optimus，终端中执行：
+```bash
+sudo pacman -S sof-firmware alsa-firmware alsa-ucm-conf                     #一些可能需要的声音固件
+sudo pacman -S ntfs-3g                                                      #识别NTFS格式的硬盘
+sudo pacman -S adobe-source-han-serif-cn-fonts wqy-zenhei                   #安装几个开源中文字体 一般装上文泉驿就能解决大多wine应用中文方块的问题
+sudo pacman -S noto-fonts-cjk noto-fonts-emoji noto-fonts-extra             #安装谷歌开源字体及表情
+sudo pacman -S chromium                                                     #安装谷歌浏览器
+sudo pacman -S ark                                                          #与dolphin同用右键解压
+sudo pacman -S p7zip unrar unarchiver lzop lrzip                            #安装ark可选依赖
+sudo pacman -S packagekit-qt5 packagekit appstream-qt appstream             #确保Discover(软件中心）可用 需重启
+sudo pacman -S gwenview                                                     #图片查看器
+sudo pacman -S git wget kate bind                                                #一些工具
 ```
-sudo apt-get install bumblebee-nvidia primus #安装Bumblebee-nvidia(适用于闭源驱动),其中primus可选,用于提升性能
-sudo apt-get install bumblebee primus #安装Bumblebee(适用于开源驱动)
-sudo update-glx --config glx    #切换显卡的工作模式   选择的配置
-```
-在grub中给内核添加参数来防止系统出现冻结。
 
-在 GRUB_CMDLINE_LINUX_DEFAULT 变量中以
+**设置系统为中文**
+
+打开 _System Settings_ > _Regional Settings_ > _Language_ -> _Add languages_ 中选择中文加入，再拖拽到第一位，Apply。
+
+再将*System Settings* > _Regional Settings_ > _Formats_ 中的值设为`中文-简体中文(zh_CN)`
+
+最后重新登陆
+
+**安装输入法**
+
+```bash
+sudo pacman -S fcitx5-im #基础包组
+sudo pacman -S fcitx5-chinese-addons #官方中文输入引擎
+sudo pacman -S fcitx5-anthy #日文输入引擎
+yay -S fcitx5-pinyin-moegirl #萌娘百科词库 由于中国大陆政府对github封锁，你可能在此卡住。如卡住，可根据后文设置好代理后再安装
+sudo pacman -S fcitx5-pinyin-zhwiki #中文维基百科词库
+sudo pacman -S fcitx5-material-color #主题
 ```
-sudo vim /etc/default/grub
+
+设置环境变量：编辑文件 `EDITOR=vim sudoedit /etc/environment` 加入以下内容。konsole 以及 dolphin 都需要这些环境变量，倒是 chrome 和 firefox 都不需要就可以输入中文
+
+```bash
+GTK_IM_MODULE=fcitx
+QT_IM_MODULE=fcitx
+XMODIFIERS=@im=fcitx
+SDL_IM_MODULE=fcitx
 ```
+
+打开 _系统设置_ > _区域设置_ > _输入法_，先点击`运行Fcitx`即可，拼音为默认添加项。如你还需要更多输入法如五笔，则再点击`添加输入法`，找到简体中文下的五笔 ，点击添加即可加入五笔输入法。
+
+接下来点击 _拼音_ 右侧的配置按钮，点选`云拼音`和`在程序中显示预编辑文本` 最后应用。
+
+回到输入法设置，点击`配置附加组件`，找到 _经典用户界面_ 在主题里选择一个你喜欢的颜色 最后应用。
+
+注销，重新登陆，就可以发现已经可以在各个软件中输入中文了
+
+**英特尔核芯显卡**
+
+```bash
+sudo pacman -S mesa lib32-mesa vulkan-intel lib32-vulkan-intel
 ```
-acpi_osi=! acpi_osi="Windows 2009"
+
+**英伟达独立显卡**
+
+```bash
+sudo pacman -S nvidia nvidia-settings lib32-nvidia-utils
 ```
-安装完毕后重启电脑使Bumblebee生效，但是Bumblebee并不能做到集显（Intel显卡）和独显（NVIDIA显卡）之间的自动切换。系统运行时会默认使用集成显卡（Intel显卡），当你需要使用独显（NVIDIA显卡）运行某个程序或游戏时候，终端执行如下命令即可：
+
+**AMD 显卡**
+
+```bash
+sudo pacman -S mesa lib32-mesa xf86-video-amdgpu vulkan-radeon lib32-vulkan-radeon libva-mesa-driver lib32-libva-mesa-driver mesa-vdpau lib32-mesa-vdpau
 ```
-optirun command #使用独显运行command程序
-```
-```
-optirun -b primus command #使用独显运行command程序,提升性能
-```
+
 **创建桌面图标**
 ```
 cd ~/Desktop
