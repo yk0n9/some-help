@@ -19,7 +19,7 @@ proxy-groups:
     type: fallback
     use: 
       - Sub
-    url: http://www.google.com/
+    url: http://www.google.com
     interval: 600
 
   - name: 🎯 全球直连
@@ -42,8 +42,7 @@ proxy-providers:
     health-check:
       enable: true
       interval: 600
-      # lazy: true
-      url: http://www.google.com/
+      url: http://www.google.com
 
 rules:
  - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
