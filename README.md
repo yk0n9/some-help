@@ -57,7 +57,7 @@ sudo pacman -S ark                                                          #与
 sudo pacman -S p7zip unrar unarchiver lzop lrzip                            #安装ark可选依赖
 sudo pacman -S packagekit-qt5 packagekit appstream-qt appstream             #确保Discover(软件中心）可用 需重启
 sudo pacman -S gwenview                                                     #图片查看器
-sudo pacman -S git wget kate bind                                                #一些工具
+sudo pacman -S git wget kate bind                                           #一些工具
 ```
 
 **设置系统为中文**
@@ -71,15 +71,15 @@ sudo pacman -S git wget kate bind                                               
 **安装输入法**
 
 ```bash
-sudo pacman -S fcitx5-im #基础包组
-sudo pacman -S fcitx5-chinese-addons #官方中文输入引擎
-sudo pacman -S fcitx5-anthy #日文输入引擎
-yay -S fcitx5-pinyin-moegirl #萌娘百科词库 由于中国大陆政府对github封锁，你可能在此卡住。如卡住，可根据后文设置好代理后再安装
-sudo pacman -S fcitx5-pinyin-zhwiki #中文维基百科词库
-sudo pacman -S fcitx5-material-color #主题
+sudo pacman -S fcitx5-im              #基础包组
+sudo pacman -S fcitx5-chinese-addons  #官方中文输入引擎
+sudo pacman -S fcitx5-anthy           #日文输入引擎
+yay -S fcitx5-pinyin-moegirl          #萌娘百科词库
+sudo pacman -S fcitx5-pinyin-zhwiki   #中文维基百科词库
+sudo pacman -S fcitx5-material-color  #主题
 ```
 
-设置环境变量：编辑文件 `EDITOR=vim sudoedit /etc/environment` 加入以下内容。konsole 以及 dolphin 都需要这些环境变量，倒是 chrome 和 firefox 都不需要就可以输入中文
+设置环境变量：编辑文件 `sudo vim /etc/environment` 加入以下内容。konsole 以及 dolphin 都需要这些环境变量，倒是 chrome 和 firefox 都不需要就可以输入中文
 
 ```bash
 GTK_IM_MODULE=fcitx
