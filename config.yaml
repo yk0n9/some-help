@@ -34,6 +34,12 @@ proxy-groups:
 
 proxy-providers:
 
+#   Sub:
+#     type: http
+#     url: https://sub.xeton.dev/sub?target=clash&list=true&url=订阅
+#     interval: 3600
+#     path: ./sub.yaml
+
   Sub:
     type: http
     url: https://sub.xeton.dev/sub?target=clash&list=true&url=订阅
