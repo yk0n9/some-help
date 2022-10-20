@@ -16,7 +16,7 @@ dns:
 proxy-groups:
 
   - name: 🚀 节点选择
-    type: fallback
+    type: load-balance
     use: 
       - Sub
     url: http://www.google.com
