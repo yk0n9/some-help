@@ -39,6 +39,10 @@ proxy-providers:
 #     url: https://sub.xeton.dev/sub?target=clash&list=true&url=订阅
 #     interval: 3600
 #     path: ./sub.yaml
+#     health-check: 
+#       enable: true
+#       url: http://www.google.com
+#       interval: 600
 
   Sub:
     type: http
