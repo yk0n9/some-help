@@ -24,11 +24,6 @@ export all_proxy=http://127.0.0.1:7890
 3.关闭Source (Fast) Boot
 ```
 
-**查看网卡型号**:
-```
-lspci -nn
-```
-
 **开启 32 位支持库**
 
 ```bash
@@ -58,6 +53,8 @@ sudo pacman -S p7zip unrar unarchiver lzop lrzip                            #安
 sudo pacman -S packagekit-qt5 packagekit appstream-qt appstream             #确保Discover(软件中心）可用 需重启
 sudo pacman -S gwenview                                                     #图片查看器
 sudo pacman -S git wget kate bind                                           #一些工具
+sudo pacman -S yay
+sudo pacman -S neofetch
 ```
 
 **设置系统为中文**
@@ -221,15 +218,28 @@ git branch --set-upstream-to=origin/master
 ```
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
-
-**.cargo/config**
+**~/.cargo/config**
 ```
 [source.crates-io]
 registry = "https://github.com/rust-lang/crates.io-index"
 
-replace-with = 'tuna'
+replace-with = 'tuna' 
+
+# 中国科学技术大学
+[source.ustc]
+registry = "git://mirrors.ustc.edu.cn/crates.io-index"
+
+# 上海交通大学
+[source.sjtu]
+registry = "https://mirrors.sjtug.sjtu.edu.cn/git/crates.io-index"
+
+# 清华大学
 [source.tuna]
 registry = "https://mirrors.tuna.tsinghua.edu.cn/git/crates.io-index.git"
+
+# rustcc社区
+[source.rustcc]
+registry = "https://code.aliyun.com/rustcc/crates.io-index.git"
 ```
 
 **mysqlclient**
