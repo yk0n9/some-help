@@ -201,11 +201,11 @@ git branch --set-upstream-to=origin/master
 
 ### Rust
 
-**rustup default stable-x86_64-pc-windows-msvc**
+**rustup default stable-msvc**
 
 下载 [Visual Studio Community](https://visualstudio.microsoft.com/zh-hans/vs/community/) -- **使用C++的桌面开发**
 
-**rustup default stable-x86_64-pc-windows-gnu**
+**rustup default stable-gnu**
 
 下载 [MinGW-w64](https://sourceforge.net/projects/mingw-w64/files/) -- **x86_64-posix-seh**
 
