@@ -16,10 +16,10 @@ dns:
 proxy-groups:
 
   - name: 🚀 节点选择
-    type: load-balance
+    type: fallback
     use: 
       - Sub
-    url: http://www.google.com
+    url: http://bing.com
     interval: 600
 
   - name: 🎯 全球直连
@@ -41,7 +41,7 @@ proxy-providers:
 #     path: ./sub.yaml
 #     health-check: 
 #       enable: true
-#       url: http://www.google.com
+#       url: http://bing.com
 #       interval: 600
 
   Sub:
@@ -51,7 +51,7 @@ proxy-providers:
     path: ./sub.yaml
 #     health-check: 
 #       enable: true
-#       url: http://www.google.com
+#       url: http://bing.com
 #       interval: 600
 
 rules:
