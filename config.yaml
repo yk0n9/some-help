@@ -16,7 +16,7 @@ dns:
 proxy-groups:
 
   - name: 🚀 节点选择
-    type: fallback
+    type: url-test
     use: 
       - Sub
     url: http://bing.com
