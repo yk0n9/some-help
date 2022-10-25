@@ -54,6 +54,8 @@ proxy-providers:
 #       url: http://bing.com
 #       interval: 600
 
+# Windows下请开启这里👆
+
 rules:
  - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
  - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
