@@ -19,7 +19,7 @@ export all_proxy=http://127.0.0.1:7890
 
 **BIOS**
 ```
-1.开启CSM（兼容）
+1.开启CSM (兼容)
 2.开启AHCI
 3.关闭Source (Fast) Boot
 ```
