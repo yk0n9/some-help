@@ -129,6 +129,25 @@ Exec=/home/ideaIU/bin/idea.sh
 Icon=/home/ideaIU/bin/idea.svg
 Terminal=false
 ```
+
+sddm.conf 文件现在默认不会自动生成了。需要自己创建：
+
+ee /usr/local/etc/sddm.conf
+
+写入
+
+MinimumUid=0
+
+MaximumUid=0
+
+0就是root用户。
+
+然后更改/usr/local/etc/pam.d/sddm文件
+
+把include之后的login，替换成system，一共4个。
+
+之后就可以以root登录sddm了！
+
 **Docker**
 ```
 mysql
