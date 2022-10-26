@@ -149,7 +149,9 @@ MaximumUid=0
 
 之后就可以以root登录sddm了！
 
-将root加到pulse-access组 sudo usermod -a -G pulse-access root
+将root加到pulse-access组
+
+sudo usermod -a -G pulse-access root
 
 **Docker**
 ```
