@@ -109,6 +109,7 @@ sudo pacman -S nvidia nvidia-settings lib32-nvidia-utils
 
 ```bash
 sudo pacman -S mesa lib32-mesa xf86-video-amdgpu vulkan-radeon lib32-vulkan-radeon libva-mesa-driver lib32-libva-mesa-driver mesa-vdpau lib32-mesa-vdpau
+sudo pacman -S mesa lib32-mesa xf86-video-amdgpu vulkan-radeon lib32-vulkan-radeon
 ```
 
 **创建桌面图标**
@@ -147,6 +148,8 @@ MaximumUid=0
 把include之后的login，替换成system，一共4个。
 
 之后就可以以root登录sddm了！
+
+将root加到pulse-access组 sudo usermod -a -G pulse-access root
 
 **Docker**
 ```
