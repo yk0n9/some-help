@@ -132,27 +132,29 @@ Terminal=false
 ```
 
 sddm.conf 文件现在默认不会自动生成了。需要自己创建：
-
-ee /usr/local/etc/sddm.conf
-
+```
+sudo vim /usr/local/etc/sddm.conf
+```
 写入
-
+```
 MinimumUid=0
 
 MaximumUid=0
-
+```
 0就是root用户。
 
-然后更改/usr/local/etc/pam.d/sddm文件
-
+然后更改
+```
+sudo vim /usr/local/etc/pam.d/sddm
+```
 把include之后的login，替换成system，一共4个。
 
-之后就可以以root登录sddm了！
+之后就可以以root登录sddm了
 
 将root加到pulse-access组
-
+```
 sudo usermod -a -G pulse-access root
-
+```
 **Docker**
 ```
 mysql
