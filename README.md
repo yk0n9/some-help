@@ -42,10 +42,16 @@ vim /etc/pacman.conf
 
 去掉[multilib]一节中两行的注释，来开启 32 位库支持。
 
+添加Archlinuxcn源
+```bash
+[archlinuxcn]
+Server = https://repo.archlinuxcn.org/$arch
+```
+
 最后:wq 保存退出，刷新 pacman 数据库
 
 ```bash
-pacman -Syyu
+sudo pacman -Sy && sudo pacman -S archlinuxcn-keyring
 ```
 
 重启电脑，即可看到欢迎界面，输入新用户的密码即可登录桌面
@@ -142,7 +148,7 @@ Terminal=false
 ```
 
 sddm.conf 文件现在默认不会自动生成了。需要自己创建：
-```
+```bash
 sudo vim /usr/local/etc/sddm.conf
 ```
 写入
@@ -154,7 +160,7 @@ MaximumUid=0
 0就是root用户。
 
 然后更改
-```
+```bash
 sudo vim /usr/local/etc/pam.d/sddm
 ```
 把include之后的login，替换成system，一共4个。
