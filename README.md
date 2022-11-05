@@ -20,6 +20,9 @@ Surge：
 https://sub.xeton.dev/sub?target=surge&ver=4&list=true&url=你的订阅链接
 
 https://sub.xeton.dev/sub?target=surge&ver=4&list=true&url=encode后的[订阅|订阅|...]
+
+---
+https://sub.xeton.dev/sub?target=auto&list=true&url=你的订阅链接
 ```
 编辑 /root/.bashrc
 ```
