@@ -7,17 +7,17 @@
 多订阅用[encode](https://www.urlencoder.org/)后的链接,用|分隔
 ```
 Clash：
-https://sub.xeton.dev/sub?target=clash&list=true&url=订阅
+https://sub.xeton.dev/sub?target=clash&list=true&url=你的订阅链接
 
 https://sub.xeton.dev/sub?target=clash&list=true&url=encode后的[订阅|订阅|...]
 
 QuanX：
-https://sub.xeton.dev/sub?target=quanx&list=true&url=订阅
+https://sub.xeton.dev/sub?target=quanx&list=true&url=你的订阅链接
 
 https://sub.xeton.dev/sub?target=quanx&list=true&url=encode后的[订阅|订阅|...]
 
 Surge：
-https://sub.xeton.dev/sub?target=surge&ver=4&list=true&url=订阅
+https://sub.xeton.dev/sub?target=surge&ver=4&list=true&url=你的订阅链接
 
 https://sub.xeton.dev/sub?target=surge&ver=4&list=true&url=encode后的[订阅|订阅|...]
 ```
