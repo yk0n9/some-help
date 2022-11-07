@@ -296,3 +296,31 @@ registry = "https://code.aliyun.com/rustcc/crates.io-index.git"
 默认在 C:\Program Files\MySQL\MySQL Connector C 6.1\lib\vs14
 
 然后执行 cargo install diesel_cli --no-default-features --features mysql
+
+## Vim-Plug
+
+###### Unix, Linux
+
+```sh
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+```
+###### Windows (PowerShell)
+
+```powershell
+iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim |`
+    ni "$(@($env:XDG_DATA_HOME, $env:LOCALAPPDATA)[$null -eq $env:XDG_DATA_HOME])/nvim-data/site/autoload/plug.vim" -Force
+```
+edit ~/.vimrc
+```
+call plug#begin('~/.vim/plugged')
+
+Plug 'joshdick/onedark.vim'
+
+call plug#end()
+```
+```
+:source %
+:PlugInstall
+```
+
