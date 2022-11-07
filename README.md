@@ -1,7 +1,7 @@
 # My-Tools
 
 ## 获取订阅链接
-### Clash
+###### Clash
 ```
 ~/.config/clash/config.yaml
 ```
@@ -132,7 +132,7 @@ sudo pacman -S mesa lib32-mesa xf86-video-amdgpu vulkan-radeon lib32-vulkan-rade
 sudo pacman -S mesa lib32-mesa xf86-video-amdgpu vulkan-radeon lib32-vulkan-radeon
 ```
 
-## 创建桌面图标
+**创建桌面图标**
 ```
 cd ~/Desktop
 touch idea.desktop
@@ -244,7 +244,7 @@ git branch --set-upstream-to=origin/master
 
 ## Rust
 
-### Win
+### Windows
 
 下载 [Rustup](https://win.rustup.rs/x86_64)
 
