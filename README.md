@@ -175,6 +175,15 @@ sudo vim /usr/local/etc/pam.d/sddm
 ```
 sudo usermod -a -G pulse-access root
 ```
+## 开机自启
+
+###### windows
+运行CMD，输入
+```
+shell:startup
+```
+把应用程序放入文件夹内
+
 ## Docker
 ```
 mysql
