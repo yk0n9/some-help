@@ -1,6 +1,7 @@
 # My-Tools
 
-**获取订阅链接**：
+## 获取订阅链接
+### Clash
 ```
 ~/.config/clash/config.yaml
 ```
@@ -30,13 +31,13 @@ export all_proxy=http://127.0.0.1:7890
 ```
 运行 source .bashrc
 
-**BIOS**
+## BIOS
 ```
 1.开启CSM (兼容)
 2.开启AHCI
-3.关闭Source (Fast) Boot
+3.关闭Source [Fast] Boot (如果安装Windows开启)
 ```
-
+## Archlinux
 **开启 32 位支持库**
 
 ```bash
@@ -131,7 +132,7 @@ sudo pacman -S mesa lib32-mesa xf86-video-amdgpu vulkan-radeon lib32-vulkan-rade
 sudo pacman -S mesa lib32-mesa xf86-video-amdgpu vulkan-radeon lib32-vulkan-radeon
 ```
 
-**创建桌面图标**
+## 创建桌面图标
 ```
 cd ~/Desktop
 touch idea.desktop
@@ -174,7 +175,7 @@ sudo vim /usr/local/etc/pam.d/sddm
 ```
 sudo usermod -a -G pulse-access root
 ```
-**Docker**
+## Docker
 ```
 mysql
 docker run --name some-mysql -p 3306:3306 -v /d/mysql/datadir:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=root -d mysql:8.0.27
@@ -192,7 +193,7 @@ clash
 docker run --name some-clash -p 9090:9090 -p 7890:7890 -v /d/clash:/root/.config/clash -d --restart always dreamacro/clash:latest
 ```
 
-**同步GitHub项目**
+## 同步GitHub项目
 
 生成SSH秘钥
 
@@ -241,9 +242,9 @@ git branch --set-upstream-to=origin/master
 ```
 至此，本地仓库重新与github远程仓库建立了连接,再次执行git pull,出现up to date就没问题了
 
-### Rust
+## Rust
 
-#### Win
+### Win
 
 下载 [Rustup](https://win.rustup.rs/x86_64)
 
@@ -257,7 +258,7 @@ git branch --set-upstream-to=origin/master
 
 下载 [CMake](https://cmake.org/download/) -- 环境变量
 
-#### Linux
+### Linux
 
 执行
 ```
@@ -295,8 +296,10 @@ registry = "https://code.aliyun.com/rustcc/crates.io-index.git"
 
 默认在 C:\Program Files\MySQL\MySQL Connector C 6.1\lib\vs14
 
-然后执行 cargo install diesel_cli --no-default-features --features mysql
-
+然后执行
+```
+cargo install diesel_cli --no-default-features --features mysql
+```
 ## Vim-Plug
 
 ###### Unix, Linux
