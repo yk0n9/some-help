@@ -19,7 +19,6 @@ proxy-groups:
     type: fallback
     use: 
       - Sub
-    url: http://bing.com
 
   - name: 🎯 全球直连
     type: select
@@ -48,10 +47,10 @@ proxy-providers:
     url: https://sub.xeton.dev/sub?target=clash&list=true&url=订阅
     interval: 3600
     path: ./sub.yaml
-#     health-check: 
-#       enable: true
-#       url: http://bing.com
-#       interval: 600
+    health-check: 
+      enable: true
+      url: http://bing.com
+      interval: 600
 
 rules:
  - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
