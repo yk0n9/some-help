@@ -271,7 +271,7 @@ git branch --set-upstream-to=origin/master
 
 执行
 ```
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+curl https://sh.rustup.rs -sSf | sh
 ```
 **~/.cargo/config**
 ```
