@@ -257,6 +257,13 @@ git branch --set-upstream-to=origin/master
 
 下载 [rustup](https://win.rustup.rs/x86_64)
 
+### Linux
+
+执行
+```
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+```
+
 **rustup default stable-msvc**
 
 下载 [Visual Studio Community](https://visualstudio.microsoft.com/zh-hans/vs/community) -- **使用C++的桌面开发**
@@ -265,14 +272,10 @@ git branch --set-upstream-to=origin/master
 
 下载 [MinGW-w64](https://winlibs.com/#download-release) -- **x86_64-posix-seh** -- 环境变量
 
+下载 [LLVM](https://github.com/llvm/llvm-project/releases) -- 环境变量
+
 下载 [CMake](https://cmake.org/download/) -- 环境变量
 
-### Linux
-
-执行
-```
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-```
 **~/.cargo/config**
 ```
 [source.crates-io]
