@@ -322,9 +322,11 @@ nvim ~/AppData/Local/nvim/init.vim
 ```
 call plug#begin('~/.vim/plugged')
 
-Plug 'joshdick/onedark.vim'
+" gruvbox theme
+Plug 'morhetz/gruvbox'
 
 call plug#end()
+colorscheme gruvbox
 ```
 ```
 :source %
