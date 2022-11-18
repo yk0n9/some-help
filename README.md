@@ -259,11 +259,11 @@ git branch --set-upstream-to=origin/master
 
 **rustup default stable-msvc**
 
-下载 [Visual Studio Community](https://visualstudio.microsoft.com/zh-hans/vs/community/) -- **使用C++的桌面开发**
+下载 [Visual Studio Community](https://visualstudio.microsoft.com/zh-hans/vs/community) -- **使用C++的桌面开发**
 
 **rustup default stable-gnu**
 
-下载 [MinGW-w64](https://sourceforge.net/projects/mingw-w64/files/) -- **x86_64-posix-seh**
+下载 [MinGW-w64](https://winlibs.com/#download-release) -- **x86_64-posix-seh**
 
 下载 [CMake](https://cmake.org/download/) -- 环境变量
 
