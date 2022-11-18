@@ -255,7 +255,7 @@ git branch --set-upstream-to=origin/master
 
 ### Windows
 
-下载 [Rustup](https://win.rustup.rs/x86_64)
+下载 [rustup](https://win.rustup.rs/x86_64)
 
 **rustup default stable-msvc**
 
@@ -263,7 +263,7 @@ git branch --set-upstream-to=origin/master
 
 **rustup default stable-gnu**
 
-下载 [MinGW-w64](https://winlibs.com/#download-release) -- **x86_64-posix-seh**
+下载 [MinGW-w64](https://winlibs.com/#download-release) -- **x86_64-posix-seh** -- 环境变量
 
 下载 [CMake](https://cmake.org/download/) -- 环境变量
 
@@ -271,7 +271,7 @@ git branch --set-upstream-to=origin/master
 
 执行
 ```
-curl https://sh.rustup.rs -sSf | sh
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 **~/.cargo/config**
 ```
