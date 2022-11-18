@@ -15,11 +15,9 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 set laststatus=2
 
-" Rust支持
-Plug 'rust-lang/rust.vim'
-
 " 自动补全
 Plug 'valloric/youcompleteme'
+
 " gruvbox theme
 Plug 'morhetz/gruvbox'
 
@@ -56,32 +54,24 @@ set showmode
 set background=dark
 " 启用gruvbox主题
 colorscheme gruvbox
-
 " 显示相对行号
 set relativenumber
 " 显示行号
 set number
-
 " 开启剪切板
 set clipboard=unnamed
-
 " 解决退格键
 set backspace=2
-
 " 插入的tab换位空格
 set tabstop=2
 set expandtab
 set shiftwidth=2
-
 " 自动与上一行缩进
 set autoindent
-
 " 允许使用鼠标控制
 set mouse=a
-
 " 高亮当前行
 set cursorline
 highlight NERDTreeFile ctermfg=14
-
 " 高亮所有搜索结果
 set hlsearch
