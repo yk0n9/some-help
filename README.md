@@ -270,9 +270,10 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 **rustup default stable-gnu**
 
-下载 [MinGW-w64](https://winlibs.com/#download-release) -- **x86_64-posix-seh** -- 环境变量
+下载 [MinGW-w64](https://winlibs.com/#download-release) -- 环境变量
 
-下载 [LLVM](https://github.com/llvm/llvm-project/releases) -- 环境变量
+---
+下载 [LLVM](https://github.com/llvm/llvm-project/releases/latest) -- 环境变量
 
 下载 [CMake](https://cmake.org/download/) -- 环境变量
 
