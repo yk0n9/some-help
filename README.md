@@ -75,6 +75,7 @@ sudo pacman -S gwenview                                                     #图
 sudo pacman -S git wget kate bind                                           #一些工具
 sudo pacman -S yay
 sudo pacman -S neofetch
+sudo pacman -S neovim
 ```
 
 **设置系统为中文**
