@@ -1,8 +1,8 @@
 mixed-port: 7890
 allow-lan: true
 mode: rule
-external-controller: 0.0.0.0:9090
-external-ui: yacd-gh-pages
+external-controller: :9090
+external-ui: clash-dashboard-gh-pages
 
 dns: 
   enable: true
