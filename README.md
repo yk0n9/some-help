@@ -1,29 +1,44 @@
-# My-Tools
+# Some-Help
 
-## 获取订阅链接
+## 我的精简配置
+###### Shadowrocket
+```
+https://raw.fastgit.org/Ykong1337/some-help/master/Shadowrocket.conf
+```
+###### Quantumult X
+```
+https://raw.fastgit.org/Ykong1337/some-help/master/QuanX.conf
+```
+###### Surge
+```
+https://raw.fastgit.org/Ykong1337/some-help/master/SurgePro.conf
+```
 ###### Clash
+```
+https://raw.fastgit.org/Ykong1337/some-help/master/config.yaml
+```
+## 获取订阅链接
+###### Clash配置位置
 ```
 ~/.config/clash/config.yaml
 ```
-多订阅用[encode](https://www.urlencoder.org/)后的链接,用|分隔
+###### 多订阅用[URLEncode](https://www.urlencoder.org/)后的链接, 订阅之间用|分隔
 ```
-Clash：
-https://sub.xeton.dev/sub?target=clash&list=true&url=你的订阅链接
+Clash: 
+https://sub.xeton.dev/sub?target=clash&list=true&url=订阅链接
+https://sub.xeton.dev/sub?target=clash&list=true&url=Encode后的[订阅|订阅|...]
 
-https://sub.xeton.dev/sub?target=clash&list=true&url=encode后的[订阅|订阅|...]
+QuanX: 
+https://sub.xeton.dev/sub?target=quanx&list=true&url=订阅链接
+https://sub.xeton.dev/sub?target=quanx&list=true&url=Encode后的[订阅|订阅|...]
 
-QuanX：
-https://sub.xeton.dev/sub?target=quanx&list=true&url=你的订阅链接
+Surge: 
+https://sub.xeton.dev/sub?target=surge&ver=4&list=true&url=订阅链接
+https://sub.xeton.dev/sub?target=surge&ver=4&list=true&url=Encode后的[订阅|订阅|...]
 
-https://sub.xeton.dev/sub?target=quanx&list=true&url=encode后的[订阅|订阅|...]
-
-Surge：
-https://sub.xeton.dev/sub?target=surge&ver=4&list=true&url=你的订阅链接
-
-https://sub.xeton.dev/sub?target=surge&ver=4&list=true&url=encode后的[订阅|订阅|...]
-
----
-https://api.v1.mk/sub?target=auto&list=true&url=你的订阅链接
+自动判断:
+https://api.v1.mk/sub?target=auto&list=true&url=订阅链接
+https://api.v1.mk/sub?target=auto&list=true&url=Encode后的[订阅|订阅|...]
 ```
 编辑 /root/.bashrc
 ```
@@ -129,7 +144,6 @@ sudo pacman -S nvidia nvidia-settings lib32-nvidia-utils
 **AMD 显卡**
 
 ```bash
-sudo pacman -S mesa lib32-mesa xf86-video-amdgpu vulkan-radeon lib32-vulkan-radeon libva-mesa-driver lib32-libva-mesa-driver mesa-vdpau lib32-mesa-vdpau
 sudo pacman -S mesa lib32-mesa xf86-video-amdgpu vulkan-radeon lib32-vulkan-radeon
 ```
 
@@ -178,7 +192,7 @@ sudo usermod -a -G pulse-access root
 ```
 ## 开机自启
 
-###### windows
+###### Windows
 运行CMD，输入
 ```
 shell:startup
