@@ -18,16 +18,16 @@ set laststatus=2
 " 自动补全
 Plug 'valloric/youcompleteme'
 
-" intellij主题
-Plug 'chiendo97/intellij.vim'
-set background=light
-colorscheme intellij
-let g:lightline.colorscheme='intellij'
+" onedark主题
+Plug 'joshdick/onedark.vim'
 
 " 错误提示
 Plug 'w0rp/ale'
 
 call plug#end()
+
+" 使用onedark主题
+colorscheme onedark
 
 " 不与vi兼容
 set nocompatible
@@ -53,8 +53,6 @@ set nowrap
 set t_Co=256
 " 显示当前的模式
 set showmode
-" 启用gruvbox主题
-colorscheme gruvbox
 " 显示相对行号
 set relativenumber
 " 显示行号
