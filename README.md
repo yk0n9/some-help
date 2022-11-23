@@ -341,11 +341,11 @@ nvim ~/AppData/Local/nvim/init.vim
 ```
 call plug#begin('~/.vim/plugged')
 
-" onedark theme
+" onedark主题
 Plug 'joshdick/onedark.vim'
-set background=dark
 
 call plug#end()
+
 colorscheme onedark
 ```
 ```
