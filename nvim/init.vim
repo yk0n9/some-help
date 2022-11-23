@@ -18,8 +18,11 @@ set laststatus=2
 " 自动补全
 Plug 'valloric/youcompleteme'
 
-" gruvbox theme
-Plug 'morhetz/gruvbox'
+" intellij主题
+Plug 'chiendo97/intellij.vim'
+set background=light
+colorscheme intellij
+let g:lightline.colorscheme='intellij'
 
 " 错误提示
 Plug 'w0rp/ale'
@@ -50,8 +53,6 @@ set nowrap
 set t_Co=256
 " 显示当前的模式
 set showmode
-" 设置黑色背景
-set background=dark
 " 启用gruvbox主题
 colorscheme gruvbox
 " 显示相对行号
