@@ -283,6 +283,10 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 下载 [Visual Studio Community](https://visualstudio.microsoft.com/zh-hans/vs/community) -- **使用C++的桌面开发**
 
+或
+
+下载 [Windows SDK](https://developer.microsoft.com/zh-cn/windows/downloads/windows-sdk/)
+
 **rustup default stable-gnu**
 
 下载 [MinGW-w64](https://winlibs.com/#download-release) -- 环境变量
