@@ -285,7 +285,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 或
 
-下载 [Windows SDK](https://developer.microsoft.com/zh-cn/windows/downloads/windows-sdk/)
+下载 [Windows SDK](https://visualstudio.microsoft.com/visual-cpp-build-tools/)
 
 **rustup default stable-gnu**
 
