@@ -281,11 +281,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 **rustup default stable-msvc**
 
-下载 [Visual Studio Community](https://visualstudio.microsoft.com/zh-hans/vs/community) -- **使用C++的桌面开发**
-
-或
-
-下载 [Windows SDK](https://visualstudio.microsoft.com/visual-cpp-build-tools/)
+下载 [C++ Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/) -- **使用C++的桌面开发**
 
 **rustup default stable-gnu**
 
