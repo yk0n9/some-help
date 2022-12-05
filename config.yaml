@@ -3,7 +3,6 @@ mixed-port: 7890
 allow-lan: true
 mode: rule
 external-controller: :9090
-external-ui: clash-dashboard-gh-pages
 
 dns:
   enable: true
@@ -44,17 +43,17 @@ proxy-providers:
       interval: 600
 
 rule-providers:
-  AdvertisingLite:
+  Advertising:
     behavior: "classical"
     type: http
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AdvertisingLite/AdvertisingLite_Classical.yaml"
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Advertising/Advertising_Classical.yaml"
     interval: 86400
-    path: ./AdvertisingLite.yaml
+    path: ./Advertising.yaml
 
-  ProxyLite:
+  Proxy:
     behavior: "classical"
     type: http
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ProxyLite/ProxyLite.yaml"
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Proxy/Proxy_Classical.yaml"
     interval: 86400
     path: ./ProxyLite.yaml
 
@@ -67,8 +66,8 @@ rule-providers:
 
 
 rules:
-  - RULE-SET,AdvertisingLite,REJECT
-  - RULE-SET,ProxyLite,Auto
+  - RULE-SET,Advertising,REJECT
+  - RULE-SET,Proxy,Auto
   - RULE-SET,China,DIRECT
   - GEOIP,CN,DIRECT
   - MATCH,Auto
