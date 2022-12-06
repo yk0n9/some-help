@@ -250,6 +250,8 @@ git init
 再然后就是设置用户名和邮箱
 ```
 git config --global user.name "用户名"
+```
+```
 git config --global user.email "你的邮箱"
 ```
 设置完后，设置你想要建立对应连接的远程仓库SSH地址
