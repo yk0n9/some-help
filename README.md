@@ -216,14 +216,20 @@ docker run --name some-nacos -p 8848:8848 -e MODE=standalone -d nacos/nacos-serv
 clash
 docker run --name some-clash -p 9090:9090 -p 7890:7890 -v /d/clash:/root/.config/clash -d --restart always dreamacro/clash:latest
 ```
-
+###### 设置Git代理
+```
+git config --global http.proxy 127.0.0.1:7890
+```
+```
+git config --global https.proxy 127.0.0.1:7890
+```
 ## 同步GitHub项目
 
 生成SSH秘钥
 
-第一步先生成ssh秘钥。在系统根目录下打开命令行终端，执行命令：
+在系统根目录下打开命令行终端，执行命令
 ```
-ssh-keygen -t rsa -C "填写你的任意邮箱"
+ssh-keygen -t rsa -C "填写你的邮箱"
 ```
 执行完成后，会生成一个.ssh文件夹，里面的id_rsa.pub文件内容就是秘钥，那么我们就进入ssh文件夹打开该文件后复制它的内容。或者命令行快速打开
 ```
@@ -237,22 +243,22 @@ cd ./.ssh && cat id_rsa.pub
 
 验证SSH
 
-回到本地，随便找个空文件夹或者新建一个文件夹，在这个新文件夹下新建一个git本地仓库。终端在这个文件夹的路径下打开，路径一定要正确，然后执行
+回到本地，随便找个空文件夹或者新建一个文件夹，在这个新文件夹下新建一个git本地仓库。终端在这个文件夹的路径下打开，然后执行
 ```
 git init
 ```
-再然后就是设置用户名和邮箱：
+再然后就是设置用户名和邮箱
 ```
 git config --global user.name "用户名"
 git config --global user.email "你的邮箱"
 ```
-设置完后，设置你想要建立对应连接的远程仓库地址：
+设置完后，设置你想要建立对应连接的远程仓库SSH地址
 ```
-git remote add origin git@github.com:XXXXXXX/xxxxxxx.git   
+git remote add origin git@github.com:XXX/xxx.git   
 ```
-这里的地址填写你github仓库的SSH地址，注意是SSH的地址不是http的地址
+这里的地址填写你github仓库的SSH地址
 
-设置完成后，把远程仓库的源代码拉取到本地：
+设置完成后，把远程仓库的源代码拉取到本地
 ```
 git pull origin master --allow-unrelated-histories 
 ```
@@ -260,7 +266,7 @@ git pull origin master --allow-unrelated-histories
 
 一般来讲没有改过的分支名肯定有一个是master，只不过不知道你想要的代码在不在master分支。
 
-执行上述命令后会出现一堆信息，大概就是关于验证的，结束会有一个（yes/no），这里手打‘yes’再回车就可以完成验证了，直接打回车会验证错误，    验证通过后就会拉取远程master分支的代码到你的文件夹，并同时在本地创建一个master分支。接下来就是要建立本地分支和远程分支的追踪关系，方便以后push，执行如下命令：
+执行上述命令后会出现一堆信息，大概就是关于验证的，结束会有一个（yes/no），这里手打'yes'再回车就可以完成验证了，直接打回车会验证错误，验证通过后就会拉取远程master分支的代码到你的文件夹，并同时在本地创建一个master分支。接下来就是要建立本地分支和远程分支的追踪关系，方便以后push，执行如下命令
 ```
 git branch --set-upstream-to=origin/master
 ```
