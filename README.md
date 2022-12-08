@@ -324,6 +324,11 @@ registry = "https://mirrors.tuna.tsinghua.edu.cn/git/crates.io-index.git"
 ```
 cargo install diesel_cli --no-default-features --features mysql
 ```
+## Windows下的包管理器
+
+```powershell
+iwr -useb get.scoop.sh | iex
+```
 ## Vim-Plug
 
 ###### Unix, Linux
