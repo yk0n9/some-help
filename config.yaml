@@ -13,7 +13,7 @@ dns:
 
 proxy-groups:
 
-  - name: Auto
+  - name: PROXY
     type: fallback
     use:
       - Sub
@@ -67,7 +67,7 @@ rule-providers:
 
 rules:
   - RULE-SET,Advertising,REJECT
-  - RULE-SET,Proxy,Auto
+  - RULE-SET,Proxy,PROXY
   - RULE-SET,China,DIRECT
   - GEOIP,CN,DIRECT
-  - MATCH,Auto
+  - MATCH,PROXY
