@@ -274,6 +274,16 @@ git branch --set-upstream-to=origin/master
 ```
 至此，本地仓库重新与github远程仓库建立了连接,再次执行git pull,出现up to date就没问题了
 
+## Windows下的包管理器 (PowerShell)
+
+###### PowerShell
+```
+iwr -useb get.scoop.sh | iex
+```
+```
+scoop update
+```
+
 ## Rust
 
 ### Windows
@@ -286,19 +296,26 @@ git branch --set-upstream-to=origin/master
 ```
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
-
+安装 LLVM
+```
+scoop install llvm
+```
 **rustup default stable-msvc**
 
 下载 [C++ Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/) -- **使用C++的桌面开发**
 
 **rustup default stable-gnu**
 
-下载 [MinGW-w64](https://winlibs.com/#download-release) -- 环境变量
+安装 MingWG
+```
+scoop install mingw
+```
+###### 其他
 
----
-下载 [LLVM](https://github.com/llvm/llvm-project/releases/latest) -- 环境变量
-
-下载 [CMake](https://cmake.org/download/) -- 环境变量
+安装 CMake
+```
+scoop install cmake
+```
 
 **~/.cargo/config**
 ```
@@ -324,14 +341,7 @@ registry = "https://mirrors.tuna.tsinghua.edu.cn/git/crates.io-index.git"
 ```
 cargo install diesel_cli --no-default-features --features mysql
 ```
-## Windows下的包管理器 (PowerShell)
 
-```powershell
-iwr -useb get.scoop.sh | iex
-```
-```
-scoop update
-```
 安装Vim
 ```
 scoop install vim
