@@ -311,8 +311,8 @@ scoop install llvm
 ```
 scoop install mingw
 ```
-###### 其他
-
+其他
+---
 安装 CMake
 ```
 scoop install cmake
@@ -367,7 +367,6 @@ iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim |`
 ```
 nvim ~/AppData/Local/nvim/init.vim
 ```
-
 ---
 ```
 call plug#begin('~/.vim/plugged')
