@@ -296,6 +296,7 @@ scoop update
 ```
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
+---
 安装 LLVM
 ```
 scoop install llvm
