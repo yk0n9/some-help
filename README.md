@@ -307,7 +307,7 @@ scoop install llvm
 
 **rustup default stable-gnu**
 
-安装 MingWG
+安装 MinGW
 ```
 scoop install mingw
 ```
