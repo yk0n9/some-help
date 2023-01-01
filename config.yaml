@@ -3,6 +3,7 @@ mixed-port: 7890
 allow-lan: true
 mode: rule
 external-controller: :9090
+external-ui: yacd
 
 dns:
   enable: true
@@ -36,7 +37,7 @@ proxy-providers:
     type: http
     url: https://sub.xeton.dev/sub?target=clash&list=true&url=订阅
     interval: 3600
-    path: ./sub.yaml
+    path: ./Sub.yaml
     health-check:
       enable: true
       url: http://bing.com
@@ -44,23 +45,30 @@ proxy-providers:
 
 rule-providers:
   Advertising:
-    behavior: "classical"
+    behavior: classical
     type: http
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Advertising/Advertising_Classical.yaml"
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Advertising/Advertising_Classical.yaml
     interval: 21600
     path: ./Advertising.yaml
 
   Proxy:
-    behavior: "classical"
+    behavior: classical
     type: http
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Proxy/Proxy_Classical.yaml"
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Proxy/Proxy_Classical.yaml
     interval: 21600
     path: ./Proxy.yaml
 
-  China:
-    behavior: "classical"
+  SteamCN:
+    behavior: classical
     type: http
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/China/China_Classical.yaml"
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/SteamCN/SteamCN.yaml
+    interval: 21600
+    path: ./SteamCN.yaml
+
+  China:
+    behavior: classical
+    type: http
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/China/China_Classical.yaml
     interval: 21600
     path: ./China.yaml
 
@@ -68,6 +76,8 @@ rule-providers:
 rules:
   - RULE-SET,Advertising,REJECT
   - RULE-SET,Proxy,PROXY
+  - RULE-SET,SteamCN,DIRECT
   - RULE-SET,China,DIRECT
   - GEOIP,CN,DIRECT
   - MATCH,PROXY
+  
