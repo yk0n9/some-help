@@ -231,6 +231,9 @@ git config --global https.proxy 127.0.0.1:7890
 iwr -useb get.scoop.sh | iex
 ```
 ```
+scoop bucket add extras
+```
+```
 scoop update
 ```
 
