@@ -226,12 +226,16 @@ git config --global https.proxy 127.0.0.1:7890
 ## Windows下的包管理器 (PowerShell)
 
 ###### PowerShell
+
+安装scoop
 ```
 iwr -useb get.scoop.sh | iex
 ```
+为scoop增加源
 ```
 scoop bucket add extras
 ```
+更新scoop源
 ```
 scoop update
 ```
@@ -249,7 +253,7 @@ scoop update
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 ---
-安装 LLVM
+安装LLVM
 ```
 scoop install llvm
 ```
@@ -259,13 +263,13 @@ scoop install llvm
 
 **rustup default stable-gnu**
 
-安装 MinGW
+安装MinGW
 ```
 scoop install mingw
 ```
 其他
 ---
-安装 CMake
+安装CMake
 ```
 scoop install cmake
 ```
