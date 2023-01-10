@@ -25,19 +25,19 @@ https://raw.fastgit.org/Ykong1337/some-help/master/config.yaml
 ###### 多订阅用[URLEncode](https://www.urlencoder.org/)后的链接, 订阅之间用|分隔
 ```
 Clash: 
-https://sub.xeton.dev/sub?target=clash&list=true&url=订阅链接
-https://sub.xeton.dev/sub?target=clash&list=true&url=Encode后的[订阅|订阅|...]
+https://sub.xeton.dev/sub?target=clash&list=true&sort=true&url=订阅链接
+https://sub.xeton.dev/sub?target=clash&list=true&sort=true&url=Encode后的[订阅|订阅|...]
 
 QuanX: 
-https://sub.xeton.dev/sub?target=quanx&list=true&url=订阅链接
-https://sub.xeton.dev/sub?target=quanx&list=true&url=Encode后的[订阅|订阅|...]
+https://sub.xeton.dev/sub?target=quanx&list=true&sort=true&url=订阅链接
+https://sub.xeton.dev/sub?target=quanx&list=true&sort=true&url=Encode后的[订阅|订阅|...]
 
 Surge: 
-https://sub.xeton.dev/sub?target=surge&ver=4&list=true&url=订阅链接
-https://sub.xeton.dev/sub?target=surge&ver=4&list=true&url=Encode后的[订阅|订阅|...]
+https://sub.xeton.dev/sub?target=surge&ver=4&list=true&sort=true&url=订阅链接
+https://sub.xeton.dev/sub?target=surge&ver=4&list=true&sort=true&url=Encode后的[订阅|订阅|...]
 
 Clash自动配置:
-https://sub.xeton.dev/sub?target=clash&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online_Mini.ini&url=订阅
+https://sub.xeton.dev/sub?target=clash&sort=true&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online_Mini.ini&url=订阅
 ```
 编辑 /root/.bashrc
 ```
