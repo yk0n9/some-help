@@ -235,6 +235,9 @@ iwr -useb get.scoop.sh | iex
 ```
 scoop bucket add extras
 ```
+```
+scoop bucket add dorado https://github.com/chawyehsu/dorado
+```
 更新scoop源
 ```
 scoop update
