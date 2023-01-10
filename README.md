@@ -233,10 +233,7 @@ iwr -useb get.scoop.sh | iex
 ```
 为scoop增加源
 ```
-scoop bucket add extras
-```
-```
-scoop bucket add dorado https://github.com/chawyehsu/dorado
+scoop bucket add apps https://github.com/kkzzhizhou/scoop-apps
 ```
 更新scoop源
 ```
