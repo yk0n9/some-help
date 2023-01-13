@@ -278,12 +278,13 @@ scoop install cmake
 ```
 [source.crates-io]
 registry = "https://github.com/rust-lang/crates.io-index"
+replace-with = 'ustc'
 
-replace-with = 'tuna' 
+[source.ustc]
+registry = "git://mirrors.ustc.edu.cn/crates.io-index"
 
-# 清华大学
 [source.tuna]
-registry = "https://mirrors.tuna.tsinghua.edu.cn/git/crates.io-index.git"
+registry = "git://mirrors.tuna.tsinghua.edu.cn/git/crates.io-index"
 ```
 **设置代理**
 ```
