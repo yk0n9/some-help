@@ -284,7 +284,7 @@ replace-with = 'ustc'
 registry = "git://mirrors.ustc.edu.cn/crates.io-index"
 
 [source.tuna]
-registry = "git://mirrors.tuna.tsinghua.edu.cn/git/crates.io-index"
+registry = "https://mirrors.tuna.tsinghua.edu.cn/git/crates.io-index.git"
 ```
 **设置代理**
 ```
