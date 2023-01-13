@@ -285,7 +285,13 @@ replace-with = 'tuna'
 [source.tuna]
 registry = "https://mirrors.tuna.tsinghua.edu.cn/git/crates.io-index.git"
 ```
-
+**设置代理**
+```
+[http]
+proxy = "127.0.0.1:7890"
+[https]
+proxy = "127.0.0.1:7890"
+```
 **mysqlclient**
 
 安装 [MySQL Connector/C](https://downloads.mysql.com/archives/c-c/)
