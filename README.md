@@ -237,7 +237,21 @@ scoop bucket add apps https://github.com/kkzzhizhou/scoop-apps
 ```
 更新scoop源
 ```
-scoop update
+scoop update *
+```
+开启多线程下载
+```
+scoop install aria2
+```
+配置多线程
+```
+scoop config aria2-split 32
+```
+```
+scoop config aria2-max-connection-per-server 16
+```
+```
+scoop config aria2-min-split-size 1M
 ```
 
 ## Rust
