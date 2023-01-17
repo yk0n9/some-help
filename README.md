@@ -199,20 +199,24 @@ shell:startup
 把应用程序放入文件夹内
 
 ## Docker
-```
 mysql
+```
 docker run --name some-mysql -p 3306:3306 -v /d/mysql/datadir:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=root -d mysql:8.0.27
-
+```
 mongo
+```
 docker run --name some-mongo -p 27017:27017 -v /d/mongo/data:/data/db -d mongo:latest
-
+```
 redis
+```
 docker run --name some-redis -p 6379:6379 -v /d/redis/redis.conf:/etc/redis/redis.conf -v /d/redis/data:/data -d redis:latest redis-server /etc/redis/redis.conf --appendonly yes
-
+```
 nacos
+```
 docker run --name some-nacos -p 8848:8848 -e MODE=standalone -d nacos/nacos-server:2.0.3
-
+```
 clash
+```
 docker run --name some-clash -p 9090:9090 -p 7890:7890 -v /d/clash:/root/.config/clash -d --restart always dreamacro/clash:latest
 ```
 ###### 设置Git代理
