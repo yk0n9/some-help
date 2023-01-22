@@ -291,6 +291,17 @@ scoop install mingw
 ```
 scoop install cmake
 ```
+安装MySQL
+```
+scoop install mysql57
+```
+```
+mysqld --console
+```
+```
+mysql
+ALTER USER 'root'@'localhost' IDENTIFIED BY '123456';
+```
 
 **~/.cargo/config**
 ```
