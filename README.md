@@ -226,6 +226,13 @@ git config --global http.proxy 127.0.0.1:7890
 ```
 git config --global https.proxy 127.0.0.1:7890
 ```
+###### Git命令流程
+```
+git init
+git commit -m "init"
+git remote add origin https://github.com/username/repositoryname.git
+git push -u origin "main"
+```
 
 ## Windows下的包管理器 (PowerShell)
 
