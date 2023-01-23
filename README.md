@@ -246,6 +246,19 @@ iwr -useb get.scoop.sh | iex
 ```
 scoop bucket add apps https://github.com/kkzzhizhou/scoop-apps
 ```
+多线程下载
+```
+scoop install aria2
+```
+安装指定版本
+```
+scoop install nodejs@16.12.0
+```
+锁定/解锁nodejs版本
+```
+scoop hold nodejs
+scoop unhold nodejs
+```
 更新scoop已安装应用
 ```
 scoop update *
