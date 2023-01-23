@@ -239,23 +239,17 @@ iwr -useb get.scoop.sh | iex
 ```
 scoop bucket add apps https://github.com/kkzzhizhou/scoop-apps
 ```
-更新scoop源
+更新scoop已安装应用
 ```
 scoop update *
 ```
-开启多线程下载
+清理cache
 ```
-scoop install aria2
+scoop cache rm *
 ```
-配置多线程
+清理旧版本
 ```
-scoop config aria2-split 32
-```
-```
-scoop config aria2-max-connection-per-server 16
-```
-```
-scoop config aria2-min-split-size 1M
+scoop cleanup *
 ```
 
 ## Rust
