@@ -240,7 +240,10 @@ git push -u origin "master"
 
 安装scoop
 ```
-iwr -useb get.scoop.sh | iex
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+```
+```
+irm get.scoop.sh | iex
 ```
 为scoop增加源
 ```
