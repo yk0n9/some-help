@@ -3,14 +3,13 @@ mixed-port: 7890
 allow-lan: true
 mode: rule
 external-controller: :9090
-external-ui: yacd
 
 dns:
   enable: true
   ipv6: false
   default-nameserver:
-    - 114.114.114.114
     - 8.8.8.8
+    - 114.114.114.114
 
 proxy-groups:
 
@@ -73,7 +72,7 @@ rule-providers:
 
 
 rules:
-  # LAN
+    # LAN
   - IP-CIDR,192.168.0.0/16,DIRECT
   - IP-CIDR,10.0.0.0/8,DIRECT
   - IP-CIDR,172.16.0.0/12,DIRECT
