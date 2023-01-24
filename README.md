@@ -244,6 +244,7 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 ```
 ```
 irm get.scoop.sh | iex
+iex (new-object net.webclient).downloadstring('https://raw.fastgit.org/scoopinstaller/install/master/install.ps1')
 ```
 为scoop增加源
 ```
