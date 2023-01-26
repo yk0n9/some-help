@@ -1,4 +1,11 @@
 # Clash.Meta
+proxy-providers:
+  sub:
+    type: http
+    url: https://sub.xeton.dev/sub?target=clash&list=true&url=订阅
+    path: sub.yaml
+    interval: 3600
+
 mixed-port: 7890
 allow-lan: true
 mode: rule
@@ -6,40 +13,17 @@ external-controller: :9090
 
 dns:
   enable: true
+  listen: 0.0.0.0:53
   ipv6: false
   default-nameserver:
     - 8.8.8.8
     - 114.114.114.114
 
 proxy-groups:
-
   - name: PROXY
     type: url-test
     use:
-      - Sub
-    url: http://bing.com
-
-proxy-providers:
-
-#   Sub:
-#     type: http
-#     url: https://sub.xeton.dev/sub?target=clash&list=true&url=订阅
-#     interval: 3600
-#     path: ./Sub.yaml
-#     health-check:
-#       enable: true
-#       url: http://bing.com
-#       interval: 600
-
-  Sub:
-    type: http
-    url: https://sub.xeton.dev/sub?target=clash&list=true&url=订阅
-    interval: 3600
-    path: Sub.yaml
-    health-check:
-      enable: true
-      url: http://bing.com
-      interval: 600
+      - sub
 
 rule-providers:
   AdvertisingLite:
