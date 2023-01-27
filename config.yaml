@@ -1,11 +1,15 @@
-# Clash.Meta
 proxy-providers:
   sub:
     type: http
     url: https://sub.xeton.dev/sub?target=clash&list=true&url=订阅
     path: sub.yaml
     interval: 3600
+    health-check:
+      enable: true
+      url: http://www.bing.com
+      interval: 300
 
+# Clash.Meta
 mixed-port: 7890
 allow-lan: true
 mode: rule
