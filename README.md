@@ -250,10 +250,6 @@ iex (new-object net.webclient).downloadstring('https://raw.fastgit.org/scoopinst
 ```
 scoop bucket add apps https://github.com/kkzzhizhou/scoop-apps
 ```
-多线程下载
-```
-scoop install aria2
-```
 安装指定版本
 ```
 scoop install nodejs@16.12.0
