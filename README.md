@@ -275,7 +275,7 @@ scoop cleanup *
 
 ### Windows
 ```
-scoop install rust
+scoop install rustup
 ```
 ### Linux
 ```
