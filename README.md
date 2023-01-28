@@ -271,16 +271,13 @@ scoop cache rm *
 ```
 scoop cleanup *
 ```
-
 ## Rust
 
 ### Windows
-
-下载 [rustup](https://win.rustup.rs/x86_64)
-
+```
+scoop install rust
+```
 ### Linux
-
-执行
 ```
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
