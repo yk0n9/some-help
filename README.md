@@ -260,6 +260,8 @@ scoop install nodejs@16.12.0
 锁定/解锁nodejs版本
 ```
 scoop hold nodejs
+```
+```
 scoop unhold nodejs
 ```
 更新scoop已安装应用
