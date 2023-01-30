@@ -219,6 +219,8 @@ clash
 ```
 docker run --name some-clash -p 9090:9090 -p 7890:7890 -v /d/clash:/root/.config/clash -d --restart always dreamacro/clash:latest
 ```
+## Git
+
 ###### 设置Git代理
 ```
 git config --global http.proxy 127.0.0.1:7890
