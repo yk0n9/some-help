@@ -3,19 +3,19 @@
 ## 我的精简配置
 ###### Shadowrocket
 ```
-https://raw.fastgit.org/Ykong1337/some-help/master/Shadowrocket.conf
+https://raw.fastgit.org/ykong1337/some-help/master/Shadowrocket.conf
 ```
 ###### Quantumult X
 ```
-https://raw.fastgit.org/Ykong1337/some-help/master/QuanX.conf
+https://raw.fastgit.org/ykong1337/some-help/master/QuanX.conf
 ```
 ###### Surge
 ```
-https://raw.fastgit.org/Ykong1337/some-help/master/SurgePro.conf
+https://raw.fastgit.org/ykong1337/some-help/master/SurgePro.conf
 ```
 ###### Clash
 ```
-https://raw.fastgit.org/Ykong1337/some-help/master/config.yaml
+https://raw.fastgit.org/ykong1337/some-help/master/config.yaml
 ```
 ## 获取订阅链接
 ###### Clash配置位置
