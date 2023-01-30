@@ -240,10 +240,13 @@ git push -u origin "master"
 
 安装scoop
 ```
-Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 ```
 ```
 irm get.scoop.sh | iex
+```
+cdn加速
+```
 iex (new-object net.webclient).downloadstring('https://raw.fastgit.org/scoopinstaller/install/master/install.ps1')
 ```
 为scoop增加源
