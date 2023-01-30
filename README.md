@@ -370,6 +370,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim |`
     ni $HOME/vimfiles/autoload/plug.vim -Force
 ```
+#### NeoVim
 
 ###### Unix, Linux
 
