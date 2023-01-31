@@ -1,7 +1,7 @@
 proxy-providers:
   sub:
     type: http
-    url: https://sub.xeton.dev/sub?target=clash&list=true&url=订阅
+    url: https://sub.xeton.dev/sub?target=clash&list=true&fdn=true&new_name=true&url=订阅
     path: sub.yaml
     interval: 3600
     health-check:
