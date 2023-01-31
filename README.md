@@ -1,6 +1,6 @@
 # Some-Help
 
-## 我的精简配置
+## 基本配置
 ###### Shadowrocket
 ```
 https://raw.fastgit.org/ykong1337/some-help/master/Shadowrocket.conf
@@ -17,7 +17,6 @@ https://raw.fastgit.org/ykong1337/some-help/master/SurgePro.conf
 ```
 https://raw.fastgit.org/ykong1337/some-help/master/config.yaml
 ```
-## 获取订阅链接
 ###### Clash配置位置
 ```
 ~/.config/clash/config.yaml
@@ -407,4 +406,15 @@ colorscheme onedark
 :source %
 :PlugInstall
 ```
-
+###### Fleet配置位置
+```
+~/.fleet/settings.json
+```
+###### Vim配置位置
+```
+~/.vimrc
+```
+###### wezterm配置位置
+```
+~/.wezterm.lua
+```
