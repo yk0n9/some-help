@@ -5,9 +5,9 @@ if wezterm.target_triple == 'x86_64-pc-windows-msvc' then
 end
 
 return {
-    font_size   = 13,
-    line_height = 1.2,
+    font_size = 13,
     font = wezterm.font 'JetBrains Mono',
-    color_scheme = 'OneDark (base16)',
-    default_prog = default_prog
+    color_scheme = 'Dracula',
+    window_background_opacity = 0.8,
+    default_prog = default_prog,
 }
