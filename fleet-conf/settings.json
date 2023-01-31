@@ -3,5 +3,5 @@
     "keymap": "pc-ij",
     "restoreWorkspacesOnStartup": false,
     "inputSequenceTimeoutMilliseconds": 300,
-    "theme": "light"
+    "theme": "sync-with-os",
 }
