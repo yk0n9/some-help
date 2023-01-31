@@ -6,7 +6,7 @@ proxy-providers:
     interval: 3600
     health-check:
       enable: true
-      url: http://bing.com
+      url: http://www.bing.com
       interval: 300
 
 # Clash.Meta
@@ -17,7 +17,6 @@ external-controller: :9090
 
 dns:
   enable: true
-  listen: 0.0.0.0:53
   ipv6: false
   default-nameserver:
     - 8.8.8.8
@@ -60,7 +59,7 @@ rule-providers:
 
 
 rules:
-    # LAN
+  # LAN
   - IP-CIDR,192.168.0.0/16,DIRECT
   - IP-CIDR,10.0.0.0/8,DIRECT
   - IP-CIDR,172.16.0.0/12,DIRECT
