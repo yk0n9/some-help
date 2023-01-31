@@ -1,27 +1,27 @@
 # Some-Help
 
-## 基本配置
-###### Shadowrocket
+### 基本配置
+#### Shadowrocket
 ```
 https://raw.fastgit.org/ykong1337/some-help/master/Shadowrocket.conf
 ```
-###### Quantumult X
+#### Quantumult X
 ```
 https://raw.fastgit.org/ykong1337/some-help/master/QuanX.conf
 ```
-###### Surge
+#### Surge
 ```
 https://raw.fastgit.org/ykong1337/some-help/master/SurgePro.conf
 ```
-###### Clash
+#### Clash
 ```
 https://raw.fastgit.org/ykong1337/some-help/master/config.yaml
 ```
-###### Clash配置位置
+#### Clash配置位置
 ```
 ~/.config/clash/config.yaml
 ```
-###### 多订阅用[URLEncode](https://www.urlencoder.org/)后的链接, 订阅之间用|分隔
+#### 多订阅用[URLEncode](https://www.urlencoder.org/)后的链接, 订阅之间用|分隔
 ```
 Clash: 
 https://sub.xeton.dev/sub?target=clash&list=true&url=订阅链接
@@ -44,13 +44,13 @@ export all_proxy=http://127.0.0.1:7890
 ```
 运行 source .bashrc
 
-## BIOS
+#### BIOS
 ```
 1.开启CSM (兼容)
 2.开启AHCI
 3.关闭Source [Fast] Boot (如果安装Windows开启)
 ```
-## Archlinux
+#### Archlinux
 **开启 32 位支持库**
 
 ```bash
@@ -188,16 +188,15 @@ sudo vim /usr/local/etc/pam.d/sddm
 ```
 sudo usermod -a -G pulse-access root
 ```
-## 开机自启
 
-###### Windows
+#### Windows开机自启
 运行CMD，输入
 ```
 shell:startup
 ```
 把应用程序放入文件夹内
 
-## Docker
+#### Docker
 mysql
 ```
 docker run --name some-mysql -p 3306:3306 -v /d/mysql/datadir:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=root -d mysql:8.0.27
@@ -218,16 +217,15 @@ clash
 ```
 docker run --name some-clash -p 9090:9090 -p 7890:7890 -v /d/clash:/root/.config/clash -d --restart always dreamacro/clash:latest
 ```
-## Git
 
-###### 设置Git代理
+#### 设置Git代理
 ```
 git config --global http.proxy 127.0.0.1:7890
 ```
 ```
 git config --global https.proxy 127.0.0.1:7890
 ```
-###### Git命令流程
+#### Git命令流程
 ```
 git init
 git commit -m "init"
@@ -235,10 +233,7 @@ git remote add origin https://github.com/username/repositoryname.git
 git push -u origin "master"
 ```
 
-## Windows下的包管理器 (PowerShell)
-
-###### PowerShell
-
+#### Windows下的包管理器 (PowerShell)
 安装scoop
 ```
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
@@ -277,13 +272,19 @@ scoop cache rm *
 ```
 scoop cleanup *
 ```
-## Rust
+显卡驱动(NVIDIA)
+```
+scoop install sudo
+```
+```
+sudo scoop install nvidia-display-driver
+```
 
-### Windows
+#### Rust-Windows
 ```
 scoop install rustup
 ```
-### Linux
+#### Rust-Linux
 ```
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
@@ -302,7 +303,7 @@ scoop install llvm
 ```
 scoop install mingw
 ```
-其他
+#### 其他
 ---
 安装CMake
 ```
@@ -353,9 +354,8 @@ cargo install diesel_cli --no-default-features --features mysql
 ```
 scoop install vim
 ```
-## Vim-Plug
 
-#### Vim
+#### Vim-Plug
 ```
 vim ~/.vimrc
 ```
@@ -371,7 +371,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim |`
     ni $HOME/vimfiles/autoload/plug.vim -Force
 ```
-#### NeoVim
+#### NeoVim-Plug
 
 ###### Unix, Linux
 
@@ -406,15 +406,15 @@ colorscheme onedark
 :source %
 :PlugInstall
 ```
-###### Fleet配置位置
+#### Fleet配置位置
 ```
 ~/.fleet/settings.json
 ```
-###### Vim配置位置
+#### Vim配置位置
 ```
 ~/.vimrc
 ```
-###### wezterm配置位置
+#### wezterm配置位置
 ```
 ~/.wezterm.lua
 ```
