@@ -2,6 +2,7 @@
     "vimEmulationEnabled": true,
     "keymap": "pc-ij",
     "restoreWorkspacesOnStartup": false,
-    "inputSequenceTimeoutMilliseconds": 300,
-    "theme": "sync-with-os",
+    "inputSequenceTimeoutMilliseconds": 150,
+    "editor.centerEditorHorizontally": true,
+    "theme": "sync-with-os"
 }
