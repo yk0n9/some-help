@@ -24,7 +24,7 @@ dns:
 
 proxy-groups:
   - name: PROXY
-    type: fallback
+    type: url-test
     use:
       - sub
 
