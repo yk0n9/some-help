@@ -11,7 +11,7 @@ https://raw.fastgit.org/ykong1337/some-help/master/QuanX.conf
 ```
 #### Surge
 ```
-https://raw.fastgit.org/ykong1337/some-help/master/SurgePro.conf
+https://raw.fastgit.org/ykong1337/some-help/master/Surge.conf
 ```
 #### Clash
 ```
