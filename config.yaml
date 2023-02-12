@@ -7,7 +7,7 @@ proxy-providers:
     interval: 3600
     health-check:
       enable: true
-      url: http://www.bing.com
+      url: http://www.google.com/
       interval: 600
 
 mixed-port: 7890
