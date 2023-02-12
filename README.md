@@ -219,11 +219,12 @@ docker run --name some-clash -p 9090:9090 -p 7890:7890 -v /d/clash:/root/.config
 ```
 
 #### 设置Git代理
+**~/.gitconfig**
 ```
-git config --global http.proxy 127.0.0.1:7890
-```
-```
-git config --global https.proxy 127.0.0.1:7890
+[http]
+proxy = 127.0.0.1:7890
+[https]
+proxy = 127.0.0.1:7890
 ```
 #### Git命令流程
 ```
