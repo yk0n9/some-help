@@ -22,11 +22,10 @@ dns:
   ipv6: false
   nameserver:
     - 8.8.8.8
-    - 114.114.114.114
 
 proxy-groups:
   - name: PROXY
-    type: fallback
+    type: url-test
     use:
       - sub
 
