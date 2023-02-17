@@ -4,4 +4,5 @@
     "restoreWorkspacesOnStartup": false,
     "inputSequenceTimeoutMilliseconds": 150,
     "editor.centerEditorHorizontally": true,
+    "editor.fontWeight": 1000,
 }
