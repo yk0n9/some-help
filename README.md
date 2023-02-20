@@ -51,6 +51,15 @@ export all_proxy=http://127.0.0.1:7890
 3.关闭Source [Fast] Boot (如果安装Windows开启)
 ```
 #### Archlinux
+**连接网络**
+```
+iwctl
+device lis
+station wlan0 scan
+station wlan0 get-networks
+station wlan0 connect YOUR-WIRELESS-NAME
+exit
+```
 **开启 32 位支持库**
 
 ```bash
