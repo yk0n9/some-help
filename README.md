@@ -266,12 +266,8 @@ scoop bucket add apps https://github.com/kkzzhizhou/scoop-apps
 ```
 scoop install nodejs@16.12.0
 ```
-锁定/解锁nodejs版本
 ```
-scoop hold nodejs
-```
-```
-scoop unhold nodejs
+scoop install firefox@110.0
 ```
 更新scoop已安装应用
 ```
