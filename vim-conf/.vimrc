@@ -1,31 +1,3 @@
-call plug#begin('~/.vim/plugged')
-
-" 资源管理器 Ctrl + E 开启
-Plug 'scrooloose/nerdtree'
-map <silent> <C-e> :NERDTreeToggle<CR>
-
-" 语法检查
-Plug 'scrooloose/syntastic'
-
-" 彩虹括号
-Plug 'kien/rainbow_parentheses.vim'
-
-" 美化状态栏
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-set laststatus=2
-
-" onedark主题
-Plug 'joshdick/onedark.vim'
-
-" 错误提示
-Plug 'w0rp/ale'
-
-call plug#end()
-
-" 使用onedark主题
-colorscheme onedark
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Maintainer:
 "       Amir Salihefendic - @amix3k
@@ -169,6 +141,11 @@ set regexpengine=0
 if $COLORTERM == 'gnome-terminal'
     set t_Co=256
 endif
+
+try
+    colorscheme desert
+catch
+endtry
 
 set background=dark
 
