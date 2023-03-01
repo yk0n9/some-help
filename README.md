@@ -405,19 +405,14 @@ iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim |`
 nvim ~/AppData/Local/nvim/init.vim
 ```
 ---
+#### 安装LazyVim
+###### Windows
 ```
-call plug#begin('~/.vim/plugged')
-
-" onedark主题
-Plug 'joshdick/onedark.vim'
-
-call plug#end()
-
-colorscheme onedark
+git clone https://github.com/LazyVim/starter $env:LOCALAPPDATA\nvim
 ```
+###### Linux
 ```
-:source %
-:PlugInstall
+git clone https://github.com/LazyVim/starter ~/.config/nvim
 ```
 #### Fleet配置位置
 ```
