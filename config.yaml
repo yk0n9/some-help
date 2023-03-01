@@ -18,10 +18,9 @@ external-controller: :9090
 
 dns:
   enable: true
-  listen: :53
-  ipv6: false
-  nameserver:
+  default-nameserver:
     - 8.8.8.8
+    - 114.114.114.114
 
 proxy-groups:
   - name: PROXY
