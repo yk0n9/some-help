@@ -5,4 +5,7 @@
     "inputSequenceTimeoutMilliseconds": 100,
     "editor.centerEditorHorizontally": true,
     "editor.fontWeight": 800,
+    "launchTerminalOnOpen": true,
+    "editor.caretShape": "Underline",
+    "terminal.copyOnSelection": true,
 }
