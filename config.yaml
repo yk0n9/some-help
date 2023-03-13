@@ -29,24 +29,17 @@ proxy-groups:
       - sub
 
 rule-providers:
-  LocalAreaNetwork:
+  AdvertisingLite:
     behavior: classical
     type: http
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AdvertisingLite/AdvertisingLite.yaml
     interval: 86400
-    path: LocalAreaNetwork.yaml
-
-  BanAD:
-    behavior: classical
-    type: http
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list
-    interval: 86400
-    path: BanAD.yaml
+    path: AdvertisingLite.yaml
 
   ProxyLite:
     behavior: classical
     type: http
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ProxyLite/ProxyLite.yaml
     interval: 86400
     path: ProxyLite.yaml
 
@@ -57,21 +50,20 @@ rule-providers:
     interval: 86400
     path: SteamCN.yaml
 
-  ChinaDomain:
+  China:
     behavior: classical
     type: http
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/China/China.yaml
     interval: 86400
-    path: ChinaDomain.yaml
+    path: China.yaml
 
 
 rules:
   # Rule
-  - RULE-SET,LocalAreaNetwork,DIRECT
-  - RULE-SET,BanAD,REJECT
+  - RULE-SET,AdvertisingLite,REJECT
   - RULE-SET,ProxyLite,PROXY
   - RULE-SET,SteamCN,DIRECT
-  - RULE-SET,ChinaDomain,DIRECT
+  - RULE-SET,China,DIRECT
   # China
   - GEOIP,CN,DIRECT
   # Final
