@@ -3,19 +3,19 @@
 ### 基本配置
 #### Shadowrocket
 ```
-https://raw.fastgit.org/ykong1337/some-help/master/Shadowrocket.conf
+https://fastly.jsdelivr.net/gh/ykong1337/some-help@master/Shadowrocket.conf
 ```
 #### Quantumult X
 ```
-https://raw.fastgit.org/ykong1337/some-help/master/QuanX.conf
+https://fastly.jsdelivr.net/gh/ykong1337/some-help@master/QuanX.conf
 ```
 #### Surge
 ```
-https://raw.fastgit.org/ykong1337/some-help/master/Surge.conf
+https://fastly.jsdelivr.net/gh/ykong1337/some-help@master/Surge.conf
 ```
 #### Clash
 ```
-https://raw.fastgit.org/ykong1337/some-help/master/config.yaml
+https://fastly.jsdelivr.net/gh/ykong1337/some-help@master/config.yaml
 ```
 #### Clash配置位置
 ```
