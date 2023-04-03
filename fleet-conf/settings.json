@@ -8,4 +8,6 @@
     "launchTerminalOnOpen": true,
     "editor.caretShape": "Underline",
     "terminal.copyOnSelection": true,
+    "theme": "light",
+    "files.toggleFolderMode": "singleClick",
 }
