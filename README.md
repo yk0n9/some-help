@@ -245,7 +245,13 @@ git commit -m "init"
 git remote add origin https://github.com/username/repositoryname.git
 git push -u origin master
 ```
-
+#### Git Sync Fork命令
+```
+git remote add upstream [url]
+git fetch upstream
+git checkout master
+git merge upstream/master
+```
 #### Windows下的包管理器 (PowerShell)
 安装scoop
 ```
