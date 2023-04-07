@@ -89,7 +89,7 @@ sudo pacman -S sof-firmware alsa-firmware alsa-ucm-conf                     #一
 sudo pacman -S ntfs-3g                                                      #识别NTFS格式的硬盘
 sudo pacman -S adobe-source-han-serif-cn-fonts wqy-zenhei                   #安装几个开源中文字体 一般装上文泉驿就能解决大多wine应用中文方块的问题
 sudo pacman -S noto-fonts-cjk noto-fonts-emoji noto-fonts-extra             #安装谷歌开源字体及表情
-sudo pacman -S chromium                                                     #安装谷歌浏览器
+sudo pacman -S firefox                                                      #安装浏览器
 sudo pacman -S ark                                                          #与dolphin同用右键解压
 sudo pacman -S p7zip unrar unarchiver lzop lrzip                            #安装ark可选依赖
 sudo pacman -S packagekit-qt5 packagekit appstream-qt appstream             #确保Discover(软件中心）可用 需重启
