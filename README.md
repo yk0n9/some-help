@@ -260,12 +260,13 @@ Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 ```
 irm get.scoop.sh | iex
 ```
-cdn加速
+或 / cdn加速
 ```
 iex (new-object net.webclient).downloadstring('https://raw.fastgit.org/scoopinstaller/install/master/install.ps1')
 ```
 为scoop增加源
 ```
+scoop bucket add main
 scoop bucket add apps https://github.com/kkzzhizhou/scoop-apps
 ```
 安装指定版本
