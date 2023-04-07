@@ -24,16 +24,16 @@ https://fastly.jsdelivr.net/gh/ykong1337/some-help@master/config.yaml
 #### 多订阅用[URLEncode](https://www.urlencoder.org/)后的链接, 订阅之间用|分隔
 ```
 Clash: 
-https://sub.xeton.dev/sub?target=clash&list=true&url=订阅链接
-https://sub.xeton.dev/sub?target=clash&list=true&url=Encode后的[订阅|订阅|...]
+https://sub.xeton.dev/sub?target=clash&udp=false&list=true&url=订阅链接
+https://sub.xeton.dev/sub?target=clash&udp=false&list=true&url=Encode后的[订阅|订阅|...]
 
 QuanX: 
-https://sub.xeton.dev/sub?target=quanx&list=true&url=订阅链接
-https://sub.xeton.dev/sub?target=quanx&list=true&url=Encode后的[订阅|订阅|...]
+https://sub.xeton.dev/sub?target=quanx&udp=false&list=true&url=订阅链接
+https://sub.xeton.dev/sub?target=quanx&udp=false&list=true&url=Encode后的[订阅|订阅|...]
 
 Surge: 
-https://sub.xeton.dev/sub?target=surge&ver=4&list=true&url=订阅链接
-https://sub.xeton.dev/sub?target=surge&ver=4&list=true&url=Encode后的[订阅|订阅|...]
+https://sub.xeton.dev/sub?target=surge&udp=false&ver=4&list=true&url=订阅链接
+https://sub.xeton.dev/sub?target=surge&udp=false&ver=4&list=true&url=Encode后的[订阅|订阅|...]
 
 Clash自动配置:
 https://sub.xeton.dev/sub?target=clash&udp=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online_Mini.ini&url=订阅
@@ -256,12 +256,7 @@ git merge upstream/master
 安装scoop
 ```
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
-```
-```
 irm get.scoop.sh | iex
-```
-或 / cdn加速
-```
 iex (new-object net.webclient).downloadstring('https://raw.fastgit.org/scoopinstaller/install/master/install.ps1')
 ```
 为scoop增加源
@@ -272,8 +267,6 @@ scoop bucket add apps https://github.com/kkzzhizhou/scoop-apps
 安装指定版本
 ```
 scoop install nodejs@16.12.0
-```
-```
 scoop install firefox@110.0
 ```
 更新scoop已安装应用
@@ -291,8 +284,7 @@ scoop cleanup *
 显卡驱动(NVIDIA)
 ```
 scoop install sudo
-```
-```
+scoop install ddu
 sudo scoop install nvidia-display-driver
 ```
 
