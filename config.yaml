@@ -2,7 +2,7 @@
 proxy-providers:
   sub:
     type: http
-    url: https://sub.xeton.dev/sub?target=clash&list=true&url=订阅
+    url: https://sub.xeton.dev/sub?target=clash&udp=false&list=true&url=订阅
     path: sub.yaml
     interval: 3600
     health-check:
@@ -18,13 +18,19 @@ external-controller: :9090
 
 dns:
   enable: true
-  default-nameserver:
+  nameserver:
     - 8.8.8.8
     - 114.114.114.114
 
 proxy-groups:
   - name: PROXY
-    type: fallback
+    type: select
+    proxies:
+      - Auto
+    use:
+      - sub
+  - name: Auto
+    type: url-test
     use:
       - sub
 
@@ -32,28 +38,28 @@ rule-providers:
   AdvertisingLite:
     behavior: classical
     type: http
-    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AdvertisingLite/AdvertisingLite.yaml
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/AdvertisingLite/AdvertisingLite.yaml
     interval: 86400
     path: AdvertisingLite.yaml
 
   ProxyLite:
     behavior: classical
     type: http
-    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ProxyLite/ProxyLite.yaml
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/ProxyLite/ProxyLite.yaml
     interval: 86400
     path: ProxyLite.yaml
 
   SteamCN:
     behavior: classical
     type: http
-    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/SteamCN/SteamCN.yaml
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/SteamCN/SteamCN.yaml
     interval: 86400
     path: SteamCN.yaml
 
   China:
     behavior: classical
     type: http
-    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/China/China.yaml
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/China/China.yaml
     interval: 86400
     path: China.yaml
 
