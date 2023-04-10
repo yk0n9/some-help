@@ -294,7 +294,7 @@ scoop install rustup
 ```
 #### Rust-Linux
 ```
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+curl https://sh.rustup.rs -sSf | sh
 ```
 ---
 安装LLVM
