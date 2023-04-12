@@ -14,6 +14,11 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'Chiel92/vim-autoformat'
 map <silent> <C-A-l> :Autoformat<cr>
 
+Plugin '907th/vim-auto-save'
+let g:auto_save = 1
+let g:auto_save_silent = 1
+let g:auto_save_no_updatetime = 1
+
 call vundle#end()
 "==========================================
 
@@ -28,7 +33,7 @@ map <C-l> <C-W>l
 " Atom One Light Theme
 set background=light
 try
-    colorscheme one
+	colorscheme one
 catch
 endtry
 
