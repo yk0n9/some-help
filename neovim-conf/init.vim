@@ -8,14 +8,14 @@ syntax on
 filetype plugin indent on
 
 Plugin 'scrooloose/nerdtree'
-map <silent> <tab> :NERDTreeToggle<cr>
+map <silent> <Tab> :NERDTreeToggle<CR>
 
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
 " Format
 Plugin 'Chiel92/vim-autoformat'
-map <silent> <C-A-l> :Autoformat<cr>
+map <silent> <C-A-l> :Autoformat<CR>
 
 " Auto Save With 1 Second
 Plugin '907th/vim-auto-save'
@@ -42,24 +42,33 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
 			\ 'Unknown'   :'?',
 			\ }
 
+" Terminal
+Plugin 'voldikss/vim-floaterm'
+let g:floaterm_keymap_new = '<F7>'
+let g:floaterm_keymap_prev = '<F8>'
+let g:floaterm_keymap_next = '<F9>'
+let g:floaterm_keymap_toggle = '<F12>'
+let g:floaterm_keymap_kill = '<F10>'
+
 call vundle#end()
 
 "===KeyMap=============================
 
-" Press Space Search
-map <space> /
+" Space Search
+map <Space> /
 " Move Between Windows
 map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 " Shift Q = Quit
-map <silent> <S-q> :q<cr>
+map <silent> <S-q> :q<CR>
 " Enter = Start New Line
-map <cr> o<esc>
+map <CR> o<Esc>
 " ; = Command
 map ; :
-
+" Term Esc = Exit
+tnoremap <Esc> <C-\><C-n>
 
 "===Other========================================
 
