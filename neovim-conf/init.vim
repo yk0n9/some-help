@@ -49,6 +49,9 @@ let g:floaterm_keymap_prev = '<F8>'
 let g:floaterm_keymap_next = '<F9>'
 let g:floaterm_keymap_toggle = '<F12>'
 let g:floaterm_keymap_kill = '<F10>'
+if has('win64') || has('win32')
+	let g:floaterm_shell='powershell'
+endif
 
 call vundle#end()
 
