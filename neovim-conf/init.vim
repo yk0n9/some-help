@@ -88,3 +88,5 @@ set tabstop=4
 set ignorecase
 " Show Line Number
 set number
+" Keep Line Separator
+set noeol
