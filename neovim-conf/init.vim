@@ -1,7 +1,16 @@
 "===Plugin======================================================
 
 call vundle#begin('~/vim-plug')
-Plugin 'nlknguyen/papercolor-theme'
+" Theme
+Plugin 'joshdick/onedark.vim'
+
+" Autocomplete
+Plugin 'neoclide/coc.nvim', {'branch': 'release'}
+try
+    let g:coc_global_extensions=['coc-rust-analyzer']
+    set updatetime=300
+catch
+endtry
 
 Plugin 'rust-lang/rust.vim'
 syntax on
@@ -30,17 +39,17 @@ Plugin 'airblade/vim-gitgutter'
 set updatetime=100
 Plugin 'xuyuanp/nerdtree-git-plugin'
 let g:NERDTreeGitStatusIndicatorMapCustom = {
-			\ 'Modified'  :'✹',
-			\ 'Staged'    :'✚',
-			\ 'Untracked' :'✭',
-			\ 'Renamed'   :'➜',
-			\ 'Unmerged'  :'═',
-			\ 'Deleted'   :'✖',
-			\ 'Dirty'     :'✗',
-			\ 'Ignored'   :'☒',
-			\ 'Clean'     :'✔︎',
-			\ 'Unknown'   :'?',
-			\ }
+            \ 'Modified'  :'✹',
+            \ 'Staged'    :'✚',
+            \ 'Untracked' :'✭',
+            \ 'Renamed'   :'➜',
+            \ 'Unmerged'  :'═',
+            \ 'Deleted'   :'✖',
+            \ 'Dirty'     :'✗',
+            \ 'Ignored'   :'☒',
+            \ 'Clean'     :'✔︎',
+            \ 'Unknown'   :'?',
+            \ }
 
 " Terminal
 Plugin 'voldikss/vim-floaterm'
@@ -50,7 +59,7 @@ let g:floaterm_keymap_next = '<F9>'
 let g:floaterm_keymap_toggle = '<F12>'
 let g:floaterm_keymap_kill = '<F10>'
 if has('win64') || has('win32')
-	let g:floaterm_shell='powershell'
+    let g:floaterm_shell='powershell'
 endif
 
 
@@ -80,11 +89,9 @@ map ; :
 tnoremap <Esc> <C-\><C-n>
 
 "===Other========================================
-
-" Atom One Light Theme
-set background=light
 try
-	colorscheme PaperColor
+    set background=dark
+    colorscheme onedark
 catch
 endtry
 
