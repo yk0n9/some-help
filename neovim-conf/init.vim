@@ -5,17 +5,15 @@ call vundle#begin('~/vim-plug')
 Plugin 'joshdick/onedark.vim'
 
 " Autocomplete
-" Ctrl + N: Next | Ctrl + P: Prev
+" Ctrl + N: Next | Ctrl + P: Prev | Enter: Confirm
 Plugin 'neoclide/coc.nvim', {'branch': 'release'}
-try
-    let g:coc_global_extensions=[
-    'coc-rust-analyzer',
-    'coc-toml',
-    'coc-tsserver',
-    'coc-translator',
-    ]
-catch
-endtry
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
+let g:coc_global_extensions=[
+            \'coc-rust-analyzer',
+            \'coc-toml',
+            \'coc-tsserver',
+            \'coc-translator',
+            \]
 
 " Language Support
 Plugin 'rust-lang/rust.vim'
@@ -24,8 +22,8 @@ filetype plugin indent on
 
 " File Directory Tree
 Plugin 'scrooloose/nerdtree'
-map <silent> <Tab> :NERDTreeToggle<CR>
-map <silent> <C-f> :NERDTreeFind<CR>
+nmap <silent> <Tab> :NERDTreeToggle<CR>
+nmap <silent> <C-f> :NERDTreeFind<CR>
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 
@@ -79,23 +77,23 @@ call vundle#end()
 "===KeyMap=============================
 
 " Move Between Windows
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-h> <C-W>h
-map <C-l> <C-W>l
+nmap <C-j> <C-W>j
+nmap <C-k> <C-W>k
+nmap <C-h> <C-W>h
+nmap <C-l> <C-W>l
 " Ctrl + Key Move
 imap <C-k> <Up>
 imap <C-j> <Down>
 imap <C-h> <Left>
 imap <C-l> <Right>
 " Space Search
-map <Space> /
+nmap <Space> /
 " Shift Q = Quit
-map <silent> <S-q> :q<CR>
+nmap <silent> <S-q> :q<CR>
 " Enter = Start New Line
-map <CR> o<Esc>
+nmap <CR> o<Esc>
 " ; = Command
-map ; :
+nmap ; :
 " Term Esc = Exit
 tnoremap <Esc> <C-\><C-n>
 
@@ -118,6 +116,7 @@ set ignorecase
 set number
 " No Cache
 set nobackup
+set nowritebackup
 set noswapfile
 " Keep Line Separator
 set noeol
