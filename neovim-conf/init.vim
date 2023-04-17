@@ -25,6 +25,9 @@ filetype plugin indent on
 " File Directory Tree
 Plugin 'scrooloose/nerdtree'
 map <silent> <Tab> :NERDTreeToggle<CR>
+map <silent> <C-f> :NERDTreeFind<CR>
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
 
 " Status Bar
 Plugin 'vim-airline/vim-airline'
