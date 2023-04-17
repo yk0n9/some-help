@@ -1,7 +1,7 @@
 "===Plugin======================================================
 
 call vundle#begin('~/vim-plug')
-Plugin 'rakr/vim-one'
+Plugin 'nlknguyen/papercolor-theme'
 
 Plugin 'rust-lang/rust.vim'
 syntax on
@@ -49,21 +49,27 @@ let g:floaterm_keymap_prev = '<F8>'
 let g:floaterm_keymap_next = '<F9>'
 let g:floaterm_keymap_toggle = '<F12>'
 let g:floaterm_keymap_kill = '<F10>'
-if has('win64') || has('win32')
-	let g:floaterm_shell='powershell'
+if has("win64") || has("win32")
+	let g:floaterm_shell = 'powershell'
 endif
+
 
 call vundle#end()
 
 "===KeyMap=============================
 
-" Space Search
-map <Space> /
 " Move Between Windows
 map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
+" Ctrl + Key Move
+imap <C-k> <Up>
+imap <C-j> <Down>
+imap <C-h> <Left>
+imap <C-l> <Right>
+" Space Search
+map <Space> /
 " Shift Q = Quit
 map <silent> <S-q> :q<CR>
 " Enter = Start New Line
@@ -78,18 +84,22 @@ tnoremap <Esc> <C-\><C-n>
 " Atom One Light Theme
 set background=light
 try
-	colorscheme one
+	colorscheme PaperColor
 catch
 endtry
 
 set autoindent
 set nowrap
 " Tab 4 Spaces
+set expandtab
 set shiftwidth=4
 set tabstop=4
 " Match Case
 set ignorecase
 " Show Line Number
 set number
+" No Cache
+set nobackup
+set noswapfile
 " Keep Line Separator
 set noeol
