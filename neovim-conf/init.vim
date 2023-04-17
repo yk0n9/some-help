@@ -8,7 +8,12 @@ Plugin 'joshdick/onedark.vim'
 " Ctrl + N: Next | Ctrl + P: Prev
 Plugin 'neoclide/coc.nvim', {'branch': 'release'}
 try
-    let g:coc_global_extensions=['coc-rust-analyzer']
+    let g:coc_global_extensions=[
+    'coc-rust-analyzer',
+    'coc-toml',
+    'coc-tsserver',
+    'coc-translator',
+    ]
 catch
 endtry
 
@@ -43,17 +48,17 @@ set updatetime=100
 " Directory Tree Git Info
 Plugin 'xuyuanp/nerdtree-git-plugin'
 let g:NERDTreeGitStatusIndicatorMapCustom = {
-            \ 'Modified'  :'✹',
-            \ 'Staged'    :'✚',
-            \ 'Untracked' :'✭',
-            \ 'Renamed'   :'➜',
-            \ 'Unmerged'  :'═',
-            \ 'Deleted'   :'✖',
-            \ 'Dirty'     :'✗',
-            \ 'Ignored'   :'☒',
-            \ 'Clean'     :'✔︎',
-            \ 'Unknown'   :'?',
-            \ }
+            \'Modified'  :'✹',
+            \'Staged'    :'✚',
+            \'Untracked' :'✭',
+            \'Renamed'   :'➜',
+            \'Unmerged'  :'═',
+            \'Deleted'   :'✖',
+            \'Dirty'     :'✗',
+            \'Ignored'   :'☒',
+            \'Clean'     :'✔︎',
+            \'Unknown'   :'?',
+            \}
 
 " Terminal
 Plugin 'voldikss/vim-floaterm'
@@ -65,7 +70,6 @@ let g:floaterm_keymap_kill = '<F10>'
 if has('win64') || has('win32')
     let g:floaterm_shell='powershell'
 endif
-
 
 call vundle#end()
 
