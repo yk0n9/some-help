@@ -6,7 +6,7 @@ Plugin 'joshdick/onedark.vim'
 
 " Autocomplete
 " Ctrl + N: Next | Ctrl + P: Prev | Enter: Confirm
-Plugin 'neoclide/coc.nvim', {'branch': 'release'}
+Plugin 'neoclide/coc.nvim'
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 let g:coc_global_extensions=[
             \'coc-rust-analyzer',
@@ -33,8 +33,8 @@ Plugin 'vim-airline/vim-airline-themes'
 let g:airline_theme='papercolor'
 
 " Format
-Plugin 'Chiel92/vim-autoformat'
-map <silent> <C-A-l> :Autoformat<CR>
+Plugin 'sbdchd/neoformat'
+map <silent> <C-A-l> :Neoformat<CR>
 
 " Auto Save With 1 Second
 Plugin '907th/vim-auto-save'
