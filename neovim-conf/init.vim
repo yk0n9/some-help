@@ -30,6 +30,7 @@ let g:NERDTreeDirArrowCollapsible = '▾'
 " Status Bar
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+let g:airline_theme='papercolor'
 
 " Format
 Plugin 'Chiel92/vim-autoformat'
