@@ -5,20 +5,23 @@ call vundle#begin('~/vim-plug')
 Plugin 'joshdick/onedark.vim'
 
 " Autocomplete
+" Ctrl + N: Next | Ctrl + P: Prev
 Plugin 'neoclide/coc.nvim', {'branch': 'release'}
 try
     let g:coc_global_extensions=['coc-rust-analyzer']
-    set updatetime=300
 catch
 endtry
 
+" Language Support
 Plugin 'rust-lang/rust.vim'
 syntax on
 filetype plugin indent on
 
+" File Directory Tree
 Plugin 'scrooloose/nerdtree'
 map <silent> <Tab> :NERDTreeToggle<CR>
 
+" Status Bar
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
@@ -37,6 +40,7 @@ Plugin 'tpope/vim-fugitive'
 " Git Show Diff
 Plugin 'airblade/vim-gitgutter'
 set updatetime=100
+" Directory Tree Git Info
 Plugin 'xuyuanp/nerdtree-git-plugin'
 let g:NERDTreeGitStatusIndicatorMapCustom = {
             \ 'Modified'  :'✹',
