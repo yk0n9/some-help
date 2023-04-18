@@ -73,6 +73,9 @@ if has('win64') || has('win32')
     let g:floaterm_shell='powershell'
 endif
 
+" Auto Pairs
+Plugin 'jiangmiao/auto-pairs'
+
 call vundle#end()
 
 "===KeyMap=============================
