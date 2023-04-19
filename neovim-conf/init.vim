@@ -2,7 +2,7 @@
 
 call vundle#begin('~/vim-plug')
 " Theme
-Plugin 'rakr/vim-one'
+Plugin 'joshdick/onedark.vim'
 
 " Autocomplete
 " Ctrl + N: Next | Ctrl + P: Prev | Enter: Confirm
@@ -30,7 +30,7 @@ let g:NERDTreeDirArrowCollapsible = '▾'
 " Status Bar
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-let g:airline_theme='one'
+let g:airline_theme='onedark'
 
 " Format
 Plugin 'sbdchd/neoformat'
@@ -108,8 +108,8 @@ tnoremap <Esc> <C-\><C-n>
 
 "===Other========================================
 try
-    set background=light
-    colorscheme one
+    set background=dark
+    colorscheme onedark
 catch
 endtry
 set cul
