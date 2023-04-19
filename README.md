@@ -258,7 +258,7 @@ git pull upstream master
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 irm get.scoop.sh | iex
 
-iex (new-object net.webclient).downloadstring('https://raw.fastgit.org/scoopinstaller/install/master/install.ps1')
+iex (new-object net.webclient).downloadstring('https://fastly.jsdelivr.net/gh/scoopinstaller/install@master/install.ps1')
 ```
 为scoop增加源
 ```
