@@ -257,11 +257,12 @@ git pull upstream master
 ```
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 irm get.scoop.sh | iex
+
 iex (new-object net.webclient).downloadstring('https://raw.fastgit.org/scoopinstaller/install/master/install.ps1')
 ```
 为scoop增加源
 ```
-scoop bucket add main extras
+scoop bucket add main extras nonportable
 ```
 安装指定版本
 ```
@@ -282,8 +283,7 @@ scoop cleanup *
 ```
 显卡驱动(NVIDIA)
 ```
-scoop install sudo
-scoop install ddu
+scoop install sudo ddu
 sudo scoop install nvidia-display-driver
 ```
 
