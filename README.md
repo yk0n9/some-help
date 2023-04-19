@@ -262,7 +262,9 @@ iex (new-object net.webclient).downloadstring('https://raw.fastgit.org/scoopinst
 ```
 为scoop增加源
 ```
-scoop bucket add main extras nonportable
+scoop bucket add main
+scoop bucket add extras
+scoop bucket add nonportable
 ```
 安装指定版本
 ```
