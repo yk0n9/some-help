@@ -70,11 +70,16 @@ let g:floaterm_keymap_next = '<F9>'
 let g:floaterm_keymap_toggle = '<F12>'
 let g:floaterm_keymap_kill = '<F10>'
 if has('win64') || has('win32')
-    let g:floaterm_shell='powershell'
+    let g:floaterm_shell = 'powershell'
 endif
 
 " Auto Pairs
 Plugin 'jiangmiao/auto-pairs'
+
+" Code Map
+" Install code-minimap
+Plugin 'wfxr/minimap.vim'
+let g:minimap_auto_start = 1
 
 call vundle#end()
 
