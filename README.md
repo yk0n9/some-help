@@ -293,7 +293,7 @@ scoop cleanup *
 显卡驱动(NVIDIA)
 ```
 scoop install sudo ddu
-sudo scoop install nvidia-display-driver
+sudo scoop install nvidia-display-driver-dch-np
 ```
 
 #### Rust-Windows
