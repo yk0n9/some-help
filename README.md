@@ -260,6 +260,13 @@ irm get.scoop.sh | iex
 
 iex (new-object net.webclient).downloadstring('https://fastly.jsdelivr.net/gh/scoopinstaller/install@master/install.ps1')
 ```
+别名
+```
+scoop alias add i 'scoop install $args[0]'
+scoop alias add rm 'scoop uninstall $args[0]'
+scoop alias add ls 'scoop list'
+scoop alias add u 'scoop update $args[0]'
+```
 为scoop增加源
 ```
 scoop bucket add main
