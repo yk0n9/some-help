@@ -1,17 +1,19 @@
 # Neovim-Intellij
 
-## Vundle
+## Vim-Plug
 
 #### Linux
 ```
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.local/share/site/bundle/Vundle.vim
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 ```
 ```
 nvim ~/.config/init.vim
 ```
 #### Windows
 ```
-git clone https://github.com/VundleVim/Vundle.vim.git $env:LOCALAPPDATA/nvim-data/site/bundle/Vundle.vim
+iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim |`
+    ni "$(@($env:XDG_DATA_HOME, $env:LOCALAPPDATA)[$null -eq $env:XDG_DATA_HOME])/nvim-data/site/autoload/plug.vim" -Force
 ```
 ```
 mkdir $env:LOCALAPPDATA/nvim
