@@ -2,7 +2,7 @@
 
 call plug#begin('~/nvim-plug')
 " Theme
-Plug 'joshdick/onedark.vim'
+Plug 'rakr/vim-one'
 
 " Autocomplete
 " Ctrl + N: Next | Ctrl + P: Prev | Enter: Confirm
@@ -30,7 +30,7 @@ let g:NERDTreeDirArrowCollapsible = '▾'
 " Status Bar
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-let g:airline_theme='onedark'
+let g:airline_theme='one'
 
 " Format
 Plug 'sbdchd/neoformat'
@@ -46,7 +46,7 @@ let g:auto_save_no_updatetime = 1
 Plug 'tpope/vim-fugitive'
 " Git Show Diff
 Plug 'airblade/vim-gitgutter'
-set updatetime=100
+set updatetime=1000
 " Directory Tree Git Info
 Plug 'xuyuanp/nerdtree-git-plugin'
 let g:NERDTreeGitStatusIndicatorMapCustom = {
@@ -108,8 +108,8 @@ tnoremap <Esc> <C-\><C-n>
 
 "===Other========================================
 try
-    set background=dark
-    colorscheme onedark
+    set background=light
+    colorscheme one
 catch
 endtry
 set cul
