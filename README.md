@@ -237,6 +237,10 @@ proxy = 127.0.0.1:7890
 [user]
 email = email
 name = name
+[pull]
+rebase = false
+[credential]
+helper = store
 ```
 #### Git命令流程
 ```
