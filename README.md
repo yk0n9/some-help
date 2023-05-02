@@ -244,7 +244,7 @@ name = name
 [safe]
     directory = *
 [core]
-	autocrlf = false
+    autocrlf = false
 ```
 #### Git命令流程
 ```
