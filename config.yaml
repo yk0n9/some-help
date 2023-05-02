@@ -29,6 +29,7 @@ proxy-groups:
       - Auto
     use:
       - sub
+
   - name: Auto
     type: url-test
     use:
@@ -49,10 +50,10 @@ rule-providers:
     interval: 86400
     path: ProxyLite.yaml
 
-  SteamCN:
+  Game:
     behavior: classical
     type: http
-    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/SteamCN/SteamCN.yaml
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Game/Game.yaml
     interval: 86400
     path: SteamCN.yaml
 
@@ -83,7 +84,7 @@ rules:
   # Rule
   - RULE-SET,AdvertisingLite,REJECT
   - RULE-SET,ProxyLite,PROXY
-  - RULE-SET,SteamCN,DIRECT
+  - RULE-SET,Game,DIRECT
   - RULE-SET,China,DIRECT
   # China
   - GEOIP,CN,DIRECT
