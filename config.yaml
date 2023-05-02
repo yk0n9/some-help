@@ -55,7 +55,7 @@ rule-providers:
     type: http
     url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Game/Game.yaml
     interval: 86400
-    path: SteamCN.yaml
+    path: Game.yaml
 
   China:
     behavior: classical
