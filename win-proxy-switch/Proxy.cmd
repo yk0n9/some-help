@@ -13,6 +13,6 @@ if %ProxyEnableValue% equ 0 (
     echo System Proxy OFF
 )
 
-ping 127.1 -n 3 >nul
+ping 127.1 -n 2 >nul
 
 exit

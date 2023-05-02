@@ -243,6 +243,8 @@ name = name
     helper = store
 [safe]
     directory = *
+[core]
+	autocrlf = false
 ```
 #### Git命令流程
 ```
