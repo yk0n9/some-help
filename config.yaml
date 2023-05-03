@@ -50,12 +50,12 @@ rule-providers:
     interval: 86400
     path: ProxyLite.yaml
 
-  Game:
+  SteamCN:
     behavior: classical
     type: http
-    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Game/GameDownload/GameDownload.yaml
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/SteamCN/SteamCN.yaml
     interval: 86400
-    path: Game.yaml
+    path: SteamCN.yaml
 
   China:
     behavior: classical
@@ -84,7 +84,7 @@ rules:
   # Rule
   - RULE-SET,AdvertisingLite,REJECT
   - RULE-SET,ProxyLite,PROXY
-  - RULE-SET,Game,DIRECT
+  - RULE-SET,SteamCN,DIRECT
   - RULE-SET,China,DIRECT
   # China
   - GEOIP,CN,DIRECT
