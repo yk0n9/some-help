@@ -53,7 +53,7 @@ rule-providers:
   Game:
     behavior: classical
     type: http
-    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Game/Game.yaml
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Game/GameDownload/GameDownload.yaml
     interval: 86400
     path: Game.yaml
 
