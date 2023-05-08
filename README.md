@@ -250,7 +250,7 @@ name = name
 ```
 git init
 git commit -m "init"
-git remote add origin https://github.com/username/repositoryname.git
+git remote add origin https://github.com/user/repo.git
 git push -u origin master
 ```
 #### Git Sync Fork命令
