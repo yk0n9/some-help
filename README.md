@@ -275,7 +275,7 @@ scoop alias add u 'scoop update $args[0]'
 ```
 为scoop增加源
 ```
-scoop bucket add main;scoop bucket add extras;scoop bucket add versions;scoop bucket add nonportable
+scoop bucket add main;scoop bucket add extras;scoop bucket add versions;scoop bucket add nonportable;scoop bucket add dorado https://github.com/chawyehsu/dorado
 ```
 安装指定版本
 ```
