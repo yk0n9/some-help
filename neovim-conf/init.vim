@@ -34,7 +34,7 @@ let g:airline_theme='one'
 
 " Format
 Plug 'sbdchd/neoformat'
-map <silent> <C-A-l> :Neoformat<CR>
+map <silent> <A-l> :Neoformat<CR>
 
 " Auto Save With 1 Second
 Plug '907th/vim-auto-save'
