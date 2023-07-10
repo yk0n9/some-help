@@ -1,19 +1,8 @@
-# Clash.Meta
-proxy-providers:
-  sub:
-    type: http
-    url: https://sub.xeton.dev/sub?target=clash&list=true&url=订阅
-    path: sub.yaml
-    interval: 3600
-    health-check:
-      enable: true
-      url: http://www.google.com/
-      interval: 600
-
 mixed-port: 7890
 allow-lan: true
 mode: rule
 ipv6: false
+log-level: info
 external-controller: :9090
 
 dns:
@@ -21,6 +10,17 @@ dns:
   nameserver:
     - 8.8.8.8
     - 114.114.114.114
+
+proxy-providers:
+  sub:
+    type: http
+    url: https://sub.xeton.dev/sub?target=clash&list=true&udp=true&url=订阅
+    path: sub.yaml
+    interval: 3600
+    health-check:
+      enable: true
+      url: http://www.google.com/
+      interval: 600
 
 proxy-groups:
   - name: PROXY
@@ -46,30 +46,16 @@ rule-providers:
   Advertising:
     behavior: classical
     type: http
-    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Advertising/Advertising.yaml
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Advertising/Advertising_Classical.yaml
     interval: 86400
     path: Advertising.yaml
-
-  Advertising_Domain:
-    behavior: domain
-    type: http
-    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Advertising/Advertising_Domain.yaml
-    interval: 86400
-    path: Advertising_Domain.yaml
 
   Proxy:
     behavior: classical
     type: http
-    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Proxy/Proxy.yaml
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Proxy/Proxy_Classical.yaml
     interval: 86400
     path: Proxy.yaml
-
-  Proxy_Domain:
-    behavior: domain
-    type: http
-    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Proxy/Proxy_Domain.yaml
-    interval: 86400
-    path: Proxy_Domain.yaml
 
   SteamCN:
     behavior: classical
@@ -81,29 +67,18 @@ rule-providers:
   China:
     behavior: classical
     type: http
-    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/China/China.yaml
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/China/China_Classical.yaml
     interval: 86400
     path: China.yaml
-
-  China_Domain:
-    behavior: domain
-    type: http
-    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/China/China_Domain.yaml
-    interval: 86400
-    path: China_Domain.yaml
-
 
 rules:
   # Lan
   - RULE-SET,Lan,DIRECT
   # Rule
   - RULE-SET,Advertising,REJECT
-  - RULE-SET,Advertising_Domain,REJECT
   - RULE-SET,Proxy,PROXY
-  - RULE-SET,Proxy_Domain,PROXY
   - RULE-SET,SteamCN,DIRECT
   - RULE-SET,China,DIRECT
-  - RULE-SET,China_Domain,DIRECT
   # China
   - GEOIP,CN,DIRECT
   # Final
