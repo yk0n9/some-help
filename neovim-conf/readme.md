@@ -8,7 +8,7 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 ```
 ```
-nvim ~/.config/init.vim
+curl https://raw.githubusercontent.com/ykong1337/some-help/master/neovim-conf/init.vim -o ~/.config/init.vim
 ```
 #### Windows
 ```
@@ -19,5 +19,15 @@ iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim |`
 mkdir $env:LOCALAPPDATA/nvim
 ```
 ```
-nvim $env:LOCALAPPDATA/nvim/init.vim
+cd $env:LOCALAPPDATA/nvim
+```
+```
+curl https://raw.githubusercontent.com/ykong1337/some-help/master/neovim-conf/init.vim -o init.vim
+```
+=============================================
+```
+nvim init.vim
+```
+```
+:PlugInstall
 ```
