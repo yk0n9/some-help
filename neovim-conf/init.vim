@@ -116,8 +116,8 @@ try
     colorscheme one
 catch
 endtry
-set cul
 
+set cul
 set autoindent
 set nowrap
 " Tab 4 Spaces
@@ -132,5 +132,3 @@ set number
 set nobackup
 set nowritebackup
 set noswapfile
-" Keep Line Separator
-set noeol
