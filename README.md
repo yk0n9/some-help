@@ -279,7 +279,7 @@ scoop alias add i 'scoop install $args[0]';scoop alias add rm 'scoop uninstall $
 ```
 为scoop增加源
 ```
-scoop bucket add main;scoop bucket add extras;scoop bucket add versions;scoop bucket add nonportable;scoop bucket add dorado https://github.com/chawyehsu/dorado
+scoop bucket add main;scoop bucket add extras;scoop bucket add versions;scoop bucket add nonportable;scoop bucket add DoveBoy_Apps https://github.com/DoveBoy/Apps
 ```
 安装指定版本
 ```
