@@ -206,27 +206,16 @@ shell:startup
 把应用程序放入文件夹内
 
 #### Docker
+```
 mysql
-```
-docker run --name some-mysql -p 3306:3306 -v /d/mysql/datadir:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=root -d mysql:8.0.27
-```
+docker run --name some-mysql -p 3306:3306 -v /d/mysql/datadir:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=root -d mysql:latest
 mongo
-```
 docker run --name some-mongo -p 27017:27017 -v /d/mongo/data:/data/db -d mongo:latest
-```
 redis
-```
 docker run --name some-redis -p 6379:6379 -v /d/redis/redis.conf:/etc/redis/redis.conf -v /d/redis/data:/data -d redis:latest redis-server /etc/redis/redis.conf --appendonly yes
-```
 nacos
-```
 docker run --name some-nacos -p 8848:8848 -e MODE=standalone -d nacos/nacos-server:2.0.3
 ```
-clash
-```
-docker run --name some-clash -p 9090:9090 -p 7890:7890 -v /d/clash:/root/.config/clash -d --restart always dreamacro/clash:latest
-```
-
 #### 设置Git
 **~/.gitconfig**
 ```
@@ -238,13 +227,13 @@ proxy = 127.0.0.1:7890
 email = email
 name = name
 [pull]
-    rebase = false
+rebase = false
 [credential]
-    helper = store
+helper = store
 [safe]
-    directory = *
+directory = *
 [core]
-    autocrlf = false
+autocrlf = false
 ```
 #### Git命令流程
 ```
@@ -267,9 +256,7 @@ Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 irm get.scoop.sh -Proxy 'http://ip:port' | iex
 
 iex (new-object net.webclient).downloadstring('https://fastly.jsdelivr.net/gh/scoopinstaller/install@master/install.ps1')
-
 ---
-
 irm get.scoop.sh -Proxy 'http://ip:port' -outfile 'install.ps1'
 ./install.ps1 -ScoopDir 'D:\Scoop' -ScoopGlobalDir 'D:\Scoop\GlobalApps' -Proxy 'http://ip:port'
 ```
@@ -279,12 +266,7 @@ scoop alias add i 'scoop install $args[0]';scoop alias add rm 'scoop uninstall $
 ```
 为scoop增加源
 ```
-scoop bucket add main;scoop bucket add extras;scoop bucket add versions;scoop bucket add nonportable;scoop bucket add DoveBoy_Apps https://github.com/DoveBoy/Apps
-```
-安装指定版本
-```
-scoop install nodejs@16.12.0
-scoop install firefox@110.0
+scoop bucket add main;scoop bucket add extras;scoop bucket add versions;scoop bucket add nonportable
 ```
 更新scoop已安装应用
 ```
@@ -296,17 +278,15 @@ scoop cache rm *;scoop cleanup *
 ```
 显卡驱动(NVIDIA)
 ```
-scoop install sudo ddu
 sudo scoop install nvidia-display-driver-dch-np
 ```
-
 #### Rust-Windows
 ```
 scoop install rustup
 ```
 #### Rust-Linux
 ```
-curl https://sh.rustup.rs -sSf | sh
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 ---
 安装LLVM
@@ -340,7 +320,13 @@ mysqld --console
 mysql
 ALTER USER 'root'@'localhost' IDENTIFIED BY '123456';
 ```
-
+**设置代理**
+```
+[http]
+proxy = "127.0.0.1:7890"
+[https]
+proxy = "127.0.0.1:7890"
+```
 **~/.cargo/config**
 ```
 [source.crates-io]
@@ -349,13 +335,6 @@ replace-with = 'ustc'
 
 [source.ustc]
 registry = "https://mirrors.ustc.edu.cn/crates.io-index"
-```
-**设置代理**
-```
-[http]
-proxy = "127.0.0.1:7890"
-[https]
-proxy = "127.0.0.1:7890"
 ```
 **mysqlclient**
 
