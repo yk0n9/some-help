@@ -30,7 +30,7 @@ let g:NERDTreeDirArrowCollapsible = '▾'
 " Status Bar
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-let g:airline_theme='one'
+let g:airline_theme='papercolor'
 
 " Format
 Plug 'sbdchd/neoformat'
@@ -76,15 +76,6 @@ endif
 " Auto Pairs
 Plug 'jiangmiao/auto-pairs'
 
-" Scrollbar
-Plug 'xuyuanp/scrollbar.nvim'
-augroup ScrollbarInit
-  autocmd!
-  autocmd CursorMoved,VimResized,QuitPre * silent! lua require('scrollbar').show()
-  autocmd WinEnter,FocusGained           * silent! lua require('scrollbar').show()
-  autocmd WinLeave,BufLeave,BufWinLeave,FocusLost            * silent! lua require('scrollbar').clear()
-augroup end
-
 call plug#end()
 
 "===KeyMap=============================
@@ -113,7 +104,7 @@ tnoremap <Esc> <C-\><C-n>
 "===Other========================================
 try
     set background=light
-    colorscheme papercolor-theme
+    colorscheme PaperColor
 catch
 endtry
 
