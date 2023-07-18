@@ -1,8 +1,6 @@
 {
     "theme": "light",
     "launchTerminalOnOpen": true,
-    "java.terminal.addJavaToolchain": false,
-    "nodejs.terminal.addNodeModules": false,
     "files.toggleFolderMode": "singleClick",
     "vimEmulationEnabled": true,
     "restoreWorkspacesOnStartup": false,
