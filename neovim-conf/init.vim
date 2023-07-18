@@ -2,7 +2,7 @@
 
 call plug#begin('~/nvim-plug')
 " Theme
-Plug 'rakr/vim-one'
+Plug 'nlknguyen/papercolor-theme'
 
 " Autocomplete
 " Ctrl + N: Next | Ctrl + P: Prev | Enter: Confirm
@@ -40,7 +40,7 @@ map <silent> <A-l> :Neoformat<CR>
 Plug '907th/vim-auto-save'
 let g:auto_save = 1
 let g:auto_save_silent = 1
-let g:auto_save_no_updatetime = 1
+let g:auto_save_events = ["InsertLeave", "TextChanged"]
 
 " Git Wrapper
 Plug 'tpope/vim-fugitive'
@@ -113,7 +113,7 @@ tnoremap <Esc> <C-\><C-n>
 "===Other========================================
 try
     set background=light
-    colorscheme one
+    colorscheme papercolor-theme
 catch
 endtry
 
