@@ -126,6 +126,10 @@ scoop install rustup
 ```
 #### Rust-Linux
 ```
+pacman -S rustup
+rustup default stable
+```
+```
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 ---
