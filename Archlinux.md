@@ -132,7 +132,6 @@ sudo vim /usr/local/etc/sddm.conf
 写入
 ```
 MinimumUid=0
-
 MaximumUid=0
 ```
 0就是root用户。
