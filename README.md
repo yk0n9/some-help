@@ -164,6 +164,7 @@ mysqld --console
 mysql
 ALTER USER 'root'@'localhost' IDENTIFIED BY '123456';
 ```
+**~/.cargo/config.toml**
 **设置代理**
 ```
 [http]
@@ -171,7 +172,7 @@ proxy = "127.0.0.1:7890"
 [https]
 proxy = "127.0.0.1:7890"
 ```
-**~/.cargo/config**
+**镜像**
 ```
 [source.crates-io]
 registry = "https://github.com/rust-lang/crates.io-index"
