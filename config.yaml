@@ -31,7 +31,7 @@ proxy-groups:
       - sub
 
   - name: Auto
-    type: fallback
+    type: url-test
     use:
       - sub
 
