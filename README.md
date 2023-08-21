@@ -172,14 +172,16 @@ proxy = "127.0.0.1:7890"
 [https]
 proxy = "127.0.0.1:7890"
 ```
-**镜像**
+**Cargo Git Fetch**
+windows
 ```
-[source.crates-io]
-registry = "https://github.com/rust-lang/crates.io-index"
-replace-with = 'ustc'
-
-[source.ustc]
-registry = "https://mirrors.ustc.edu.cn/crates.io-index"
+set CARGO_NET_GIT_FETCH_WITH_CLI=true
+```
+linux
+```
+vim ~/.bashrc
+export CARGO_NET_GIT_FETCH_WITH_CLI=true
+source ~/.bashrc
 ```
 **mysqlclient**
 
