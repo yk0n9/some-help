@@ -1,5 +1,4 @@
 {
-    "theme": "light",
     "launchTerminalOnOpen": true,
     "files.toggleFolderMode": "singleClick",
     "vimEmulationEnabled": true,
