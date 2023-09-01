@@ -5,4 +5,5 @@
     "restoreWorkspacesOnStartup": false,
     "keymap": "pc-ij",
     "editor.fontWeight": 800,
+    "theme": "sync-with-os"
 }
