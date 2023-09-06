@@ -19,7 +19,7 @@ proxy-providers:
     interval: 3600
     health-check:
       enable: true
-      url: http://bing.com/
+      url: http://bing.com
       interval: 600
 
 proxy-groups:
@@ -31,6 +31,7 @@ proxy-groups:
       - sub
 
   - name: Auto
+    url: http://bing.com
     type: url-test
     use:
       - sub
