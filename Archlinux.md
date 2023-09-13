@@ -21,10 +21,6 @@ vim /etc/pacman.d/mirrorlist
 ```bash
 Server = https://mirrors.aliyun.com/archlinux/$repo/os/$arch
 ```
-```bash
-sudo rm -R /var/lib/pacman/sync
-sudo pacman -Syyu
-```
 **开启 32 位支持库**
 ```bash
 vim /etc/pacman.conf
@@ -38,7 +34,15 @@ Server = https://repo.archlinuxcn.org/$arch
 刷新 pacman 数据库
 
 ```bash
-sudo pacman -Sy && sudo pacman -S archlinux-keyring archlinuxcn-keyring
+sudo pacman -Syyu && sudo pacman -S archlinux-keyring archlinuxcn-keyring
+```
+```bash
+sudo rm -R /var/lib/pacman/sync
+sudo pacman -Syyu
+```
+卸载无残留
+```
+sudo pacman -Rsn xxx
 ```
 **安装一些基础功能包**
 
