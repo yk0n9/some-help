@@ -38,8 +38,7 @@ Server = https://repo.archlinuxcn.org/$arch
 刷新 pacman 数据库
 
 ```bash
-sudo pacman -Sy archlinux-keyring
-sudo pacman -Sy archlinuxcn-keyring
+sudo pacman -Sy && sudo pacman -S archlinux-keyring archlinuxcn-keyring
 ```
 **安装一些基础功能包**
 
