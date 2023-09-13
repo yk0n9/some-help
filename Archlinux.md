@@ -22,6 +22,7 @@ vim /etc/pacman.d/mirrorlist
 Server = https://mirrors.aliyun.com/archlinux/$repo/os/$arch
 ```
 ```bash
+sudo rm -R /var/lib/pacman/sync
 sudo pacman -Syyu
 ```
 **开启 32 位支持库**
