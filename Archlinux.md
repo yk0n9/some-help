@@ -19,7 +19,7 @@ exit
 vim /etc/pacman.d/mirrorlist
 ```
 ```bash
-Server = https://mirrors.tuna.tsinghua.edu.cn/archlinux/$repo/os/$arch
+Server = https://mirrors.tuna.tsinghua.edu.cn/archlinux/
 ```
 ```bash
 sudo pacman -Syyu
@@ -32,7 +32,7 @@ vim /etc/pacman.conf
 在文件底部添加Archlinuxcn源
 ```bash
 [archlinuxcn]
-Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
+Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/
 ```
 刷新 pacman 数据库
 
