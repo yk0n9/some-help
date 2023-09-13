@@ -56,7 +56,7 @@ sudo pacman -S git wget kate bind                                           #一
 sudo pacman -S yay
 sudo pacman -S neofetch
 sudo pacman -S neovim
-sudo pacman -S base-devel                                                   #开发环境
+sudo pacman -S base-devel glibc lib32-glibc                                 #开发环境
 ```
 
 **设置系统为中文**
