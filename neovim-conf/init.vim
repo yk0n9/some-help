@@ -2,7 +2,7 @@
 
 call plug#begin('~/nvim-plug')
 " Theme
-Plug 'nlknguyen/papercolor-theme'
+Plug 'joshdick/onedark.vim'
 
 " Autocomplete
 " Ctrl + N: Next | Ctrl + P: Prev | Enter: Confirm
@@ -30,7 +30,7 @@ let g:NERDTreeDirArrowCollapsible = '▾'
 " Status Bar
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-let g:airline_theme='papercolor'
+let g:airline_theme='onedark'
 
 " Format
 Plug 'sbdchd/neoformat'
@@ -103,8 +103,8 @@ tnoremap <Esc> <C-\><C-n>
 
 "===Other========================================
 try
-    set background=light
-    colorscheme PaperColor
+    set background=dark
+    colorscheme onedark
 catch
 endtry
 
