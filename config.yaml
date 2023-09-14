@@ -7,6 +7,12 @@ external-controller: :9090
 
 dns:
   enable: true
+  listen: 0.0.0.0:53
+  ipv6: false
+  fake-ip-range: 198.18.0.1/16
+  default-nameserver:
+    - 8.8.8.8
+    - 114.114.114.114
   nameserver:
     - 8.8.8.8
     - 114.114.114.114
@@ -20,7 +26,7 @@ proxy-providers:
     health-check:
       enable: true
       url: http://bing.com
-      interval: 600
+      interval: 300
 
 proxy-groups:
   - name: PROXY
@@ -31,8 +37,8 @@ proxy-groups:
       - sub
 
   - name: Auto
-    url: http://bing.com
     type: url-test
+    url: http://bing.com
     use:
       - sub
 
