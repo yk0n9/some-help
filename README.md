@@ -95,7 +95,7 @@ git pull upstream master
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 irm get.scoop.sh -Proxy 'http://ip:port' | iex
 
-iex (new-object net.webclient).downloadstring('https://fastly.jsdelivr.net/gh/scoopinstaller/install@master/install.ps1')
+irm https://ghproxy.com/https://raw.githubusercontent.com/scoopinstaller/install/master/install.ps1 | iex
 ---
 irm get.scoop.sh -Proxy 'http://ip:port' -outfile 'install.ps1'
 ./install.ps1 -ScoopDir 'D:\Scoop' -ScoopGlobalDir 'D:\Scoop\GlobalApps' -Proxy 'http://ip:port'
