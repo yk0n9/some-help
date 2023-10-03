@@ -66,8 +66,8 @@ proxy = 127.0.0.1:7890
 [https]
 proxy = 127.0.0.1:7890
 [user]
-email = email
-name = name
+email = ykonghao@icloud.com
+name = ykong1337
 [pull]
 rebase = false
 [credential]
@@ -76,6 +76,8 @@ helper = store
 directory = *
 [core]
 autocrlf = false
+[credential "helperselector"]
+selected = manager
 ```
 #### Git命令流程
 ```
