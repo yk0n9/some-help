@@ -8,10 +8,10 @@
 **连接网络**
 ```
 iwctl
-device lis
+device list
 station wlan0 scan
 station wlan0 get-networks
-station wlan0 connect YOUR-WIRELESS-NAME
+station wlan0 connect [WIRELESS-NAME]
 exit
 ```
 **使用国内源**
