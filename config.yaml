@@ -25,8 +25,8 @@ proxy-providers:
     interval: 3600
     health-check:
       enable: true
-      url: http://bing.com
-      interval: 300
+      url: http://www.gstatic.com/generate_204
+      interval: 600
 
 proxy-groups:
   - name: PROXY
@@ -38,7 +38,6 @@ proxy-groups:
 
   - name: Auto
     type: url-test
-    url: http://bing.com
     use:
       - sub
 
