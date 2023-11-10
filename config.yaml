@@ -23,7 +23,7 @@ proxy-providers:
     interval: 3600
     health-check:
       enable: true
-      url: http://www.gstatic.com/generate_204
+      url: http://www.google.com
       interval: 600
 
 proxy-groups:
@@ -36,7 +36,7 @@ proxy-groups:
 
   - name: Auto
     type: url-test
-    url: http://www.gstatic.com/generate_204
+    url: http://www.google.com
     interval: 600
     use:
       - sub
