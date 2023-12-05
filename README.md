@@ -24,21 +24,25 @@ https://fastly.jsdelivr.net/gh/ykong1337/some-help@master/config.yaml
 #### 多订阅用[URLEncode](https://www.urlencoder.org/)后的链接, 订阅之间用|分隔
 ```
 Clash: 
-https://sub.xeton.dev/sub?target=clash&list=true&url=订阅链接
-https://sub.xeton.dev/sub?target=clash&list=true&url=Encode后的[订阅|订阅|...]
+https://sub.tsutsu.one/sub?target=clash&list=true&url=订阅链接
+https://sub.tsutsu.one/sub?target=clash&list=true&url=Encode后的[订阅|订阅|...]
 
 QuanX: 
-https://sub.xeton.dev/sub?target=quanx&list=true&url=订阅链接
-https://sub.xeton.dev/sub?target=quanx&list=true&url=Encode后的[订阅|订阅|...]
+https://sub.tsutsu.one/sub?target=quanx&list=true&url=订阅链接
+https://sub.tsutsu.one/sub?target=quanx&list=true&url=Encode后的[订阅|订阅|...]
 
 Surge: 
-https://sub.xeton.dev/sub?target=surge&ver=4&list=true&url=订阅链接
-https://sub.xeton.dev/sub?target=surge&ver=4&list=true&url=Encode后的[订阅|订阅|...]
+https://sub.tsutsu.one/sub?target=surge&ver=4&list=true&url=订阅链接
+https://sub.tsutsu.one/sub?target=surge&ver=4&list=true&url=Encode后的[订阅|订阅|...]
 
 Clash自动配置:
-https://sub.xeton.dev/sub?target=clash&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online_Mini.ini&url=订阅
+https://sub.tsutsu.one/sub?target=clash&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online_Mini.ini&url=订阅
 
 [订阅转换](https://sub.tsutsu.one/)
+```
+#### Github加速转换
+```
+https://www.jsdelivr.com/github
 ```
 #### Windows开机自启
 运行CMD，输入
