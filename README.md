@@ -3,19 +3,19 @@
 ### 基本配置
 #### Shadowrocket
 ```
-https://fastly.jsdelivr.net/gh/ykong1337/some-help@master/Shadowrocket.conf
+https://cdn.jsdelivr.net/gh/ykong1337/some-help@master/Shadowrocket.conf
 ```
 #### Quantumult X
 ```
-https://fastly.jsdelivr.net/gh/ykong1337/some-help@master/QuanX.conf
+https://cdn.jsdelivr.net/gh/ykong1337/some-help@master/QuanX.conf
 ```
 #### Surge
 ```
-https://fastly.jsdelivr.net/gh/ykong1337/some-help@master/Surge.conf
+https://cdn.jsdelivr.net/gh/ykong1337/some-help@master/Surge.conf
 ```
 #### Clash
 ```
-https://fastly.jsdelivr.net/gh/ykong1337/some-help@master/config.yaml
+https://cdn.jsdelivr.net/gh/ykong1337/some-help@master/config.yaml
 ```
 #### Clash配置位置
 ```
@@ -103,7 +103,7 @@ git pull upstream master
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 irm get.scoop.sh -Proxy 'http://ip:port' | iex
 
-irm https://fastly.jsdelivr.net/gh/scoopinstaller/install@master/install.ps1 | iex
+irm https://cdn.jsdelivr.net/gh/scoopinstaller/install@master/install.ps1 | iex
 ---
 irm get.scoop.sh -Proxy 'http://ip:port' -outfile 'install.ps1'
 ./install.ps1 -ScoopDir 'D:\Scoop' -ScoopGlobalDir 'D:\Scoop\GlobalApps' -Proxy 'http://ip:port'
@@ -201,68 +201,4 @@ source ~/.bashrc
 然后执行
 ```
 cargo install diesel_cli --no-default-features --features mysql
-```
-
-安装Vim
-```
-scoop install vim
-```
-
-#### Vim-Plug
-```
-vim ~/.vimrc
-```
-###### Unix
-
-```sh
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-```
-###### Windows (PowerShell)
-
-```powershell
-iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim |`
-    ni $HOME/vimfiles/autoload/plug.vim -Force
-```
-#### NeoVim-Plug
-
-###### Unix, Linux
-
-```sh
-sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-```
-```
-nvim ~/.config/nvim/init.vim
-```
-###### Windows (PowerShell)
-
-```powershell
-iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim |`
-    ni "$(@($env:XDG_DATA_HOME, $env:LOCALAPPDATA)[$null -eq $env:XDG_DATA_HOME])/nvim-data/site/autoload/plug.vim" -Force
-```
-```
-nvim ~/AppData/Local/nvim/init.vim
-```
----
-#### 安装LazyVim
-###### Windows
-```
-git clone https://github.com/LazyVim/starter $env:LOCALAPPDATA\nvim
-```
-###### Linux
-```
-git clone https://github.com/LazyVim/starter ~/.config/nvim
-```
-#### Fleet配置位置
-```
-~/.fleet/settings.json
-```
-#### Vim配置位置
-```
-~/.vimrc
-```
-#### wezterm配置位置
-```
-~/.wezterm.lua
 ```
