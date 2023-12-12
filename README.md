@@ -202,3 +202,7 @@ source ~/.bashrc
 ```
 cargo install diesel_cli --no-default-features --features mysql
 ```
+**Windows 关闭VBS**
+```
+sudo bcdedit /set hypervisorlaunchtype off
+```
