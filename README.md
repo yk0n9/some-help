@@ -40,10 +40,9 @@ https://sub.tsutsu.one/sub?target=clash&config=https%3A%2F%2Fraw.githubuserconte
 
 [订阅转换](https://sub.tsutsu.one/)
 ```
-#### Github加速转换
-```
-https://www.jsdelivr.com/github
-```
+
+[Github加速转换](https://www.jsdelivr.com/github)
+
 #### Windows开机自启
 运行CMD，输入
 ```
