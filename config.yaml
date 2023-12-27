@@ -23,20 +23,28 @@ proxy-providers:
     interval: 3600
     health-check:
       enable: true
-      url: http://www.google.com
+      url: http://google.com
       interval: 600
 
 proxy-groups:
   - name: PROXY
     type: select
     proxies:
-      - Auto
+      - auto
+      - fallback
     use:
       - sub
 
-  - name: Auto
+  - name: auto
     type: url-test
-    url: http://www.google.com
+    url: http://google.com
+    interval: 600
+    use:
+      - sub
+
+  - name: fallback
+    type: fallback
+    url: http://google.com
     interval: 600
     use:
       - sub
