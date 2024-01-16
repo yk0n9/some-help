@@ -100,10 +100,12 @@ git pull upstream master
 安装scoop
 ```
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
-irm get.scoop.sh -Proxy 'http://ip:port' | iex
-
-irm https://cdn.jsdelivr.net/gh/ScoopInstaller/Install@master/install.ps1 | iex
 ---
+irm get.scoop.sh -Proxy 'http://ip:port' | iex
+irm https://cdn.jsdelivr.net/gh/ScoopInstaller/Install@master/install.ps1 | iex
+---admin
+iex "& {$(irm https://cdn.jsdelivr.net/gh/ScoopInstaller/Install@master/install.ps1)} -RunAsAdmin"
+---custom
 irm get.scoop.sh -Proxy 'http://ip:port' -outfile 'install.ps1'
 ./install.ps1 -ScoopDir 'D:\Scoop' -ScoopGlobalDir 'D:\Scoop\GlobalApps' -Proxy 'http://ip:port'
 ```
