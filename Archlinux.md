@@ -34,7 +34,9 @@ Server = https://repo.archlinuxcn.org/$arch
 刷新 pacman 数据库
 
 ```bash
-sudo pacman -Syyu && sudo pacman -S archlinux-keyring archlinuxcn-keyring
+sudo pacman -S archlinux-keyring
+sudo pacman -S archlinuxcn-keyring
+sudo pacman -Syyu
 ```
 ```bash
 sudo rm -R /var/lib/pacman/sync
