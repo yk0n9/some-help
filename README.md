@@ -101,6 +101,7 @@ git pull upstream master
 ```
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 ---
+iwr -useb get.scoop.sh | iex
 irm get.scoop.sh -Proxy 'http://ip:port' | iex
 irm https://cdn.jsdelivr.net/gh/ScoopInstaller/Install@master/install.ps1 | iex
 ---admin
