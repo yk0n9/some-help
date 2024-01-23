@@ -18,7 +18,7 @@ dns:
 proxy-providers:
   sub:
     type: http
-    url: https://api.tsutsu.one/sub?target=clash&list=true&url=订阅
+    url: https://sub.xeton.dev/sub?target=clash&list=true&url=订阅
     path: sub.yaml
     interval: 1800
     health-check:
