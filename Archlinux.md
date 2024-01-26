@@ -25,24 +25,26 @@ Server = https://mirrors.aliyun.com/archlinux/$repo/os/$arch
 ```bash
 vim /etc/pacman.conf
 ```
-去掉[multilib]一节中两行的注释，来开启 32 位库支持。
-在文件底部添加Archlinuxcn源
-```bash
+```
+sudo pacman -Syy
+sudo pacman -S archlinux-keyring
+```
+去掉[multilib]一节中两行的注释开启 32 位库支持
+添加Archlinuxcn源
+```
 [archlinuxcn]
 Server = https://repo.archlinuxcn.org/$arch
 ```
-刷新 pacman 数据库
-
 ```bash
-sudo pacman -S archlinux-keyring
+sudo pacman-key --lsign-key "farseerfc@archlinux.org"
 sudo pacman -S archlinuxcn-keyring
-sudo pacman -Syyu
 ```
+重新更新源
 ```bash
 sudo rm -R /var/lib/pacman/sync
-sudo pacman -Syyu
+sudo pacman -Syy
 ```
-卸载无残留
+卸载
 ```
 sudo pacman -Rsn xxx
 ```
@@ -62,7 +64,7 @@ sudo pacman -S git wget kate bind                                           #一
 sudo pacman -S yay
 sudo pacman -S neofetch
 sudo pacman -S neovim
-sudo pacman -S base-devel glibc lib32-glibc                                 #开发环境
+sudo pacman -S base-devel glibc                                             #开发环境
 ```
 
 **设置系统为中文**
