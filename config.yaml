@@ -81,7 +81,7 @@ rule-providers:
   China:
     behavior: classical
     type: http
-    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/China/China_Classical.yaml
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/ChinaMax/ChinaMax_Classical.yaml
     interval: 86400
     path: China.yaml
 
