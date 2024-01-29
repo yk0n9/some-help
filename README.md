@@ -100,15 +100,16 @@ git pull upstream master
 安装scoop
 ```
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
----
-iwr -useb get.scoop.sh | iex
-irm get.scoop.sh -Proxy 'http://ip:port' | iex
+---normal
+irm get.scoop.sh | iex
+irm get.scoop.sh [-Proxy 'http://ip:port'] | iex
 irm https://cdn.jsdelivr.net/gh/ScoopInstaller/Install@master/install.ps1 | iex
 ---admin
 iex "& {$(irm https://cdn.jsdelivr.net/gh/ScoopInstaller/Install@master/install.ps1)} -RunAsAdmin"
 ---custom
-irm get.scoop.sh -Proxy 'http://ip:port' -outfile 'install.ps1'
-./install.ps1 -ScoopDir 'D:\Scoop' -ScoopGlobalDir 'D:\Scoop\GlobalApps' -Proxy 'http://ip:port'
+irm get.scoop.sh -outfile 'install.ps1'
+irm https://cdn.jsdelivr.net/gh/ScoopInstaller/Install@master/install.ps1 -outfile 'install.ps1'
+./install.ps1 -ScoopDir 'D:\Scoop' -ScoopGlobalDir 'D:\Scoop\Apps' [-RunAsAdmin]
 ```
 别名
 ```
@@ -133,7 +134,7 @@ scoop cleanup *
 ```
 显卡驱动(NVIDIA)
 ```
-sudo scoop install nvidia-display-driver-dch-np
+sudo scoop install nonportable/nvidia-display-driver-dch-np
 ```
 #### Rust-Windows
 ```
