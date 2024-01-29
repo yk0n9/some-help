@@ -116,7 +116,11 @@ scoop alias add i 'scoop install $args[0]';scoop alias add rm 'scoop uninstall $
 ```
 为scoop增加源
 ```
-scoop bucket add main;scoop bucket add extras;scoop bucket add versions;scoop bucket add nonportable
+scoop bucket add main
+scoop bucket add extras
+scoop bucket add versions
+scoop bucket add nonportable
+scoop bucket add chawyehsu/dorado
 ```
 更新scoop已安装应用
 ```
@@ -124,7 +128,8 @@ scoop update *
 ```
 清理cache
 ```
-scoop cache rm *;scoop cleanup *
+scoop cache rm *
+scoop cleanup *
 ```
 显卡驱动(NVIDIA)
 ```
