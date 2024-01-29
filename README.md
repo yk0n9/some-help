@@ -254,15 +254,15 @@ proxy = "127.0.0.1:7890"
 windows
 
 ```
-set CARGO_NET_GIT_FETCH_WITH_CLI=true
+setx CARGO_NET_GIT_FETCH_WITH_CLI "true"
 ```
 
 linux
 
 ```
-vim ~/.bashrc
+vim /etc/profile
 export CARGO_NET_GIT_FETCH_WITH_CLI=true
-source ~/.bashrc
+source /etc/profile
 ```
 
 **mysqlclient**
