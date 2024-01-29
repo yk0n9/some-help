@@ -121,7 +121,7 @@ scoop bucket add main
 scoop bucket add extras
 scoop bucket add versions
 scoop bucket add nonportable
-scoop bucket add chawyehsu/dorado
+scoop bucket add dorado https://github.com/chawyehsu/dorado
 ```
 更新scoop已安装应用
 ```
