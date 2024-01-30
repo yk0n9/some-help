@@ -163,6 +163,12 @@ scoop bucket add dorado https://github.com/chawyehsu/dorado
 scoop bucket rm dorado
 ```
 
+锁版本
+
+```
+scoop hold firefox
+```
+
 更新已安装应用
 
 ```
