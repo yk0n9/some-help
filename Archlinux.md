@@ -28,6 +28,7 @@ vim /etc/pacman.conf
 ```
 sudo pacman -Syy
 sudo pacman -S archlinux-keyring
+sudo pacman -Syu
 ```
 去掉[multilib]一节中两行的注释开启 32 位库支持
 添加Archlinuxcn源
@@ -38,6 +39,7 @@ Server = https://repo.archlinuxcn.org/$arch
 ```bash
 sudo pacman-key --lsign-key "farseerfc@archlinux.org"
 sudo pacman -S archlinuxcn-keyring
+sudo pacman -Syu
 ```
 重新更新源
 ```bash
