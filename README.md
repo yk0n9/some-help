@@ -89,7 +89,7 @@ proxy = 127.0.0.1:7890
 proxy = 127.0.0.1:7890
 [user]
 email = ykonghao@icloud.com
-name = ykong1337
+name = yk0n9
 [pull]
 rebase = false
 [credential]
