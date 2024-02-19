@@ -141,7 +141,7 @@ irm https://cdn.jsdelivr.net/gh/ScoopInstaller/Install@master/install.ps1 -outfi
 别名
 
 ```
-scoop alias add add 'scoop install $args[0]'
+scoop alias add i 'scoop install $args[0]'
 scoop alias add rm 'scoop uninstall $args[0]'
 scoop alias add ls 'scoop list'
 scoop alias add u 'scoop update $args[0]'
