@@ -34,7 +34,7 @@ proxy-groups:
 proxy-providers:
   sub:
     type: http
-    url: https://sub.xeton.dev/sub?url=订阅&target=clash&list=true
+    url: https://sub.xeton.dev/sub?&target=clash&list=true&url=订阅
     path: sub.yaml
     interval: 1800
     health-check:
@@ -59,7 +59,7 @@ rule-providers:
   Advertising:
     behavior: classical
     type: http
-    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/Clash/Advertising/Advertising_Classical.yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Advertising/Advertising_Classical.yaml
     interval: 86400
     path: Advertising.yaml
   Proxy:
