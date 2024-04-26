@@ -200,7 +200,10 @@ scoop install rustup
 ```
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
-
+```
+dnf install rustup
+rustup-init
+```
 ```
 source "$HOME/.cargo/env"
 ```
