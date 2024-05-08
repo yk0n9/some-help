@@ -48,7 +48,7 @@ https://sub.xeton.dev/sub?target=surge&ver=4&list=true&url=订阅链接
 https://sub.xeton.dev/sub?target=surge&ver=4&list=true&url=Encode后的[订阅|订阅|...]
 
 Clash自动配置:
-https://sub.xeton.dev/sub?target=clash&config=https%3A%2F%2Fsubconverter.oss-ap-southeast-1.aliyuncs.com%2FRules%2FRemoteConfig%2Funiversal%2Furltest.ini&url=订阅
+https://sub.xeton.dev/sub?target=clash&udp=false&config=https%3A%2F%2Fraw.githubusercontent.com%2Fyk0n9%2Fsome-help%2Fmaster%2Fsubconverter.ini&url=订阅
 
 [订阅转换](https://acl4ssr-sub.github.io/)
 ```
