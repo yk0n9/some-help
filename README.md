@@ -203,6 +203,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 dnf install rustup
 rustup-init
+rustup component add rust-analyzer
 ```
 ```
 source "$HOME/.cargo/env"
