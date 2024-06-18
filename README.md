@@ -236,7 +236,7 @@ scoop install mingw
 scoop install cmake
 ```
 ```
-scoop install clion@2023.1.6-231.9414.12
+scoop install clion@2023.1.7-231.9423.4
 ```
 安装MySQL
 
