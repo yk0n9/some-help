@@ -1,0 +1,14 @@
+{
+  "editor.fontFamily": "JetBrainsMono Nerd Font",
+  "editor.cursorBlinking": "smooth",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "files.autoSave": "afterDelay",
+  "window.commandCenter": false,
+  "window.restoreWindows": "none",
+  "explorer.confirmDelete": false,
+
+  "prettier.useEditorConfig": false,
+  "commentTranslate.targetLanguage": "zh-CN",
+  "workbench.colorTheme": "Catppuccin Latte",
+  "workbench.iconTheme": "catppuccin-latte",
+}
