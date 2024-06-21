@@ -1,7 +1,10 @@
 {
   "editor.fontFamily": "JetBrainsMono Nerd Font",
-  "editor.cursorBlinking": "smooth",
   "editor.cursorSmoothCaretAnimation": "on",
+  "editor.cursorBlinking": "smooth",
+  "workbench.list.smoothScrolling": true,
+  "editor.smoothScrolling": true,
+  "terminal.integrated.smoothScrolling": true,
   "files.autoSave": "afterDelay",
   "window.commandCenter": false,
   "window.restoreWindows": "none",
