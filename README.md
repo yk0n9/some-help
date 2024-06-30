@@ -5,25 +5,25 @@
 #### Shadowrocket
 
 ```
-https://cdn.jsdelivr.net/gh/ykong1337/some-help@master/Shadowrocket.conf
+https://cdn.jsdelivr.net/gh/yk0n9/some-help@master/Shadowrocket.conf
 ```
 
 #### Quantumult X
 
 ```
-https://cdn.jsdelivr.net/gh/ykong1337/some-help@master/QuanX.conf
+https://cdn.jsdelivr.net/gh/yk0n9/some-help@master/QuanX.conf
 ```
 
 #### Surge
 
 ```
-https://cdn.jsdelivr.net/gh/ykong1337/some-help@master/Surge.conf
+https://cdn.jsdelivr.net/gh/yk0n9/some-help@master/Surge.conf
 ```
 
 #### Clash
 
 ```
-https://cdn.jsdelivr.net/gh/ykong1337/some-help@master/config.yaml
+https://cdn.jsdelivr.net/gh/yk0n9/some-help@master/config.yaml
 ```
 
 #### Clash配置位置
