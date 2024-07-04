@@ -10,6 +10,8 @@
     "window.restoreWindows": "none",
     "explorer.confirmDelete": false,
     "explorer.fileNesting.enabled": true,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "diffEditor.hideUnchangedRegions.enabled": true,
   
     "prettier.useEditorConfig": false,
     "commentTranslate.targetLanguage": "zh-CN",
