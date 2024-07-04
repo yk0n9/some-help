@@ -9,6 +9,7 @@
     "window.commandCenter": false,
     "window.restoreWindows": "none",
     "explorer.confirmDelete": false,
+    "explorer.fileNesting.enabled": true,
   
     "prettier.useEditorConfig": false,
     "commentTranslate.targetLanguage": "zh-CN",
