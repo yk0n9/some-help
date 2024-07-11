@@ -21,20 +21,21 @@ vim /etc/pacman.d/mirrorlist
 ```bash
 Server = https://mirrors.aliyun.com/archlinux/$repo/os/$arch
 ```
+**更新包**
+```
+sudo pacman -Syy
+sudo rm -rf /etc/pacman.d/gnupg
+sudo pacman-key --init
+sudo pacman-key --populate archlinux
+sudo pacman -S archlinux-keyring
+sudo pacman -Syu
+```
 **开启 32 位支持库**
 ```bash
 vim /etc/pacman.conf
 ```
-```
-sudo pacman -Syy
-rm -rf /etc/pacman.d/gnupg
-pacman-key --init
-pacman-key --populate archlinux
-sudo pacman -S archlinux-keyring
-sudo pacman -Syu
-```
 去掉[multilib]一节中两行的注释开启 32 位库支持
-添加Archlinuxcn源
+**添加Archlinuxcn源**
 ```
 [archlinuxcn]
 Server = https://repo.archlinuxcn.org/$arch
