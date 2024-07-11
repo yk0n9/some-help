@@ -27,6 +27,9 @@ vim /etc/pacman.conf
 ```
 ```
 sudo pacman -Syy
+rm -rf /etc/pacman.d/gnupg
+pacman-key --init
+pacman-key --populate archlinux
 sudo pacman -S archlinux-keyring
 sudo pacman -Syu
 ```
