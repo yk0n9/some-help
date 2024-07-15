@@ -15,6 +15,6 @@
   
     "prettier.useEditorConfig": false,
     "commentTranslate.targetLanguage": "zh-CN",
-    "workbench.colorTheme": "One Dark Pro",
-    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorTheme": "Catppuccin Frappé",
+    "workbench.iconTheme": "catppuccin-frappe",
 }
