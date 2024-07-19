@@ -10,8 +10,9 @@
     "window.restoreWindows": "none",
     "explorer.confirmDelete": false,
     "explorer.fileNesting.enabled": true,
-    "diffEditor.ignoreTrimWhitespace": false,
     "diffEditor.hideUnchangedRegions.enabled": true,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
   
     "prettier.useEditorConfig": false,
     "commentTranslate.targetLanguage": "zh-CN",
