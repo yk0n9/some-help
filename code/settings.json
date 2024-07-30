@@ -1,5 +1,5 @@
 {
-    "editor.fontFamily": "VictorMono NFM",
+    "editor.fontFamily": "JetBrainsMono NF",
     "editor.cursorSmoothCaretAnimation": "on",
     "editor.cursorBlinking": "smooth",
     "workbench.list.smoothScrolling": true,
