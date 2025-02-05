@@ -1,0 +1,75 @@
+mode: rule
+mixed-port: 7890
+allow-lan: false
+log-level: info
+secret: ""
+external-controller: 127.0.0.1:9090
+dns:
+  enable: true
+  ipv6: false
+  nameserver:
+    - 114.114.114.114
+    - 223.5.5.5
+    - 8.8.8.8
+proxy-groups:
+  - name: Proxy
+    type: select
+    proxies:
+      - Auto
+      - Fallback
+    use:
+      - sub
+  - name: Auto
+    type: url-test
+    url: http://www.google.com
+    interval: 30
+    use:
+      - sub
+  - name: Fallback
+    type: fallback
+    url: http://www.google.com
+    interval: 30
+    use:
+      - sub
+proxy-providers:
+  sub:
+    type: http
+    url: https://sub.xeton.dev/sub?target=clash&list=true&url=订阅
+    path: sub.yaml
+    interval: 1800
+    health-check:
+      enable: true
+      url: http://www.google.com
+      interval: 30
+rules:
+  - RULE-SET,Lan,DIRECT
+  - RULE-SET,Advertising,REJECT
+  - RULE-SET,Proxy,Proxy
+  - RULE-SET,SteamCN,DIRECT
+  - GEOIP,CN,DIRECT
+  - MATCH,Proxy
+rule-providers:
+  Lan:
+    behavior: classical
+    type: http
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Lan/Lan.yaml
+    interval: 86400
+    path: Lan.yaml
+  Advertising:
+    behavior: classical
+    type: http
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Advertising/Advertising_Classical.yaml
+    interval: 86400
+    path: Advertising.yaml
+  Proxy:
+    behavior: classical
+    type: http
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Proxy/Proxy_Classical.yaml
+    interval: 86400
+    path: Proxy.yaml
+  SteamCN:
+    behavior: classical
+    type: http
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/SteamCN/SteamCN.yaml
+    interval: 86400
+    path: SteamCN.yaml
