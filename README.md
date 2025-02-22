@@ -135,6 +135,7 @@ iex "& {$(irm https://cdn.jsdelivr.net/gh/ScoopInstaller/Install@master/install.
 ---custom
 irm get.scoop.sh -outfile 'install.ps1'
 irm https://cdn.jsdelivr.net/gh/ScoopInstaller/Install@master/install.ps1 -outfile 'install.ps1'
+
 ./install.ps1 -ScoopDir 'D:\Scoop' -ScoopGlobalDir 'D:\Scoop\Apps' [-RunAsAdmin]
 ```
 
@@ -184,10 +185,11 @@ scoop cache rm *
 scoop cleanup *
 ```
 
-显卡驱动(NVIDIA)
+设置代理
 
 ```
-sudo scoop install nonportable/nvidia-display-driver-dch-np
+scoop config proxy 127.0.0.1:7890
+scoop config rm proxy
 ```
 
 #### Rust-Windows
