@@ -288,34 +288,6 @@ export CARGO_NET_GIT_FETCH_WITH_CLI=true
 source /etc/profile
 ```
 
-**mysqlclient**
+**Cmder**
 
-安装 [MySQL Connector/C](https://downloads.mysql.com/archives/c-c/)
-
-设置环境变量：MYSQLCLIENT_LIB_DIR
-
-默认在 C:\Program Files\MySQL\MySQL Connector C 6.1\lib\vs14
-
-然后执行
-
-```
-cargo install diesel_cli --no-default-features --features mysql
-```
-
-**Windows 关闭 VBS**
-
-```
-sudo bcdedit /set hypervisorlaunchtype off
-```
-
-**AHK**
-
-```
-#SingleInstance Force
-
-if !A_IsAdmin && !(DllCall("GetCommandLine", "str") ~= " /restart(?!\S)")
-  Try RunWait('*RunAs "' (A_IsCompiled ? A_ScriptFullPath '" /restart' : A_AhkPath '" /restart "' A_ScriptFullPath '"'))
-
-Ctrl::CapsLock
-CapsLock::Ctrl
-```
+Settings - Features - 取消勾选 Inject ConEmuHk
