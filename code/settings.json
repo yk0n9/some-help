@@ -17,7 +17,7 @@
   "extensions.experimental.affinity": {
     "vscodevim.vim": 1
   },
-  
+
   "commentTranslate.targetLanguage": "zh-CN",
   "workbench.colorTheme": "Maple Dark",
   "workbench.iconTheme": "vscode-icons",
