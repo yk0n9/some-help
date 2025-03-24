@@ -1,5 +1,5 @@
 {
-  "editor.fontFamily": "VictorMono NFM",
+  "editor.fontFamily": "Maple Mono NF CN",
   // "editor.fontFamily": "JetBrainsMono NF",
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.cursorBlinking": "smooth",
@@ -19,7 +19,7 @@
   },
   
   "commentTranslate.targetLanguage": "zh-CN",
-  "workbench.colorTheme": "Ayu Light",
+  "workbench.colorTheme": "Maple Dark",
   "workbench.iconTheme": "vscode-icons",
   "workbench.productIconTheme": "fluent-icons",
   "workbench.activityBar.location": "top",
