@@ -1,29 +1,15 @@
 {
-  "editor.fontFamily": "Maple Mono NF CN",
-  // "editor.fontFamily": "JetBrainsMono NF",
-  "editor.cursorSmoothCaretAnimation": "on",
-  "editor.cursorBlinking": "smooth",
-  "workbench.list.smoothScrolling": true,
-  "editor.smoothScrolling": true,
-  "terminal.integrated.smoothScrolling": true,
-  "files.autoSave": "afterDelay",
-  "window.commandCenter": false,
-  "window.restoreWindows": "none",
-  "explorer.confirmDelete": false,
-  "explorer.fileNesting.enabled": true,
-  "diffEditor.hideUnchangedRegions.enabled": true,
-  "diffEditor.ignoreTrimWhitespace": false,
-  "editor.folding": false,
-  "extensions.experimental.affinity": {
-    "vscodevim.vim": 1
-  },
-
-  "commentTranslate.targetLanguage": "zh-CN",
-  "workbench.colorTheme": "Maple Dark",
-  "workbench.iconTheme": "vscode-icons",
-  "workbench.productIconTheme": "fluent-icons",
+  "editor.fontFamily": "Fira Code",
+  "workbench.colorTheme": "Rosé Pine",
+  "workbench.iconTheme": "rose-pine-icons",
   "workbench.activityBar.location": "top",
-  "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, UseTab: Never, IndentWidth: 4, TabWidth: 4, BreakBeforeBraces: Attach, AllowShortIfStatementsOnASingleLine: false, IndentCaseLabels: false, ColumnLimit: 80, AccessModifierOffset: -4 }",
+  "explorer.fileNesting.enabled": true,
+  "explorer.confirmDelete": false,
+  "window.restoreWindows": "none",
+  "window.commandCenter": false,
+  "files.autoSave": "afterDelay",
+  "diffEditor.hideUnchangedRegions.enabled": true,
+  "C_Cpp.clang_format_style": "{BasedOnStyle: Google, IndentWidth: 4}",
   "vim.normalModeKeyBindings": [
     {
       "before": ["<C-h>"],
@@ -53,5 +39,5 @@
       "before": [";"],
       "after": [":"]
     }
-  ]
+  ],
 }
