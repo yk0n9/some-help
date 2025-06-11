@@ -296,3 +296,16 @@ google关闭wifi验证
 ```
 adb shell settings put global captive_portal_detection_enabled 0
 ```
+
+**frpc**
+```
+serverAddr = "x.x.x.x"
+serverPort = 7000
+
+[[proxies]]
+name = "stardew"
+type = "udp"
+localIP = "127.0.0.1"
+localPort = 24642
+remotePort = 24642
+```
