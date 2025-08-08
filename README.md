@@ -309,3 +309,11 @@ localIP = "127.0.0.1"
 localPort = 24642
 remotePort = 24642
 ```
+
+**dnf alias** 
+```
+echo "alias du='sudo dnf update -y'" >> ~/.bashrc
+echo "alias di='sudo dnf install -y'" >> ~/.bashrc
+echo "alias dr='sudo dnf remove -y'" >> ~/.bashrc
+source ~/.bashrc
+```
