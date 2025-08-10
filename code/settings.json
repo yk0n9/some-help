@@ -1,5 +1,7 @@
 {
   "editor.fontFamily": "Fira Code",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.cursorBlinking": "solid",
   "workbench.colorTheme": "Rosé Pine",
   "workbench.iconTheme": "rose-pine-icons",
   "workbench.activityBar.location": "top",
