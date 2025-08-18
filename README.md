@@ -294,7 +294,7 @@ Settings - Features - 取消勾选 Inject ConEmuHk
 
 google关闭wifi验证
 ```
-adb shell settings put global captive_portal_detection_enabled 0
+adb shell settings put global captive_portal_mode 0
 ```
 
 **frpc**
