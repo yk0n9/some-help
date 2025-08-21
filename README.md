@@ -312,8 +312,5 @@ remotePort = 24642
 
 **dnf alias** 
 ```
-echo "alias du='sudo dnf update -y'" >> ~/.bashrc
-echo "alias di='sudo dnf install -y'" >> ~/.bashrc
-echo "alias dr='sudo dnf remove -y'" >> ~/.bashrc
-source ~/.bashrc
+echo "alias du='sudo dnf update -y'" >> ~/.bashrc && echo "alias di='sudo dnf install -y'" >> ~/.bashrc && echo "alias dr='sudo dnf remove -y'" >> ~/.bashrc && source ~/.bashrc
 ```
