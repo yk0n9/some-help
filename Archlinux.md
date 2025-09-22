@@ -29,15 +29,13 @@ vim /etc/pacman.d/mirrorlist
 Server = https://mirrors.aliyun.com/archlinux/$repo/os/$arch
 ```
 
-**更新包**
+**更新包(init)**
 
 ```
-sudo pacman -Syy
-sudo rm -rf /etc/pacman.d/gnupg
-sudo pacman-key --init
-sudo pacman-key --populate archlinux
-sudo pacman -S archlinux-keyring
-sudo pacman -Syu
+sudo rm -rf /etc/pacman.d/gnupg && sudo pacman-key --init && sudo pacman-key --populate archlinux && sudo pacman -S archlinux-keyring
+```
+```
+sudo pacman -Syyu
 ```
 
 **开启 32 位支持库**
