@@ -1,45 +1,77 @@
 {
-  "editor.fontFamily": "Fira Code",
-  "editor.cursorSmoothCaretAnimation": "on",
-  "editor.cursorBlinking": "solid",
-  "workbench.colorTheme": "Rosé Pine",
-  "workbench.iconTheme": "rose-pine-icons",
-  "workbench.activityBar.location": "top",
-  "explorer.fileNesting.enabled": true,
-  "explorer.confirmDelete": false,
-  "window.restoreWindows": "none",
-  "window.commandCenter": false,
-  "files.autoSave": "afterDelay",
-  "diffEditor.hideUnchangedRegions.enabled": true,
-  "C_Cpp.clang_format_style": "{BasedOnStyle: Google, IndentWidth: 4}",
-  "vim.normalModeKeyBindings": [
-    {
-      "before": ["<C-h>"],
-      "after": ["<C-w>", "h"]
-    },
-    {
-      "before": ["<C-l>"],
-      "after": ["<C-w>", "l"]
-    },
-    {
-      "before": ["<C-j>"],
-      "after": ["<C-w>", "j"]
-    },
-    {
-      "before": ["<C-k>"],
-      "after": ["<C-w>", "k"]
-    },
-    {
-      "before": ["<Space>"],
-      "after": ["/"]
-    },
-    {
-      "before": ["<S-q>"],
-      "after": [":", "q", "!", "<CR>"]
-    },
-    {
-      "before": [";"],
-      "after": [":"]
-    }
-  ],
+    "editor.fontFamily": "Fira Code",
+    "editor.cursorBlinking": "solid",
+    "workbench.activityBar.location": "top",
+    "explorer.fileNesting.enabled": true,
+    "explorer.confirmDelete": false,
+    "window.restoreWindows": "none",
+    "window.commandCenter": false,
+    "files.autoSave": "afterDelay",
+    "diffEditor.hideUnchangedRegions.enabled": true,
+    "C_Cpp.clang_format_style": "{ BasedOnStyle: Google, IndentWidth: 4 }",
+    "vim.normalModeKeyBindings": [
+        {
+            "before": [
+                "<C-h>"
+            ],
+            "after": [
+                "<C-w>",
+                "h"
+            ]
+        },
+        {
+            "before": [
+                "<C-l>"
+            ],
+            "after": [
+                "<C-w>",
+                "l"
+            ]
+        },
+        {
+            "before": [
+                "<C-j>"
+            ],
+            "after": [
+                "<C-w>",
+                "j"
+            ]
+        },
+        {
+            "before": [
+                "<C-k>"
+            ],
+            "after": [
+                "<C-w>",
+                "k"
+            ]
+        },
+        {
+            "before": [
+                "<Space>"
+            ],
+            "after": [
+                "/"
+            ]
+        },
+        {
+            "before": [
+                "<S-q>"
+            ],
+            "after": [
+                ":",
+                "q",
+                "!",
+                "<CR>"
+            ]
+        },
+        {
+            "before": [
+                ";"
+            ],
+            "after": [
+                ":"
+            ]
+        }
+    ],
 }
