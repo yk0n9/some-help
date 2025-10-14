@@ -35,10 +35,10 @@ background = '#29263c'
 cursor = '#a277ff'
 
 [font]
-size = 9
+size = 12
 
 [font.normal]
-family = "Victor Mono"
+family = "Fira Code"
 style = "Bold"
 
 [window]
