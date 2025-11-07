@@ -1,41 +1,33 @@
-# Colors (Aura Theme)
-
-# Default colors
-[colors.primary]
-background = '#15141b'
-foreground = '#edecee'
-
-# Normal colors
-[colors.normal]
-black   = '#110f18'
-red     = '#ff6767'
-green   = '#61ffca'
-yellow  = '#ffca85'
-blue    = '#a277ff'
-magenta = '#a277ff'
-cyan    = '#61ffca'
-white   = '#edecee'
-
-# Bright colors
+# Colors (Dracula)
 [colors.bright]
-black   = '#4d4d4d'
-red     = '#ff6767'
-green   = '#61ffca'
-yellow  = '#ffca85'
-blue    = '#a277ff'
-magenta = '#a277ff'
-cyan    = '#61ffca'
-white   = '#edecee'
+black = "0x555555"
+blue = "0xcaa9fa"
+cyan = "0x8be9fd"
+green = "0x50fa7b"
+magenta = "0xff79c6"
+red = "0xff5555"
+white = "0xffffff"
+yellow = "0xf1fa8c"
 
-[colors.selection]
-text       = 'CellForeground'
-background = '#29263c'
+[colors.normal]
+black = "0x000000"
+blue = "0xbd93f9"
+cyan = "0x8be9fd"
+green = "0x50fa7b"
+magenta = "0xff79c6"
+red = "0xff5555"
+white = "0xbbbbbb"
+yellow = "0xf1fa8c"
 
-[colors.cursor]
-cursor = '#a277ff'
+[colors.primary]
+background = "0x282a36"
+foreground = "0xf8f8f2"
+
+[cursor.style]
+shape = "Block"
 
 [font]
-size = 12
+size = 10
 
 [font.normal]
 family = "Fira Code"
