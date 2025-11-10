@@ -314,3 +314,24 @@ remotePort = 24642
 ```
 echo "alias du='sudo dnf update -y'" >> ~/.bashrc && echo "alias di='sudo dnf install -y'" >> ~/.bashrc && echo "alias dr='sudo dnf remove -y'" >> ~/.bashrc && source ~/.bashrc
 ```
+**镜像源**
+
+Fedora 39+
+```
+sudo sed -e 's|^metalink=|#metalink=|g' \
+         -e 's|^#baseurl=http://download.example/pub/fedora/linux|baseurl=https://mirrors.ustc.edu.cn/fedora|g' \
+         -i.bak \
+         /etc/yum.repos.d/fedora.repo \
+         /etc/yum.repos.d/fedora-updates.repo
+```
+
+Debian
+```
+sudo sed -i 's/deb.debian.org/mirrors.ustc.edu.cn/g' /etc/apt/sources.list
+```
+
+Ubuntu
+```
+sudo sed -i 's@//.*archive.ubuntu.com@//mirrors.ustc.edu.cn@g' /etc/apt/sources.list
+sudo sed -i 's/security.ubuntu.com/mirrors.ustc.edu.cn/g' /etc/apt/sources.list
+```
