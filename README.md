@@ -5,25 +5,25 @@
 #### Shadowrocket
 
 ```
-https://cdn.jsdelivr.net/gh/yk0n9/some-help@master/Shadowrocket.conf
+https://cdn.jsdelivr.net/gh/yk0n9/some-help@master/proxy/Shadowrocket.conf
 ```
 
 #### Quantumult X
 
 ```
-https://cdn.jsdelivr.net/gh/yk0n9/some-help@master/QuanX.conf
+https://cdn.jsdelivr.net/gh/yk0n9/some-help@master/proxy/QuanX.conf
 ```
 
 #### Surge
 
 ```
-https://cdn.jsdelivr.net/gh/yk0n9/some-help@master/Surge.conf
+https://cdn.jsdelivr.net/gh/yk0n9/some-help@master/proxy/Surge.conf
 ```
 
 #### Clash
 
 ```
-https://cdn.jsdelivr.net/gh/yk0n9/some-help@master/config.yaml
+https://cdn.jsdelivr.net/gh/yk0n9/some-help@master/proxy/config.yaml
 ```
 
 #### Clash 配置位置
@@ -242,10 +242,6 @@ scoop install mingw
 
 ```
 scoop install cmake
-```
-
-```
-scoop install clion@2023.1.7-231.9423.4
 ```
 
 安装 MySQL
