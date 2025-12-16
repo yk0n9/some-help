@@ -6,5 +6,5 @@ apt install gcc git vim zsh curl neofetch ibus ibus-libpinyin -y
 
 im-config -n ibus
 
-chsh -s /bin/zsh ${USER}
+chsh -s /bin/zsh $USER
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
