@@ -36,52 +36,51 @@ proxy-groups:
       - TW
       - JP
       - SG
+    include-all-providers: true
 
   - name: Auto
     type: fallback
-    url: 'https://www.gstatic.com/generate_204'
+    url: "https://www.gstatic.com/generate_204"
     interval: 300
-    use:
-      - sub
+    include-all-providers: true
 
   - name: HK
     type: fallback
-    url: 'https://www.gstatic.com/generate_204'
+    url: "https://www.gstatic.com/generate_204"
     interval: 300
     filter: "🇭🇰|港|HK|hk|Hong Kong|HongKong|hongkong"
-    use:
-      - sub
+    include-all-providers: true
+
   - name: TW
     type: fallback
-    url: 'https://www.gstatic.com/generate_204'
+    url: "https://www.gstatic.com/generate_204"
     interval: 300
     filter: "🇹🇼|台|新北|彰化|TW|Taiwan"
-    use:
-      - sub
+    include-all-providers: true
+
   - name: JP
     type: fallback
-    url: 'https://www.gstatic.com/generate_204'
+    url: "https://www.gstatic.com/generate_204"
     interval: 300
     filter: "🇯🇵|日本|川日|东京|大阪|泉日|埼玉|沪日|深日|JP|Japan"
-    use:
-      - sub
+    include-all-providers: true
+
   - name: SG
     type: fallback
-    url: 'https://www.gstatic.com/generate_204'
+    url: "https://www.gstatic.com/generate_204"
     interval: 300
     filter: "🇸🇬|新加坡|坡|狮城|SG|Singapore"
-    use:
-      - sub
-  
+    include-all-providers: true
+
 proxy-providers:
-  sub:
+  tag1:
     type: http
-    url: 'https://sub.xeton.dev/sub?target=clash&list=true&url=ENCODE'
+    url: "https://sub.xeton.dev/sub?target=clash&list=true&url=ENCODEDURL"
     path: sub.yaml
     interval: 3600
     health-check:
       enable: true
-      url: 'https://www.gstatic.com/generate_204'
+      url: "https://www.gstatic.com/generate_204"
       interval: 300
 
 rules:
@@ -96,27 +95,27 @@ rule-providers:
   Lan:
     behavior: classical
     type: http
-    url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Lan/Lan.yaml'
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Lan/Lan.yaml"
     interval: 86400
     path: Lan.yaml
-  
+
   Advertising:
     behavior: classical
     type: http
-    url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Advertising/Advertising_Classical.yaml'
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Advertising/Advertising_Classical.yaml"
     interval: 86400
     path: Advertising.yaml
-  
+
   Proxy:
     behavior: classical
     type: http
-    url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Proxy/Proxy_Classical.yaml'
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Proxy/Proxy_Classical.yaml"
     interval: 86400
     path: Proxy.yaml
-  
+
   ChinaMax:
     behavior: classical
     type: http
-    url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/ChinaMax/ChinaMax_Classical.yaml'
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/ChinaMax/ChinaMax_Classical.yaml"
     interval: 86400
     path: ChinaMax.yaml
