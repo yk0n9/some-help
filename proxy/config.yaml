@@ -32,22 +32,47 @@ proxy-groups:
     type: select
     proxies:
       - Auto
-      - Fallback
-    use:
-      - sub
+      - HK
+      - TW
+      - JP
+      - SG
+
   - name: Auto
-    type: url-test
-    url: 'https://www.gstatic.com/generate_204'
-    interval: 300
-    use:
-      - sub
-  - name: Fallback
     type: fallback
     url: 'https://www.gstatic.com/generate_204'
     interval: 300
     use:
       - sub
 
+  - name: HK
+    type: fallback
+    url: 'https://www.gstatic.com/generate_204'
+    interval: 300
+    filter: "🇭🇰|港|HK|hk|Hong Kong|HongKong|hongkong"
+    use:
+      - sub
+  - name: TW
+    type: fallback
+    url: 'https://www.gstatic.com/generate_204'
+    interval: 300
+    filter: "🇹🇼|台|新北|彰化|TW|Taiwan"
+    use:
+      - sub
+  - name: JP
+    type: fallback
+    url: 'https://www.gstatic.com/generate_204'
+    interval: 300
+    filter: "🇯🇵|日本|川日|东京|大阪|泉日|埼玉|沪日|深日|JP|Japan"
+    use:
+      - sub
+  - name: SG
+    type: fallback
+    url: 'https://www.gstatic.com/generate_204'
+    interval: 300
+    filter: "🇸🇬|新加坡|坡|狮城|SG|Singapore"
+    use:
+      - sub
+  
 proxy-providers:
   sub:
     type: http
