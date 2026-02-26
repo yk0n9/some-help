@@ -30,7 +30,7 @@ shape = "Block"
 size = 10
 
 [font.normal]
-family = "Fira Code"
+family = "Comic Mono"
 style = "Bold"
 
 [window]
