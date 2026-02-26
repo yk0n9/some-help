@@ -1,16 +1,32 @@
 mode: rule
 mixed-port: 7890
-allow-lan: false
-log-level: info
-secret: ""
-external-controller: 127.0.0.1:9090
+allow-lan: true
+log-level: debug
+ipv6: false
+external-controller: 0.0.0.0:9090
+tcp-concurrent: true
+
+tun:
+  enable: true
+  stack: gvisor
+  device: mihomo0
+  auto-route: true
+  auto-detect-interface: true
+
 dns:
   enable: true
   ipv6: false
-  nameserver:
+  listen: 0.0.0.0:53
+  enhanced-mode: fake-ip
+  default-nameserver:
+    - 8.8.8.8
     - 114.114.114.114
     - 223.5.5.5
+  nameserver:
     - 8.8.8.8
+    - 114.114.114.114
+    - 223.5.5.5
+
 proxy-groups:
   - name: Proxy
     type: select
@@ -21,55 +37,61 @@ proxy-groups:
       - sub
   - name: Auto
     type: url-test
-    url: http://www.google.com
-    interval: 30
+    url: 'https://www.gstatic.com/generate_204'
+    interval: 300
     use:
       - sub
   - name: Fallback
     type: fallback
-    url: http://www.google.com
-    interval: 30
+    url: 'https://www.gstatic.com/generate_204'
+    interval: 300
     use:
       - sub
+
 proxy-providers:
   sub:
     type: http
-    url: https://sub.xeton.dev/sub?target=clash&list=true&url=订阅
+    url: 'https://sub.xeton.dev/sub?target=clash&list=true&url=ENCODE'
     path: sub.yaml
-    interval: 1800
+    interval: 3600
     health-check:
       enable: true
-      url: http://www.google.com
-      interval: 30
+      url: 'https://www.gstatic.com/generate_204'
+      interval: 300
+
 rules:
-  - RULE-SET,Lan,DIRECT
   - RULE-SET,Advertising,REJECT
   - RULE-SET,Proxy,Proxy
-  - RULE-SET,SteamCN,DIRECT
+  - RULE-SET,ChinaMax,DIRECT
+  - RULE-SET,Lan,DIRECT
   - GEOIP,CN,DIRECT
   - MATCH,Proxy
+
 rule-providers:
   Lan:
     behavior: classical
     type: http
-    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Lan/Lan.yaml
+    url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Lan/Lan.yaml'
     interval: 86400
     path: Lan.yaml
+  
   Advertising:
     behavior: classical
     type: http
-    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Advertising/Advertising_Classical.yaml
+    url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Advertising/Advertising_Classical.yaml'
     interval: 86400
     path: Advertising.yaml
+  
   Proxy:
     behavior: classical
     type: http
-    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Proxy/Proxy_Classical.yaml
+    url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Proxy/Proxy_Classical.yaml'
     interval: 86400
     path: Proxy.yaml
-  SteamCN:
+  
+  ChinaMax:
     behavior: classical
     type: http
-    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/SteamCN/SteamCN.yaml
+    url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/ChinaMax/ChinaMax_Classical.yaml'
     interval: 86400
-    path: SteamCN.yaml
+    path: ChinaMax.yaml
