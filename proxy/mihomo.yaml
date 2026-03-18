@@ -50,28 +50,28 @@ proxy-groups:
     type: fallback
     url: http://www.gstatic.com/generate_204
     interval: 300
-    filter: 🇭🇰|港|HK|hk|Hong Kong|HongKong|hongkong
+    filter: 香港|HK|Hong Kong|🇭🇰
     include-all-providers: true
 
   - name: TW
     type: fallback
     url: http://www.gstatic.com/generate_204
     interval: 300
-    filter: 🇹🇼|台|新北|彰化|TW|Taiwan
+    filter: 台湾|台北|TW|Taiwan|🇹🇼
     include-all-providers: true
 
   - name: JP
     type: fallback
     url: http://www.gstatic.com/generate_204
     interval: 300
-    filter: 🇯🇵|日本|川日|东京|大阪|泉日|埼玉|沪日|深日|JP|Japan
+    filter: 日本|东京|大阪|JP|Japan|🇯🇵
     include-all-providers: true
 
   - name: SG
     type: fallback
     url: http://www.gstatic.com/generate_204
     interval: 300
-    filter: 🇸🇬|新加坡|坡|狮城|SG|Singapore
+    filter: 新加坡|狮城|SG|Singapore|🇸🇬
     include-all-providers: true
 
 proxy-providers:
