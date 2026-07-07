@@ -1,0 +1,9 @@
+services:
+  frps:
+    image: swr.cn-north-4.myhuaweicloud.com/ddn-k8s/ghcr.io/fatedier/frps:v0.67.0
+    container_name: frps
+    restart: always
+    network_mode: host
+    volumes:
+      - ./frps.toml:/etc/frp/frps.toml
+    command: ["-c", "/etc/frp/frps.toml"]
