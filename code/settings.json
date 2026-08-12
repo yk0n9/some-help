@@ -1,5 +1,7 @@
 {
-    "editor.fontFamily": "Fira Code",
+    "update.mode": "none",
+    "extensions.autoUpdate": "off",
+    "editor.fontFamily": "Victor Mono",
     "editor.cursorBlinking": "solid",
     "workbench.activityBar.location": "top",
     "explorer.fileNesting.enabled": true,
