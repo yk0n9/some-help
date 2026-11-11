@@ -1,3 +1,5 @@
+
+
 # Some-Help
 
 ### 基本配置
@@ -297,6 +299,7 @@ adb shell settings put global captive_portal_mode 0
 ```
 serverAddr = "x.x.x.x"
 serverPort = 7000
+auth.token = "abc"
 
 [[proxies]]
 name = "stardew"
